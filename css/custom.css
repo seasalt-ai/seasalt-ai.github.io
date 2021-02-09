@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 html {

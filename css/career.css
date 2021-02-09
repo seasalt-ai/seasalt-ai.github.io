@@ -165,12 +165,14 @@
 
 .position-detail-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
+  transform: translate3d(0, -20%, 0);
 }
 
 .position-detail-text {
+  font-size: 18px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -256,10 +258,12 @@
   .career-position-detail {
     margin: auto;
     margin-top: 20px;
-    font-size: calc(100vw * 18/360);
   }
   .position-detail-icon {
-    width: calc(100vw * 20/360);
-    height: calc(100vw * 20/360);
+    width: calc(100vw * 16/360);
+    height: calc(100vw * 16/360);
+  }
+  .position-detail-text {
+    font-size: calc(100vw * 14/360);
   }
 }
