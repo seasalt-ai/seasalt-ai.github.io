@@ -1,5 +1,27 @@
 body {
   font-family: Arial, sans-serif;
+  overflow: auto;
+}
+
+html {
+  overflow: hidden;
+}
+
+body, html {
+  position: relative;
+  height: 100%;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #292f36;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #57cbcc;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #57cbcc;
 }
 
 .navbar.fixed-top {
