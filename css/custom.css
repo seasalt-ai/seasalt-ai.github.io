@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb {
   margin: 10px 0;
 }
 
+.copyright .fa {
+  margin-right: 0.3em;
+}
+
 @media (min-width: 992px) {
   .navbar-container {
     padding-left: 15px;

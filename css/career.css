@@ -169,6 +169,7 @@
   height: 16px;
   object-fit: contain;
   transform: translate3d(0, -20%, 0);
+  margin-right: 0.4em;
 }
 
 .position-detail-text {
