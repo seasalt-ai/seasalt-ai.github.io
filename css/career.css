@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  font-family: Arial;
+  font-family: 'Roboto', 'Noto Sans TC', Arial;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -97,7 +97,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  font-family: Arial;
+  font-family: 'Roboto', 'Noto Sans TC', Arial;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

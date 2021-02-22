@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', 'Noto Sans TC', Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -37,6 +37,10 @@ body::-webkit-scrollbar-thumb {
 
 .copyright .fa {
   margin-right: 0.3em;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -119,6 +123,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero-section {
+  background-image: var(--bgImage);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 70px center;
