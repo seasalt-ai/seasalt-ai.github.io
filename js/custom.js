@@ -240,11 +240,13 @@ $('#hero-section-submit-button').click(function (e) {
   e.preventDefault();
   let $emailInput = $('#hero-section__email');
   let email = $emailInput.val();
-
-  if (emailCheck(email)) {
-    writeToGoogleForm('whitePaper', email, 'whitePaper-submit-message', 'hero-section__email')
-  } else {
-    displayMessage('whitePaper-submit-message', true);
+  
+  if (email.trim() !== "") {
+    if (!emailCheck(email)) {
+      writeToGoogleForm('whitePaper', email, 'whitePaper-submit-message', 'hero-section__email')
+    } else {
+      displayMessage('whitePaper-submit-message', true);
+    }
   }
 });
 
@@ -255,7 +257,7 @@ $('#footer-links-form-submit').click(function (e) {
   let email = $emailInput.val();
 
   if (email.trim() !== "") {
-    if (emailCheck(email)) {
+    if (!emailCheck(email)) {
       writeToGoogleForm('email_list', email, 'submit-message', 'footer-links-email__input')
     } else {
       displayMessage('submit-message', true);
@@ -269,10 +271,12 @@ $('#location-based-submit-button').click(function (e) {
   let $emailInput = $('#location-based__email');
   let email = $emailInput.val();
 
-  if (emailCheck(email)) {
-    writeToGoogleForm('LBM_whitepager', email, 'location-based-submit-message', 'location-based__email')
-  } else {
-    displayMessage('location-based-submit-message', true);
+  if (email.trim() !== "") {
+    if (!emailCheck(email)) {
+      writeToGoogleForm('LBM_whitepager', email, 'location-based-submit-message', 'location-based__email')
+    } else {
+      displayMessage('location-based-submit-message', true);
+    }
   }
 });
 
