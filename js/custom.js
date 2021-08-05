@@ -58,37 +58,228 @@ const initScroll = (() => {
   return initScroll;
 })();
 
-const initVideo = ({ containerSelector, videoSelector }) => {
-  const select = (selector) => document.querySelectorAll(selector);
+// const initVideo = ({ containerSelector, videoSelector }) => {
+//   const select = (selector) => document.querySelectorAll(selector);
 
+//   const containers = select(containerSelector);
+//   const videos = select(videoSelector);
+
+//   const playingList = Array(Math.max(containers.length, videos.length)).fill(
+//     false
+//   );
+
+//   containers.forEach((container, index) => {
+//     container.addEventListener("click", () => {
+//       const video = videos[index];
+//       if (!video) {
+//         return;
+//       }
+//       const isPlaying = playingList[index];
+//       const classMethod = isPlaying ? "remove" : "add";
+//       const playMethod = isPlaying ? "pause" : "play";
+
+//       container?.classList?.[classMethod]("is-playing");
+//       video[playMethod]();
+
+//       if (isPlaying) {
+//         playingList[index] = false;
+//       } else {
+//         playingList[index] = true;
+//       }
+//     });
+//   });
+// };
+
+// 全螢幕影片
+function initVideo({
+  buttonSelector = '.index .header button.button-arrow',
+  containerSelector = '.video-mask-container',
+  videoSelector = '.video-mask-container .video-media-fullscreen',
+  playSelector = '.video-mask-container .video-fullscreen-play',
+  pauseSelector = '.video-mask-container .video-fullscreen-pause',
+  progressSelector = '.video-mask-container .video-fullscreen-progress',
+  closeSelector = 'label.menu-label',
+}) {
+  const select = (selector) => document.querySelectorAll(selector);
+  // const { body } = document;
+  const buttons = select(buttonSelector);
   const containers = select(containerSelector);
   const videos = select(videoSelector);
+  const plays = select(playSelector);
+  const pauses = select(pauseSelector);
+  const progresses = select(progressSelector);
+  const closes = select(closeSelector);
 
-  const playingList = Array(Math.max(containers.length, videos.length)).fill(
-    false
-  );
+  // 影片時間事件
+  const events = ['timeupdate', 'progress'];
 
-  containers.forEach((container, index) => {
-    container.addEventListener("click", () => {
-      const video = videos[index];
-      if (!video) {
-        return;
+  // 影片狀態紀錄
+  const record = {
+    show: false,
+  };
+
+  // 播放影片
+  function playVideos(event) {
+    const { currentTarget, target } = event;
+    const dom = currentTarget ?? target;
+    const { attributes } = dom ?? {};
+    const { 'media-source': source, 'media-poster': poster } = attributes ?? {};
+    const [{ value: videoSrc }, { value: imageSrc }] = [source ?? {}, poster ?? {}];
+    
+    videos.forEach((video) => {
+      const currentSrc =  video.children?.[0]?.src.replace(/^(\/\/|https?):/, '') ?? '';
+      const triggeredSrc = videoSrc?.replace(/^(\/\/|https?):/, '');
+
+      if (imageSrc) {
+        video.poster = imageSrc;
       }
-      const isPlaying = playingList[index];
-      const classMethod = isPlaying ? "remove" : "add";
-      const playMethod = isPlaying ? "pause" : "play";
-
-      container?.classList?.[classMethod]("is-playing");
-      video[playMethod]();
-
-      if (isPlaying) {
-        playingList[index] = false;
-      } else {
-        playingList[index] = true;
+      if (videoSrc && (currentSrc !== triggeredSrc)) {
+        video.src = videoSrc;
       }
+      // source 有快取 bug
+      // if (videoSrc) {
+      //   if (video.src) {
+      //     video.src = videoSrc;
+      //   } else if (currentSrc !== triggeredSrc) {
+      //     const sourceDom = document.createElement('source');
+      //     sourceDom.src = videoSrc;
+      //     console.log(`debug -> videos.forEach -> sourceDom`, sourceDom)
+      //     video.innerHTML = '';
+      //     video.insertBefore(sourceDom, video.firstChild);
+      //   }
+      // }
+      video.play()
+        .catch((err) => {
+          console.log('debug : playVideos -> err', err);
+        });
+      video.muted = false;
+    });
+  }
+
+  // 暫停影片
+  function pauseVideos() {
+    videos.forEach((video) => {
+      video.pause();
+    });
+  }
+
+  // 改變 開啟/關閉 影片 class
+  function toggleClasses() {
+    const method = record.show ? 'add' : 'remove';
+    containers.forEach((container) => {
+      container.classList[method]('is-shown');
+    });
+    closes.forEach((close) => {
+      close.classList[method]('is-close');
+    });
+  }
+
+  // 關閉影片 popup
+  function closeVideos(event) {
+    if (record.show) {
+      event.preventDefault();
+      record.show = !1;
+      toggleClasses();
+      pauseVideos();
+    }
+  }
+
+  // 按下 開啟影片 popup
+  buttons.forEach((button) => {
+    button.onclick = (e) => {
+      const { attributes } = button ?? {};
+      const { 'media-source': source } = attributes ?? {};
+      const { value: videoSrc } = source;
+      if (videoSrc) {
+        record.show = !0;
+        toggleClasses();
+        playVideos(e);
+      }
+    };
+  });
+
+  // 按下 關閉影片 popup
+  closes.forEach((close) => {
+    close.onclick = closeVideos;
+  });
+
+  // 點影片背景
+  containers.forEach((el) => {
+    el.onclick = (e) => {
+      const { target, srcElement, toElement } = e;
+      const clickedElement = target ?? srcElement ?? toElement;
+      if (el === clickedElement) {
+        pauseVideos();
+        closeVideos(e);
+      }
+    };
+  });
+
+  // 按下 播放影片
+  plays.forEach((play) => {
+    play.onclick = playVideos;
+  });
+
+  // 按下 暫停影片
+  pauses.forEach((pause) => {
+    pause.onclick = pauseVideos;
+  });
+
+  videos.forEach((video) => {
+    video.onclick = (event) => {
+      event.preventDefault();
+      video[video.paused ? 'play' : 'pause']();
+    };
+  })
+
+  // 按下進度條
+  progresses.forEach((progress) => {
+    progress.onclick = (event) => {
+      event.preventDefault();
+      const { offsetX, target, srcElement, toElement } = event;
+      const timeRatio = offsetX / progress.clientWidth;
+  
+      videos.forEach((video) => {
+        const { buffered, duration, currentTime } = video;
+        video.currentTime = timeRatio * duration;
+      })
+    };
+  });
+
+  // 影片時間改變
+  function updateBar({ currentTarget: video }) {
+    progresses.forEach((progress) => {
+      const { buffered, duration, currentTime } = video;
+      const { length: bufferedLength } = buffered;
+      // Array.from
+      const loadedBars = [].slice.call(progress.children);
+      while (loadedBars.length > bufferedLength) {
+        const last = loadedBars.pop();
+        last.remove();
+      }
+      while (loadedBars.length < bufferedLength) {
+        const dom = document.createElement('div');
+        dom.classList.add('loaded');
+        progress.append(dom);
+        loadedBars.push(dom);
+      }
+      for (let index = bufferedLength - 1; index >= 0; index--) {
+        const loadedBar = loadedBars[index];
+        const [start, end] = [buffered.start(index), buffered.end(index)];
+        // console.log('debug : updateBar -> index, start, end, duration', index, start, end, duration);
+        loadedBar.style.width = `${100 * (end - start) / duration}%`;
+        loadedBar.style.left = `${start / duration}%`;
+      }
+      progress.style.setProperty('--time', `${100 * currentTime / duration}%`);
+    });
+  }
+  // 影片時間改變事件
+  events.forEach((evt) => {
+    videos.forEach((video) => {
+      video.addEventListener(evt, updateBar);
     });
   });
-};
+}
 
 const calculateIndex = ({ clientWidth, scrollWidth, scrollLeft }, length) => {
   const margin = (35 / 375) * clientWidth;
@@ -335,9 +526,12 @@ $(window).load(function () {
   }
 
   // initialize videos' play and pause
+  // initVideo({
+  //   containerSelector: ".location-section-video .section-video-card",
+  //   videoSelector: ".location-section-video .video-card-video",
+  // });
   initVideo({
-    containerSelector: ".location-section-video .section-video-card",
-    videoSelector: ".location-section-video .video-card-video",
+    buttonSelector: ".location-section-video .section-video-card",
   });
 
   // first section(hero-section) description typing animation
