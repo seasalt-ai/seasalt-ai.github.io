@@ -281,6 +281,71 @@ function initVideo({
   });
 }
 
+// white paer 頁面輸入
+function initWhitePaper({
+  list = [],
+  selector = 'white-paper-data',
+  inputSelector = '.whitepaper-form-input',
+  buttonSelector = '.location-whitepaper-submit'
+}) {
+  const select = (selector) => document.querySelectorAll(selector);
+  const buttons = select(buttonSelector);
+  const formList = list
+    .map((str) => {
+      const div = document.querySelector(`[${selector}=${str}]`);
+      const input = document.querySelector(`[${selector}=${str}] > ${inputSelector}`);
+      const dataString = str;
+      return { div, input, dataString };
+    })
+    .filter(({ div, input, dataString }) => div && input);
+
+  formList.forEach(({ div, input }) => {
+    input.addEventListener('change', () => {
+      div.classList.remove('has-error');
+    })
+    input.addEventListener('input', () => {
+      div.classList.remove('has-error');
+    })
+  });
+
+  buttons.forEach(( button ) => {
+    button.addEventListener('click', () => {
+      let valid = true;
+      const params = {};
+      formList.forEach(({ div, input, dataString }) => {
+        if (!input?.value
+          || (dataString === 'mail' && !emailCheck(input?.value) )
+        ) {
+          div.classList.add('has-error');
+          valid = false;
+        } else {
+          params[dataString] = input?.value;
+        }
+      });
+      if (valid) {
+        $.post(
+          "https://script.google.com/macros/s/AKfycbzmVEBYVXnDqPCpeKjxP0SAX5dMNSy5OWEPj0w4OiPVOEifoRvPNLGq_bk9nKoMmZTa_Q/exec",
+          params,
+          (data) => {
+            console.log(`debug -> button.addEventListener -> data`, data)
+            toast({
+              type: toast.types.success,
+              text: 'Your submit is complete.',
+            })
+          }
+        )
+        .fail((err) => {
+          const errorMessage = err?.message || err?.responseText || err?.statusText || 'error';
+          toast({
+            type: toast.types.fail,
+            text: `Your submit is failed. ${errorMessage}`,
+          })
+        });
+      }
+    })
+  })
+}
+
 const calculateIndex = ({ clientWidth, scrollWidth, scrollLeft }, length) => {
   const margin = (35 / 375) * clientWidth;
   const width = scrollWidth - clientWidth - 2 * margin;
@@ -435,7 +500,7 @@ $("#hero-section-submit-button").click(function (e) {
   let email = $emailInput.val();
 
   if (email.trim() !== "") {
-    if (!emailCheck(email)) {
+    if (emailCheck(email)) {
       writeToGoogleForm(
         "whitePaper",
         email,
@@ -455,7 +520,7 @@ $("#footer-links-form-submit").click(function (e) {
   let email = $emailInput.val();
 
   if (email.trim() !== "") {
-    if (!emailCheck(email)) {
+    if (emailCheck(email)) {
       writeToGoogleForm(
         "email_list",
         email,
@@ -475,7 +540,7 @@ $("#location-based-submit-button").click(function (e) {
   let email = $emailInput.val();
 
   if (email.trim() !== "") {
-    if (!emailCheck(email)) {
+    if (emailCheck(email)) {
       writeToGoogleForm(
         "LBM_whitepager",
         email,
@@ -504,6 +569,10 @@ $(window).load(function () {
     nextSelector: ".seaSuite-container__content .next-btn",
     classList: ["selected-1", "selected-2", "selected-3"],
   });
+
+  initWhitePaper({
+    list: ['mail', 'block', 'first', 'last', 'company', 'designation', 'phone', 'country']
+  })
 
   $(".seaSuite-container__content .zoom-btn").click(function () {
     $(".seaSuite-container__img").toggleClass("is-full-mode");
