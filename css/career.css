@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  font-family: 'Roboto', 'Noto Sans TC', Arial;
+  font-family: "Roboto", "Noto Sans TC", Arial;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -16,50 +16,50 @@
 
 .career-mission-section {
   margin-top: 69px;
-  padding: calc(100vw * 173/1920) calc(100vw * 200/1920) calc(100vw * 173/1920) calc(100vw * 92/1920);
+  padding: calc(100vw * 173 / 1920) calc(100vw * 200 / 1920)
+    calc(100vw * 173 / 1920) calc(100vw * 92 / 1920);
 }
 
 .career-vision-section {
-  padding: calc(100vw * 73/1920) calc(100vw * 200/1920);
+  padding: calc(100vw * 73 / 1920) calc(100vw * 200 / 1920);
   background-color: #242930;
 }
 
 .career-mission-svg {
-  width: calc(100vw * 746.428/1920);
-  height: calc(100vw * 732.815/1920);
+  width: calc(100vw * 746.428 / 1920);
+  height: calc(100vw * 732.815 / 1920);
   margin-right: auto;
   transition: all 0.2s ease-in-out;
 }
 
 .career-vision-svg {
-  width: calc(100vw * 675/1920);
-  height: calc(100vw * 350/1920);
+  width: calc(100vw * 675 / 1920);
+  height: calc(100vw * 350 / 1920);
   margin-right: auto;
   transition: all 0.2s ease-in-out;
 }
 
 .career-mission-group {
-  width: calc(100vw * 753/1920);
+  width: calc(100vw * 753 / 1920);
   transition: all 0.2s ease-in-out;
 }
 
 .career-vision-group {
-  width: calc(100vw * 753/1920);
+  width: calc(100vw * 753 / 1920);
   transition: all 0.2s ease-in-out;
 }
 
-
 .career-main-title {
-  font-size: calc(100vw * 80/1920);
+  font-size: calc(100vw * 80 / 1920);
   text-align: left;
   color: #ffffff;
   word-break: break-all;
 }
 
 .career-main-description {
-  font-size: calc(100vw * 44/1920);
+  font-size: calc(100vw * 44 / 1920);
   text-align: left;
-  color: #737f8a;
+  color: #aab0b6;
 }
 
 .career-mission-section:not(.actived) .career-mission-svg {
@@ -82,7 +82,7 @@
   opacity: 0;
 }
 
-.career-detail-section > :nth-child(2n+1):not(.actived) {
+.career-detail-section > :nth-child(2n + 1):not(.actived) {
   transform: translate3d(-25%, 0, 0);
   opacity: 0;
 }
@@ -97,7 +97,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Roboto', 'Noto Sans TC', Arial;
+  font-family: "Roboto", "Noto Sans TC", Arial;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -153,7 +153,7 @@
   line-height: 1.13;
   letter-spacing: normal;
   text-align: left;
-  color: #737f8a;
+  color: #aab0b6;
 }
 
 .career-position-detail {
@@ -167,15 +167,14 @@
 
 .position-detail-icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-  transform: translate3d(0, -20%, 0);
   margin-right: 0.4em;
 }
 
 .position-detail-text {
-  font-size: 18px;
+  font-size: 28px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -186,47 +185,47 @@
   }
 
   .career-mission-section {
-    padding: calc(100vw * 40/375) 0;
+    padding: calc(100vw * 40 / 375) 0;
   }
-  
+
   .career-vision-section {
-    padding: calc(100vw * 80/375) 0;
+    padding: calc(100vw * 80 / 375) 0;
   }
 
   .career-mission-svg,
   .career-vision-svg {
     margin: auto;
   }
-  
+
   .career-mission-svg {
-    width: calc(100vw * 250/375);
-    height: calc(100vw * 245/375);
+    width: calc(100vw * 250 / 375);
+    height: calc(100vw * 245 / 375);
     margin-right: auto;
   }
 
   .career-vision-svg {
-    width: calc(100vw * 270/375);
-    height: calc(100vw * 140/375);
+    width: calc(100vw * 270 / 375);
+    height: calc(100vw * 140 / 375);
     margin-right: auto;
   }
 
   .career-mission-group,
   .career-vision-group {
-    width: calc(100vw * 295/375);
-    margin-bottom: calc(100vw * 40/375);
+    width: calc(100vw * 295 / 375);
+    margin-bottom: calc(100vw * 40 / 375);
   }
 
   .career-main-title {
     /* font-size: calc(100vw * 80/1920); */
-    font-size: calc(100vw * 36/375);
+    font-size: calc(100vw * 36 / 375);
     text-align: center;
   }
-  
+
   .career-main-description {
     /* font-size: calc(100vw * 44/1920); */
-    font-size: calc(100vw * 24/375);
+    font-size: calc(100vw * 24 / 375);
     text-align: center;
-    margin-top: calc(100vw * 20/375);
+    margin-top: calc(100vw * 20 / 375);
   }
 
   .career-department-title,
@@ -239,8 +238,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: calc(100vw * 20/360) calc(100vw * 21/360);
-    border-radius: calc(100vw * 30/360);
+    padding: calc(100vw * 20 / 360) calc(100vw * 21 / 360);
+    border-radius: calc(100vw * 30 / 360);
   }
   .career-department-title,
   .career-position-title,
@@ -248,25 +247,25 @@
   .career-position-Type {
     text-align: center;
   }
-  
+
   .career-position-title {
-    font-size: calc(100vw * 18/360);
+    font-size: calc(100vw * 18 / 360);
   }
 
   .career-position-Location,
   .career-position-Type {
     /* font-size: 16px; */
-    font-size: calc(100vw * 16/360);
+    font-size: calc(100vw * 16 / 360);
   }
   .career-position-detail {
     margin: auto;
     margin-top: 20px;
   }
   .position-detail-icon {
-    width: calc(100vw * 16/360);
-    height: calc(100vw * 16/360);
+    width: calc(100vw * 16 / 360);
+    height: calc(100vw * 16 / 360);
   }
   .position-detail-text {
-    font-size: calc(100vw * 14/360);
+    font-size: calc(100vw * 18 / 360);
   }
 }
