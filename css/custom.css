@@ -18,13 +18,20 @@ html {
 body::-webkit-scrollbar-track {
   background-color: #292f36;
 }
+
 body::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
   height: 4px;
   background-color: #57cbcc;
 }
+
+/* body::-webkit-scrollbar:hover {
+  width: 12px;
+} */
+
 body::-webkit-scrollbar-thumb {
   background-color: #57cbcc;
+  border-radius: 8px;
 }
 
 .navbar.fixed-top {
