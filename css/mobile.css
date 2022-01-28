@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar .container.navbar-container {
     /* flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -15,8 +15,8 @@
   /* logo */
   .navbar-brand.logo {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     max-width: calc(100vw - 170px);
     transition: all 0.1s ease-in-out;
     min-height: 49px;
@@ -30,7 +30,11 @@
     object-fit: contain;
     object-position: center;
   }
-  .container.navbar-container .navbar-collapse {
+  .navbar-container .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    left: 0;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     background-color: #353b43;
@@ -57,7 +61,7 @@
   }
   /* 選單大項 */
   .nav-link.nav-products-name {
-    display: none;
+    /* display: none; */
   }
   /* 選單小項 */
   li.product-list-item {

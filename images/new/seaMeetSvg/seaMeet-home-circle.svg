@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <style>
+            .ngmeeting-home-circle-svg-1 {
+                fill: #353b43;
+                opacity: 1;
+                isolation: isolate;
+            }
+
+            .ngmeeting-home-circle-svg-2 {
+                fill: #707070;
+            }
+
+            .ngmeeting-home-circle-svg-3 {
+                fill: #292f36;
+            }
+
+            .ngmeeting-home-circle-svg-4 {
+                fill: #fff;
+            }
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_5" data-name="Layer 5">
+            <circle class="ngmeeting-home-circle-svg-1" cx="50" cy="50" r="50" />
+            <g id="Group_985" data-name="Group 985">
+                <circle id="Ellipse_118" data-name="Ellipse 118" class="ngmeeting-home-circle-svg-2" cx="39.98" cy="10.03" r="2.86" />
+                <circle id="Ellipse_127" data-name="Ellipse 127" class="ngmeeting-home-circle-svg-2" cx="39.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_156" data-name="Ellipse 156" class="ngmeeting-home-circle-svg-2" cx="29.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_162" data-name="Ellipse 162" class="ngmeeting-home-circle-svg-2" cx="29.98" cy="30.02" r="2.86" />
+                <circle id="Ellipse_192" data-name="Ellipse 192" class="ngmeeting-home-circle-svg-2" cx="29.98" cy="70.02" r="2.86" />
+                <circle id="Ellipse_196" data-name="Ellipse 196" class="ngmeeting-home-circle-svg-2" cx="29.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_157" data-name="Ellipse 157" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_163" data-name="Ellipse 163" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="30.02" r="2.86" />
+                <circle id="Ellipse_169" data-name="Ellipse 169" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="40.02" r="2.86" />
+                <circle id="Ellipse_175" data-name="Ellipse 175" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="50.02" r="2.86" />
+                <circle id="Ellipse_187" data-name="Ellipse 187" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="60.02" r="2.86" />
+                <circle id="Ellipse_193" data-name="Ellipse 193" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="70.02" r="2.86" />
+                <circle id="Ellipse_229" data-name="Ellipse 229" class="ngmeeting-home-circle-svg-2" cx="19.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_172" data-name="Ellipse 172" class="ngmeeting-home-circle-svg-2" cx="89.98" cy="40.02" r="2.86" />
+                <circle id="Ellipse_178" data-name="Ellipse 178" class="ngmeeting-home-circle-svg-2" cx="89.98" cy="50.02" r="2.86" />
+                <circle id="Ellipse_190" data-name="Ellipse 190" class="ngmeeting-home-circle-svg-2" cx="89.98" cy="60.02" r="2.86" />
+                <circle id="Ellipse_170" data-name="Ellipse 170" class="ngmeeting-home-circle-svg-2" cx="9.98" cy="40.02" r="2.86" />
+                <circle id="Ellipse_176" data-name="Ellipse 176" class="ngmeeting-home-circle-svg-2" cx="9.98" cy="50.02" r="2.86" />
+                <circle id="Ellipse_188" data-name="Ellipse 188" class="ngmeeting-home-circle-svg-2" cx="9.98" cy="60.02" r="2.86" />
+                <circle id="Ellipse_173" data-name="Ellipse 173" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="40.02" r="2.86" />
+                <circle id="Ellipse_179" data-name="Ellipse 179" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="50.02" r="2.86" />
+                <circle id="Ellipse_191" data-name="Ellipse 191" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="60.02" r="2.86" />
+                <circle id="Ellipse_195" data-name="Ellipse 195" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="70.02" r="2.86" />
+                <circle id="Ellipse_197" data-name="Ellipse 197" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_155" data-name="Ellipse 155" class="ngmeeting-home-circle-svg-2" cx="39.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_202" data-name="Ellipse 202" class="ngmeeting-home-circle-svg-2" cx="39.98" cy="90.02" r="2.86" />
+                <circle id="Ellipse_121" data-name="Ellipse 121" class="ngmeeting-home-circle-svg-2" cx="49.98" cy="10.03" r="2.86" />
+                <circle id="Ellipse_126" data-name="Ellipse 126" class="ngmeeting-home-circle-svg-2" cx="49.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_154" data-name="Ellipse 154" class="ngmeeting-home-circle-svg-2" cx="49.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_203" data-name="Ellipse 203" class="ngmeeting-home-circle-svg-2" cx="49.98" cy="90.02" r="2.86" />
+                <circle id="Ellipse_122" data-name="Ellipse 122" class="ngmeeting-home-circle-svg-2" cx="59.98" cy="10.03" r="2.86" />
+                <circle id="Ellipse_125" data-name="Ellipse 125" class="ngmeeting-home-circle-svg-2" cx="59.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_153" data-name="Ellipse 153" class="ngmeeting-home-circle-svg-2" cx="59.98" cy="80.02" r="2.86" />
+                <circle id="Ellipse_204" data-name="Ellipse 204" class="ngmeeting-home-circle-svg-2" cx="59.98" cy="90.02" r="2.86" />
+                <circle id="Ellipse_124" data-name="Ellipse 124" class="ngmeeting-home-circle-svg-2" cx="69.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_158" data-name="Ellipse 158" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="20.02" r="2.86" />
+                <circle id="Ellipse_165" data-name="Ellipse 165" class="ngmeeting-home-circle-svg-2" cx="79.98" cy="30.02" r="2.86" />
+                <circle id="Ellipse_128" data-name="Ellipse 128" class="ngmeeting-home-circle-svg-2" cx="69.98" cy="30.02" r="2.86" />
+                <circle id="Ellipse_148" data-name="Ellipse 148" class="ngmeeting-home-circle-svg-2" cx="69.98" cy="70.02" r="2.86" />
+                <circle id="Ellipse_152" data-name="Ellipse 152" class="ngmeeting-home-circle-svg-2" cx="69.98" cy="80.02" r="2.86" />
+            </g>
+            <g id="Group_986" data-name="Group 986">
+                <circle id="Ellipse_224" data-name="Ellipse 224" class="ngmeeting-home-circle-svg-3" cx="50" cy="50.01" r="25" />
+                <path id="Icon_ionic-md-microphone" data-name="Icon ionic-md-microphone" class="ngmeeting-home-circle-svg-4"
+                    d="M56.54,42.68V41.31a2.66,2.66,0,0,0-2.72-2.59H46.56a2.65,2.65,0,0,0-2.71,2.59v1.37h7.53v1.83H43.85v2.13h7.53v1.84H43.85v2.13h7.53v1.83H43.85v2.07a2.64,2.64,0,0,0,2.71,2.59h1.49v3.82h4.27V57.1h1.5a2.65,2.65,0,0,0,2.71-2.58h0V52.44H53.76V50.61h2.78V48.48H53.76V46.64h2.78V44.51H53.76V42.68Z" />
+            </g>
+        </g>
+    </g>
+</svg>
