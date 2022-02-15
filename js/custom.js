@@ -322,9 +322,10 @@ function initWhitePaper({
           params[dataString] = input?.value;
         }
       });
+      params['block'] = 'Voice_Index';
       if (valid) {
         $.post(
-          "https://script.google.com/macros/s/AKfycbzmVEBYVXnDqPCpeKjxP0SAX5dMNSy5OWEPj0w4OiPVOEifoRvPNLGq_bk9nKoMmZTa_Q/exec",
+          "https://cors.seasalt.ai/https://script.google.com/macros/s/AKfycbzmVEBYVXnDqPCpeKjxP0SAX5dMNSy5OWEPj0w4OiPVOEifoRvPNLGq_bk9nKoMmZTa_Q/exec",
           params,
           (data) => {
             console.log(`debug -> button.addEventListener -> data`, data)
