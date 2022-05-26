@@ -445,14 +445,43 @@ const initProductScroll = ({
 /* ========================================================================= */
 /*	Book a Demo
 /* ========================================================================= */
+
+const eventNameUrlMapping = {
+  mail_submit:
+    'https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16',
+  book_a_demo:
+    'https://cdn.forms-content.sg-form.com/6c0b6aa1-d7ed-11ec-8737-7a4e9a7b7692',
+  voice_intelligence_white_paper: 'https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16'
+};
+
+const openFormPopup = (e) => {
+  e.preventDefault()
+  const iframe = document.querySelector('#form-popup-iframe');
+  iframe.onload = () => {
+    const popup = document.querySelector('.form-popup');
+    popup.classList.add('form-popup--display');
+    const closeButton = document.querySelector('.form-popup__closeBtn');
+    const closeFormHandler = () => {
+      popup.classList.remove('form-popup--display');
+    };
+
+    closeButton.addEventListener('click', closeFormHandler);
+  };
+
+  const eventName = e.currentTarget.getAttribute('data-event-name');
+  iframe.src = eventNameUrlMapping[eventName];
+};
+
 function clickBookDemo() {
-  const bookDemoLink = "https://forms.gle/RdNoQYseQ8DVpTu66";
+  const bookDemoLink = 'https://forms.gle/RdNoQYseQ8DVpTu66';
   window.open(bookDemoLink);
 }
 
 $(document).ready(function () {
-  $("[id^=bookDemo_]").on("click", clickBookDemo);
+  $('[id^=bookDemo_]').on('click', openFormPopup);
 });
+
+
 
 /* ========================================================================= */
 /*	email submit
@@ -515,24 +544,13 @@ $("#hero-section-submit-button").click(function (e) {
 });
 
 // footer email submit
-$("#footer-links-form-submit").click(function (e) {
-  e.preventDefault();
-  let $emailInput = $("#footer-links-email__input");
-  let email = $emailInput.val();
-
-  if (email.trim() !== "") {
-    if (emailCheck(email)) {
-      writeToGoogleForm(
-        "email_list",
-        email,
-        "submit-message",
-        "footer-links-email__input"
-      );
-    } else {
-      displayMessage("submit-message", true);
-    }
-  }
+$('#footer-links-form-submit').click((e) => {
+  openFormPopup(e);
 });
+
+$('#get-voice-intelligence-white-paper').click(e => {
+  openFormPopup(e);
+})
 
 // location-based messaging whitePaper submit
 $("#location-based-submit-button").click(function (e) {
