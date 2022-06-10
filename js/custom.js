@@ -450,7 +450,7 @@ const eventNameUrlMapping = {
   mail_submit:
     'https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16',
   book_a_demo:
-    'https://cdn.forms-content.sg-form.com/6c0b6aa1-d7ed-11ec-8737-7a4e9a7b7692',
+    'https://cdn.forms-content.sg-form.com/cefe125b-cffe-11ec-aa53-6a68201efa16',
   voice_intelligence_white_paper: 'https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16'
 };
 
