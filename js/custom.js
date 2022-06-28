@@ -460,12 +460,14 @@ const openFormPopup = (e) => {
   iframe.onload = () => {
     const popup = document.querySelector('.form-popup');
     popup.classList.add('form-popup--display');
+    const popupOuter = document.querySelector('.form-popup__background');
     const closeButton = document.querySelector('.form-popup__closeBtn');
     const closeFormHandler = () => {
       popup.classList.remove('form-popup--display');
     };
 
     closeButton.addEventListener('click', closeFormHandler);
+    popupOuter.addEventListener('click', closeFormHandler);
   };
 
   const eventName = e.currentTarget.getAttribute('data-event-name');
