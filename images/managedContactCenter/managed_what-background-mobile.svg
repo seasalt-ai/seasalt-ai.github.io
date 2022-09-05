@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="622" viewBox="0 0 375 622">
+    <defs>
+        <clipPath id="wqgb2d9tza">
+            <path data-name="Rectangle 1488" transform="translate(0 667)" style="fill:#242930" d="M0 0h375v622H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Mask Group 12" transform="translate(0 -667)" style="clip-path:url(#wqgb2d9tza)">
+        <g data-name="Group 540">
+            <g data-name="Group 503" transform="translate(331.86 869.792)">
+                <ellipse data-name="Ellipse 6" cx="28.035" cy="28.504" rx="28.035" ry="28.504" style="fill:#414a53"/>
+            </g>
+            <g data-name="Group 506">
+                <g data-name="Group 439">
+                    <g data-name="Group 437" transform="translate(332.727 683.773)">
+                        <ellipse data-name="Ellipse 26" cx="2.204" cy="2.241" rx="2.204" ry="2.241" transform="translate(.069)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37929" d="M657.509 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-653.1 -412.844)" style="fill:#22d5e0"/>
+                        <ellipse data-name="Ellipse 27" cx="2.204" cy="2.241" rx="2.204" ry="2.241" transform="translate(11.09)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37930" d="M673.608 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-658.11 -412.844)" style="fill:#22d5e0"/>
+                    </g>
+                    <g data-name="Group 438" transform="translate(310.34 683.773)">
+                        <ellipse data-name="Ellipse 28" cx="2.204" cy="2.241" rx="2.204" ry="2.241" transform="translate(.069)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37931" d="M625.008 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-620.6 -412.844)" style="fill:#22d5e0"/>
+                        <ellipse data-name="Ellipse 29" cx="2.204" cy="2.241" rx="2.204" ry="2.241" transform="translate(11.09)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37932" d="M641.109 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-625.61 -412.844)" style="fill:#22d5e0"/>
+                    </g>
+                </g>
+                <g data-name="Group 442">
+                    <g data-name="Group 440" transform="translate(377.501 683.773)">
+                        <ellipse data-name="Ellipse 30" cx="2.204" cy="2.241" rx="2.204" ry="2.241" style="fill:#22d5e0"/>
+                        <path data-name="Path 37933" d="M722.508 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-718.1 -412.844)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37934" d="M738.509 410.141a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-723.079 -407.9)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37935" d="M738.509 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-723.079 -412.844)" style="fill:#22d5e0"/>
+                    </g>
+                    <g data-name="Group 441" transform="translate(355.114 683.773)">
+                        <ellipse data-name="Ellipse 31" cx="2.204" cy="2.241" rx="2.204" ry="2.241" style="fill:#22d5e0"/>
+                        <path data-name="Path 37936" d="M690.009 426.641a2.2 2.2 0 1 1-2.2-2.241 2.195 2.195 0 0 1 2.2 2.241z" transform="translate(-685.6 -412.844)" style="fill:#22d5e0"/>
+                        <ellipse data-name="Ellipse 32" cx="2.204" cy="2.241" rx="2.204" ry="2.241" transform="translate(11.09)" style="fill:#22d5e0"/>
+                        <path data-name="Path 37937" d="M706.009 426.641a2.2 2.2 0 1 1-2.2-2.241 2.194 2.194 0 0 1 2.2 2.241z" transform="translate(-690.579 -412.844)" style="fill:#22d5e0"/>
+                    </g>
+                </g>
+            </g>
+            <g data-name="Group 507">
+                <path data-name="Path 37938" d="M460.618 430.3c-26.589 0-48.218 21.991-48.218 49.024s21.629 49.024 48.218 49.024 48.218-21.991 48.218-49.024-21.629-49.024-48.218-49.024zm0 88.314c-21.354 0-38.712-17.579-38.712-39.36 0-21.711 17.29-39.36 38.712-39.36 21.354 0 38.712 17.579 38.712 39.36s-17.358 39.36-38.712 39.36z" transform="translate(-441.709 453.5)" style="fill:#262e38"/>
+            </g>
+        </g>
+    </g>
+</svg>

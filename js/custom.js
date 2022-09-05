@@ -17,7 +17,7 @@ const initScroll = (() => {
     });
   });
 
-  function initScroll(containerSelector, sectionClass) {
+  function initScroll(containerSelector, sectionClass, offset = 0) {
     const { body } = document;
 
     // 滾動到的 section 加入 .actived ，畫面外的移除 .actived
@@ -38,13 +38,13 @@ const initScroll = (() => {
       sections.forEach((elm, index) => {
         const { offsetTop, clientHeight: elmHeight } = elm;
         if (
-          viewTop + clientHeight > offsetTop &&
-          viewTop < offsetTop + elmHeight * 0.5
+          viewTop + clientHeight + offset > offsetTop &&
+          viewTop + offset < offsetTop + elmHeight * 0.5
         ) {
           elm.classList.add("actived");
         } else if (
-          viewTop + clientHeight <= offsetTop ||
-          viewTop >= offsetTop + elmHeight
+          viewTop + clientHeight + offset <= offsetTop ||
+          viewTop + offset >= offsetTop + elmHeight
         ) {
           elm.classList.remove("actived");
         }
@@ -582,6 +582,18 @@ $(window).load(function () {
   initScroll(".career-detail-section", "career-position-item");
 
   initScroll(".location-based-messaging", "location-based-section");
+
+  initScroll("#content", "managed", -150);
+  initScroll("#content", "managed-what", -150);
+  initScroll("#content", "managed-do", -150);
+  initScroll("#content", "timeshare", -150);
+  initScroll("#content", "agents", -150);
+  initScroll("#content", "workforce", -150);
+  initScroll("#content", "scale", -150);
+  initScroll("#content", "powered", -150);
+
+  initScroll("#content .inner-header", "workforce");
+  initScroll("#content .inner-header", "powered");
 
   initProductScroll({
     scrollSelector: ".seaSuite-container__subModuleList",
