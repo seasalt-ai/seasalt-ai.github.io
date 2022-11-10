@@ -1,378 +1,49 @@
-<!doctype html><html class=no-js lang=en-us scroll-behavior=smooth><head>
-<script>(function(b,d,e,a,g){b[a]=b[a]||[],b[a].push({'gtm.start':(new Date).getTime(),event:'gtm.js'});var f=d.getElementsByTagName(e)[0],c=d.createElement(e),h=a!='dataLayer'?'&l='+a:'';c.async=!0,c.src='https://www.googletagmanager.com/gtm.js?id='+g+h,f.parentNode.insertBefore(c,f)})(window,document,'script','dataLayer','GTM-N26SF8T')</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"Corporation","url":"https://seasalt.ai/","logo":"https://seasalt.ai/images/logo.png","name":"Seasalt.ai","description":"Seasalt.ai is a Seattle-based Cloud Communication AI company. Try SeaSuite and SeaX, the next-gen voice solution for the contact centers of the future."}</script>
-<meta charset=utf-8>
-<meta name=description content="In this blog, we will take a look at 'distributed' contact centers: what they are, how they can benefit you, and how SeaX leverages a distributed platform to better serve our clients.">
-<meta name=author content="Sarah Reid">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.92.2">
-<title>
-Expand Your Contact Center Footprint with a Distributed Contact Center
-</title>
-<link rel="shortcut icon" type=image/x-icon href=https://seasalt.ai/images/favicon.ico>
-<link rel=stylesheet href=https://seasalt.ai/plugins/themefisher-font/style.min.css>
-<link rel=stylesheet href=https://seasalt.ai/plugins/animate-css/animate.min.css>
-<link rel=stylesheet href=https://seasalt.ai/plugins/magnific-popup/dist/magnific-popup.css>
-<link rel=stylesheet href=https://seasalt.ai/plugins/slick-carousel/slick/slick.css>
-<link rel=stylesheet href=https://seasalt.ai/plugins/slick-carousel/slick/slick-theme.css>
-<link rel=stylesheet href=https://seasalt.ai/css/style.min.css integrity media=screen>
-<link rel=stylesheet href=https://seasalt.ai/css/index.min.css integrity media=screen>
-<link rel=stylesheet href=https://seasalt.ai/css/custom.css>
-<link rel=stylesheet href=https://seasalt.ai/css/career.css>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel=stylesheet>
-<link rel=preconnect href=https://fonts.gstatic.com>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel=stylesheet>
-<script>(()=>{window.addEventListener('load',()=>{const a={accountSid:'AC41b16a5f90c65a13c4d5a3f44a0d1d79',flexFlowSid:'FOadf3d4566db52c9b9f327b49bd6376f6',context:{friendlyName:'Customer',isWebchatDemo:!0},colorTheme:{overrides:{EntryPoint:{Container:{background:'#F22F46',color:'#FFFFFF','&:hover':{backgroundColor:'#DE2137'}}}}},fileAttachment:{enabled:!0}}})})()</script>
-<style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style>
-<link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
-</head>
-<body id=body data-spy=scroll data-target=.navbar data-offset=52>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
-<div id=content>
-<header class=seasalt-header-container>
-<div class=page-sidebar-hamburger></div>
-<a class=seasalt-header-logo href=/>
-<img class=header-logo-svg src=https://seasalt.ai/images/logo.png>
-</a>
-<div class=seasalt-header-main></div>
-<div class="seasalt-header-settings is-closed">
-<div class="header-links-text is-title">
-<span class=links-text-span>Products</span>
-<div class=header-links-dropdown>
-<a class="links-dropdown-row is-title">
-<span class=links-text-span>
-HORIZONTAL AI
-</span>
-</a>
-<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/>
-<span class=links-text-span>
-SeaSuite
-</span>
-</a>
-<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://code.seasalt.ai/>
-<span class=links-text-span>
-SeaCode
-</span>
-</a>
-<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://chat.seasalt.ai/>
-<span class=links-text-span>
-SeaChat
-</span>
-</a>
-<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://word.seasalt.ai/>
-<span class=links-text-span>
-SeaWord
-</span>
-</a>
-<a class="links-dropdown-row indent-1">
-<span class=links-text-span>
-SeaVoice
-</span>
-</a>
-<a class="links-dropdown-row indent-2" target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/stt>
-<span class=links-text-span>
-Speech to Text
-</span>
-</a>
-<a class="links-dropdown-row indent-2" target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/tts>
-<span class=links-text-span>
-Text to Speech
-</span>
-</a>
-<a class="links-dropdown-row is-title">
-<span class=links-text-span>
-VERTICAL PRODUCTS
-</span>
-</a>
-<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://meet.seasalt.ai>
-<span class=links-text-span>
-SeaMeet
-</span>
-</a>
-<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://seax.seasalt.ai/>
-<span class=links-text-span>
-SeaX
-</span>
-</a>
-</div>
-</div>
-<div class="header-links-text is-title">
-<span class=links-text-span>Solutions</span>
-<div class=header-links-dropdown>
-<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://nearme.seasalt.ai/>
-<span class=links-text-span>
-Near Me Messaging
-</span>
-</a>
-<a class=links-dropdown-row href=/managed-contact-center/>
-<span class=links-text-span>
-Managed Contact Center
-</span>
-</a>
-</div>
-</div>
-<div class="header-links-text is-title">
-<span class=links-text-span>Company</span>
-<div class=header-links-dropdown>
-<a class=links-dropdown-row href=/careers/>
-<span class=links-text-span>
-Careers
-</span>
-</a>
-<a class=links-dropdown-row href=/blog/>
-<span class=links-text-span>
-Blog
-</span>
-</a>
-<a class=links-dropdown-row href=/events/>
-<span class=links-text-span>
-Events
-</span>
-</a>
-</div>
-</div>
-<a class="header-button-container ga-event" id=bookDemo_Top data-event-name=book_a_demo data-event-label=home-header target=_blank>
-<span class=header-button-text>
-Book A Demo
-</span>
-</a>
-</div>
-<div class="ng-loading-container fixed"></div>
-</header>
-<section class="section single-article">
-<div class=single-article-container>
-<div>
-<h1 class=article-title>Expand Your Contact Center Footprint with a Distributed Contact Center</h1>
-<ul class=list-inline>
-<li class="btn btn-info" style=border-radius:.5rem>
-<a href=https://seasalt.ai/tags/seax/>SeaX</a>
-</li></ul>
-<ul class="list-inline article-sub-title">
-<li class="list-inline-item author-name">Sarah Reid</li>
-<li class=list-inline-item>Wednesday, Jul 27, 2022</li>
-</ul>
-<div class=single-article-pic><img class="img-fluid article-picture" src=https://seasalt.ai/images/blog/20-seax-distributed-contact-center/0-main.png alt=blog-image></div>
-</div>
-<div class=post-single-content>
-<p><em>In our previous blog post, <a href=https://seasalt.ai/blog/19-seax-omnichannel-communication/>Bring Customers from Any Channel to One Place with SeaX Omnichannel Communication</a>, we showed the power of omnichannel communication on SeaX, which allows user messages from virtually any channel to be surfaced on the SeaX platform. In this post, we will take a look at &ldquo;distributed&rdquo; contact centers: what they are, how they can benefit you, and how SeaX leverages a distributed platform to better serve our clients.</em></p>
-<h1 id=table-of-contents>Table of Contents</h1>
-<ul>
-<li><a href=#what-is-a-distributed-contact-center>What is a “distributed” contact center?</a></li>
-<li><a href=#what-benefits-does-a-distributed-contact-center-have>What benefits does a “distributed” contact center have?</a></li>
-<li><a href=#what-challenges-does-a-distributed-contact-center-have>What challenges does a “distributed” contact center have?</a></li>
-<li><a href=#how-does-seax-solve-these-issues>How does SeaX solve these issues?</a>
-<ul>
-<li><a href=#routing-calls-to-distributed-locations-and-agents>Routing Calls To Distributed Locations and Agents</a></li>
-<li><a href=#configuring-distributed-location-availability>Configuring Distributed Location Availability</a></li>
-<li><a href=#customize-distributed-location-messaging>Customize Distributed Location Messaging</a></li>
-</ul>
-</li>
-</ul>
-<h1 id=what-is-a-distributed-contact-center>What is a “distributed” contact center?</h1>
-<p>On the simplest level, a distributed contact center is a contact center that exists in more than one location, unlike the traditional one-location contact center. This could be a contact center with multiple offices, or multiple locations in different countries, or even a contact center with no physical location where all the agents work remotely. However, distributed contact centers still need to operate like traditional one-location contact centers, providing a seamless experience for everyone involved. For the agents, this means being supported on one platform no matter where they are located. For the customer, this means being correctly connected to the appropriate location and agent based on their needs.</p>
-<h1 id=what-benefits-does-a-distributed-contact-center-have>What benefits does a “distributed” contact center have?</h1>
-<p>Distributed contact centers have a number of benefits over traditional contact centers, especially in terms of their reach and coverage. Having agents in multiple time zones ensures that customers can reach you whenever they need help. With traditional contact centers, customers are limited to calling during one set of open hours, making it more difficult for them to get in contact with your business. Having distributed agents also gives your business more opportunity to hire people with diverse skills and specialities, such as having agents that cover a wider range of languages. Traditional contact centers in one location are limited to hiring agents in that location, running the risk of not being able to find an agent with the skills that you need. Finally, having widespread agents closer to more of your customers allows agents to have a deeper understanding of any specialized rules and regulations in that area. In a traditional one-location contact center, agents may not know specific details about something like shipping in a country on the other side of the world, making it more difficult to assist customers.</p>
-<h1 id=what-challenges-does-a-distributed-contact-center-have>What challenges does a “distributed” contact center have?</h1>
-<p>While the distributed nature of these contact centers have a lot of benefits for your business, there are some challenges to distributed contact centers as well. Having agents in multiple time zones allows easy communication with customers at all times, but also means that it is essential for calls to be correctly routed so that a customer is not directed to a location that is currently closed or an agent who is off duty. It is also important to send customers to the agents who speak the customer’s requested language and have the correct training to handle their issue. With the wide pool of agents in different locations with different skills, this routing task can quickly get complicated.</p>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/1-feature-comparison.png alt="Feature comparison: traditional call center vs distributed contact center vs SeaX.">
-<p><em>Feature comparison: traditional call center vs distributed contact center vs SeaX.</em></p>
-</center>
-<h1 id=how-does-seax-solve-these-issues>How does SeaX solve these issues?</h1>
-<h2 id=routing-calls-to-distributed-locations-and-agents>Routing Calls To Distributed Locations and Agents</h2>
-<p>SeaX is a collaborative contact center solution that is born cloud-native and distributed. It is built on top of <a href=https://www.twilio.com/flex>Twilio Flex</a> that utilizes Twilio’s cloud communications platform. Twilio provides the basic building blocks for SeaX, such as telecom infrastructure, message & task routing, and a basic contact center UI. Within SeaX, you can configure multiple phone numbers for your different locations, allowing you to have appropriate country and area codes for each area that your contact center operates in. You can therefore configure your settings by location, ensuring that each location operates correctly and receives the right calls, while still serving all of your agents on the same platform.</p>
-<p>The <a href=https://www.twilio.com/taskrouter>Twilio TaskRouter</a> assigns calls and messages to agents based on the call and agent attributes.</p>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/2-taskrouter.png alt="Diagram of TaskRouter architecture.">
-<p><em>Diagram of TaskRouter architecture. <a href=https://twilio-cms-prod.s3.amazonaws.com/images/taskrouter-diagram.width-800.png>Source</a>.</em></p>
-</center>
-<p>It also enables you to use skills-based routing, giving you fine-grained control over which agents and locations receive which calls. Not only can you label which skills your agents have, such as the level of their sales training, you can also list things like the languages that they speak, ensuring that they only get calls that they can handle. In addition, you can use this routing to assign specific phone numbers to agents, tying each agent to a particular location of your contact center, even if they aren’t physically there. Agents will only receive calls routed to their assigned location, ensuring that your customers calls are always directed to the correct person.</p>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/3-skills.png alt="Skills defined in the TaskRouter for routing incoming calls and messages.">
-<p><em>Skills defined in the TaskRouter for routing incoming calls and messages.</em></p>
-</center>
-<h2 id=configuring-distributed-location-availability>Configuring Distributed Location Availability</h2>
-<p>In SeaX, you can also configure your open hours and holidays by phone number. With this tool, you can independently control when each of your locations is open, giving you full flexibility as to when each of your locations can be contacted. In essence, each of your locations can operate like a traditional call center, with set open hours and closed on local holidays, while still being configured and connected from one common platform for your agents to operate on.</p>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/4-open-hours.png alt="Operating hours for two different phone numbers in two different time zones on the same SeaX instance.">
-</center>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/5-open-hours.png alt="Operating hours for two different phone numbers in two different time zones on the same SeaX instance.">
-<p><em>Operating hours for two different phone numbers in two different time zones on the same SeaX instance.</em></p>
-</center>
-<h2 id=customize-distributed-location-messaging>Customize Distributed Location Messaging</h2>
-<p>SeaX enables customer unavailable messages by phone number as well. The unavailable messages are automatically played to customers when there is no-one available to take their call. With the ability to customize this message by phone number, you can have messages in different languages or containing different information depending on what is most important to convey to customers calling that location.</p>
-<center>
-<img src=/images/blog/20-seax-distributed-contact-center/6-unavailable-message.png alt="Unavailable message for a specific phone number on the SeaX platform.">
-<p><em>Unavailable message for a specific phone number on the SeaX platform.</em></p>
-</center>
-<p>A traditional one-location contact center can only effectively serve the area directly around it, though it is by nature on one platform. A distributed contact center greatly expands the customer base that it can serve with agents in multiple locations, but has some challenges with integrating all the services its agents need no matter where they are. With SeaX, you can get the reach to every part of your customer base, while still serving all of your agents on one easy platform.</p>
-<p>Thanks for taking the time to read about how SeaX cloud contact center supports your distributed contact center on one platform. Please stay tuned for our next blog post, which will dive into our in-house text-to-speech and speech-to-text, and how they can enhance your contact center. If you’re interested in learning more right away, fill out our “<a href="https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true">Book a Demo</a>" form to get a first hand look at the SeaX platform.</p>
-<div class="social-share pt-4">
-<h4>Share:</h4>
-<a class=resp-sharing-button__link href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
-</div>
-</a>
-<a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&url=https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><clipPath id="clip-path"><rect id="Rectangle_169" data-name="Rectangle 169" width="18" height="18" transform="translate(-933 -4063)" fill="#fff"/></clipPath></defs><g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(933 4063)" clip-path="url(#clip-path)"><path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M14.355 6.619c.01.142.01.284.01.426a9.266 9.266.0 01-9.33 9.33A9.267 9.267.0 010 14.9a6.784 6.784.0 00.792.041 6.567 6.567.0 004.071-1.4A3.285 3.285.0 011.8 11.269a4.135 4.135.0 00.619.051 3.468 3.468.0 00.863-.112A3.28 3.28.0 01.65 7.99V7.949a3.3 3.3.0 001.482.416A3.284 3.284.0 011.117 3.98 9.321 9.321.0 007.878 7.411 3.7 3.7.0 017.8 6.66a3.282 3.282.0 015.675-2.244 6.456 6.456.0 002.081-.792 3.27 3.27.0 01-1.442 1.807A6.574 6.574.0 0016 4.924a7.049 7.049.0 01-1.645 1.7z" transform="translate(-931 -4062.381)" fill="#fff"/></g></svg>
-</div>
-</a>
-<a class=resp-sharing-button__link href="mailto:?subject=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&body=https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9.0 6v12c0 1.1.9 2 2 2h20c1.1.0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17.0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1.0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08.0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
-</div>
-</a>
-<a class=resp-sharing-button__link href="https://reddit.com/submit/?url=https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f&resubmit=true&title=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center" target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96.0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65.0 3-1.35 3-3s-1.35-3-3-3c-1.38.0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65.0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66.0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64.0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4.0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6.0.23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1.0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1.0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg>
-</div>
-</a>
-<a class=resp-sharing-button__link href="whatsapp://send?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center%20https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f" data-action=share/whatsapp/share target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3.0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7.0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1.0-5.2 4.2-9.4 9.4-9.4 2.5.0 4.9 1 6.7 2.8s2.8 4.2 2.8 6.7c-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6.3-.3.4-.5c.2-.1.3-.3.4-.5s0-.4.0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-</div>
-</a>
-<a class=resp-sharing-button__link href="https://telegram.me/share/url?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&url=https%3a%2f%2fseasalt.ai%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label>
-<div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><clipPath id="telegram-clip-path"><rect id="Rectangle_168" data-name="Rectangle 168" width="18" height="18" transform="translate(-933 -4121)" fill="#fff"/></clipPath></defs><g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(933 4121)" clip-path="url(#telegram-clip-path)"><path id="Icon_simple-telegram" data-name="Icon simple-telegram" d="M15.939 4.129 13.531 15.5c-.167.807-.654 1-1.334.627L8.529 13.412 6.755 15.126a.935.935.0 01-.734.373c-.48.0-.4-.18-.56-.634L4.194 10.738.56 9.6c-.787-.23-.794-.77.173-1.163L14.912 2.968c.647-.287 1.267.16 1.02 1.154z" transform="translate(-932.987 -4121.596)" fill="#fff"/></g></svg>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-</div>
-<section class="newSection contain-footer">
-<div class="footer-links section-inner">
-<div class=footer-links-texts>
-<div class=links-texts-column>
-<span class=links-texts-title>Products</span>
-<a class=links-texts-link href=https://suite.seasalt.ai/ target=_blank>
-SeaSuite
-</a>
-<a class="links-texts-link indent-1" href=https://code.seasalt.ai/ target=_blank>
-SeaCode
-</a>
-<a class="links-texts-link indent-1" href=https://chat.seasalt.ai/ target=_blank>
-SeaChat
-</a>
-<a class="links-texts-link indent-1" href=https://word.seasalt.ai/ target=_blank>
-SeaWord
-</a>
-<div class="links-texts-link is-light indent-1">
-SeaVoice
-</div>
-<a class="links-texts-link indent-2" href=https://suite.seasalt.ai/stt target=_blank>
-Speech To Text
-</a>
-<a class="links-texts-link indent-2" href=https://suite.seasalt.ai/tts target=_blank>
-Text To Speech
-</a>
-<a class=links-texts-link href=https://meet.seasalt.ai target=_blank>
-SeaMeet
-</a>
-<a class=links-texts-link href=https://seax.seasalt.ai/ target=_blank>
-SeaX
-</a>
-</div>
-<div class=links-texts-column>
-<span class=links-texts-title>Solutions</span>
-<a class=links-texts-link href=https://nearme.seasalt.ai/>
-Near Me Messaging
-</a>
-<a class=links-texts-link href=/managed-contact-center/>
-Managed Contact Center
-</a>
+<!doctype html><html class=no-js lang=en-us scroll-behavior=smooth><head><script>(function(e,t,n,s,o){e[s]=e[s]||[],e[s].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=t.getElementsByTagName(n)[0],i=t.createElement(n),r=s!="dataLayer"?"&l="+s:"";i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id="+o+r,a.parentNode.insertBefore(i,a)})(window,document,"script","dataLayer","GTM-N26SF8T")</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Corporation","url":"https://seasalt.ai/","logo":"https://seasalt.ai/images/logo.png","name":"Seasalt.ai","description":"Seasalt.ai is a Seattle-based Cloud Communication AI company. Try SeaSuite and SeaX, the next-gen voice solution for the contact centers of the future."}</script><meta charset=utf-8><meta name=description content="In this blog, we will take a look at 'distributed' contact centers: what they are, how they can benefit you, and how SeaX leverages a distributed platform to better serve our clients."><meta name=author content="Sarah Reid"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.105.0"><title>Expand Your Contact Center Footprint with a Distributed Contact Center</title><link rel="shortcut icon" type=image/x-icon href=/images/favicon.ico><link rel=stylesheet href=/plugins/themefisher-font/style.min.css><link rel=stylesheet href=/plugins/animate-css/animate.min.css><link rel=stylesheet href=/plugins/magnific-popup/dist/magnific-popup.css><link rel=stylesheet href=/plugins/slick-carousel/slick/slick.css><link rel=stylesheet href=/plugins/slick-carousel/slick/slick-theme.css><link rel=stylesheet href=/css/style.min.css integrity media=screen><link rel=stylesheet href=/css/index.min.css integrity media=screen><link rel=stylesheet href=/css/custom.css><link rel=stylesheet href=/css/career.css><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel=stylesheet><link rel=preconnect href=https://fonts.gstatic.com><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel=stylesheet><script>(()=>{window.addEventListener("load",()=>{const e={accountSid:"AC41b16a5f90c65a13c4d5a3f44a0d1d79",flexFlowSid:"FOadf3d4566db52c9b9f327b49bd6376f6",context:{friendlyName:"Customer",isWebchatDemo:!0},colorTheme:{overrides:{EntryPoint:{Container:{background:"#F22F46",color:"#FFFFFF","&:hover":{backgroundColor:"#DE2137"}}}}},fileAttachment:{enabled:!0}}})})()</script><style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style><link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head><body id=body data-spy=scroll data-target=.navbar data-offset=52><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript><div id=content><header class=seasalt-header-container><div class=page-sidebar-hamburger></div><a class=seasalt-header-logo href=/><img class=header-logo-svg src=/images/logo.png></a><div class=seasalt-header-main></div><div class="seasalt-header-settings is-closed"><div class="header-links-text is-title"><span class=links-text-span>Products</span><div class=header-links-dropdown><a class="links-dropdown-row is-title"><span class=links-text-span>HORIZONTAL AI</span></a>
+<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/><span class=links-text-span>SeaSuite</span></a>
+<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://code.seasalt.ai/><span class=links-text-span>SeaCode</span></a>
+<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://chat.seasalt.ai/><span class=links-text-span>SeaChat</span></a>
+<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://word.seasalt.ai/><span class=links-text-span>SeaWord</span></a>
+<a class="links-dropdown-row indent-1"><span class=links-text-span>SeaVoice</span></a>
+<a class="links-dropdown-row indent-2" target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/stt><span class=links-text-span>Speech to Text</span></a>
+<a class="links-dropdown-row indent-2" target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/tts><span class=links-text-span>Text to Speech</span></a>
+<a class="links-dropdown-row is-title"><span class=links-text-span>VERTICAL PRODUCTS</span></a>
+<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://meet.seasalt.ai><span class=links-text-span>SeaMeet</span></a>
+<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://seax.seasalt.ai/><span class=links-text-span>SeaX</span></a></div></div><div class="header-links-text is-title"><span class=links-text-span>Solutions</span><div class=header-links-dropdown><a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://nearme.seasalt.ai/><span class=links-text-span>Near Me Messaging</span></a>
+<a class=links-dropdown-row href=/managed-contact-center/><span class=links-text-span>Managed Contact Center</span></a></div></div><div class="header-links-text is-title"><span class=links-text-span>Company</span><div class=header-links-dropdown><a class=links-dropdown-row href=/careers/><span class=links-text-span>Careers</span></a>
+<a class=links-dropdown-row href=/blog/><span class=links-text-span>Blog</span></a>
+<a class=links-dropdown-row href=/events/><span class=links-text-span>Events</span></a></div></div><a class="header-button-container ga-event" id=bookDemo_Top data-event-name=book_a_demo data-event-label=home-header target=_blank><span class=header-button-text>Book A Demo</span></a></div><div class="ng-loading-container fixed"></div></header><section class="section single-article"><div class=single-article-container><div><h1 class=article-title>Expand Your Contact Center Footprint with a Distributed Contact Center</h1><ul class=list-inline><li class="btn btn-info" style=border-radius:.5rem><a href=/tags/seax/>SeaX</a></li></ul><ul class="list-inline article-sub-title"><li class="list-inline-item author-name">Sarah Reid</li><li class=list-inline-item>Wednesday, Jul 27, 2022</li></ul><div class=single-article-pic><img class="img-fluid article-picture" src=/images/blog/20-seax-distributed-contact-center/0-main.png alt=blog-image></div></div><div class=post-single-content><p><em>In our previous blog post, <a href=https://seasalt.ai/blog/19-seax-omnichannel-communication/>Bring Customers from Any Channel to One Place with SeaX Omnichannel Communication</a>, we showed the power of omnichannel communication on SeaX, which allows user messages from virtually any channel to be surfaced on the SeaX platform. In this post, we will take a look at &ldquo;distributed&rdquo; contact centers: what they are, how they can benefit you, and how SeaX leverages a distributed platform to better serve our clients.</em></p><h1 id=table-of-contents>Table of Contents</h1><ul><li><a href=#what-is-a-distributed-contact-center>What is a “distributed” contact center?</a></li><li><a href=#what-benefits-does-a-distributed-contact-center-have>What benefits does a “distributed” contact center have?</a></li><li><a href=#what-challenges-does-a-distributed-contact-center-have>What challenges does a “distributed” contact center have?</a></li><li><a href=#how-does-seax-solve-these-issues>How does SeaX solve these issues?</a><ul><li><a href=#routing-calls-to-distributed-locations-and-agents>Routing Calls To Distributed Locations and Agents</a></li><li><a href=#configuring-distributed-location-availability>Configuring Distributed Location Availability</a></li><li><a href=#customize-distributed-location-messaging>Customize Distributed Location Messaging</a></li></ul></li></ul><h1 id=what-is-a-distributed-contact-center>What is a “distributed” contact center?</h1><p>On the simplest level, a distributed contact center is a contact center that exists in more than one location, unlike the traditional one-location contact center. This could be a contact center with multiple offices, or multiple locations in different countries, or even a contact center with no physical location where all the agents work remotely. However, distributed contact centers still need to operate like traditional one-location contact centers, providing a seamless experience for everyone involved. For the agents, this means being supported on one platform no matter where they are located. For the customer, this means being correctly connected to the appropriate location and agent based on their needs.</p><h1 id=what-benefits-does-a-distributed-contact-center-have>What benefits does a “distributed” contact center have?</h1><p>Distributed contact centers have a number of benefits over traditional contact centers, especially in terms of their reach and coverage. Having agents in multiple time zones ensures that customers can reach you whenever they need help. With traditional contact centers, customers are limited to calling during one set of open hours, making it more difficult for them to get in contact with your business. Having distributed agents also gives your business more opportunity to hire people with diverse skills and specialities, such as having agents that cover a wider range of languages. Traditional contact centers in one location are limited to hiring agents in that location, running the risk of not being able to find an agent with the skills that you need. Finally, having widespread agents closer to more of your customers allows agents to have a deeper understanding of any specialized rules and regulations in that area. In a traditional one-location contact center, agents may not know specific details about something like shipping in a country on the other side of the world, making it more difficult to assist customers.</p><h1 id=what-challenges-does-a-distributed-contact-center-have>What challenges does a “distributed” contact center have?</h1><p>While the distributed nature of these contact centers have a lot of benefits for your business, there are some challenges to distributed contact centers as well. Having agents in multiple time zones allows easy communication with customers at all times, but also means that it is essential for calls to be correctly routed so that a customer is not directed to a location that is currently closed or an agent who is off duty. It is also important to send customers to the agents who speak the customer’s requested language and have the correct training to handle their issue. With the wide pool of agents in different locations with different skills, this routing task can quickly get complicated.</p><center><img src=/images/blog/20-seax-distributed-contact-center/1-feature-comparison.png alt="Feature comparison: traditional call center vs distributed contact center vs SeaX."><p><em>Feature comparison: traditional call center vs distributed contact center vs SeaX.</em></p></center><h1 id=how-does-seax-solve-these-issues>How does SeaX solve these issues?</h1><h2 id=routing-calls-to-distributed-locations-and-agents>Routing Calls To Distributed Locations and Agents</h2><p>SeaX is a collaborative contact center solution that is born cloud-native and distributed. It is built on top of <a href=https://www.twilio.com/flex>Twilio Flex</a> that utilizes Twilio’s cloud communications platform. Twilio provides the basic building blocks for SeaX, such as telecom infrastructure, message & task routing, and a basic contact center UI. Within SeaX, you can configure multiple phone numbers for your different locations, allowing you to have appropriate country and area codes for each area that your contact center operates in. You can therefore configure your settings by location, ensuring that each location operates correctly and receives the right calls, while still serving all of your agents on the same platform.</p><p>The <a href=https://www.twilio.com/taskrouter>Twilio TaskRouter</a> assigns calls and messages to agents based on the call and agent attributes.</p><center><img src=/images/blog/20-seax-distributed-contact-center/2-taskrouter.png alt="Diagram of TaskRouter architecture."><p><em>Diagram of TaskRouter architecture. <a href=https://twilio-cms-prod.s3.amazonaws.com/images/taskrouter-diagram.width-800.png>Source</a>.</em></p></center><p>It also enables you to use skills-based routing, giving you fine-grained control over which agents and locations receive which calls. Not only can you label which skills your agents have, such as the level of their sales training, you can also list things like the languages that they speak, ensuring that they only get calls that they can handle. In addition, you can use this routing to assign specific phone numbers to agents, tying each agent to a particular location of your contact center, even if they aren’t physically there. Agents will only receive calls routed to their assigned location, ensuring that your customers calls are always directed to the correct person.</p><center><img src=/images/blog/20-seax-distributed-contact-center/3-skills.png alt="Skills defined in the TaskRouter for routing incoming calls and messages."><p><em>Skills defined in the TaskRouter for routing incoming calls and messages.</em></p></center><h2 id=configuring-distributed-location-availability>Configuring Distributed Location Availability</h2><p>In SeaX, you can also configure your open hours and holidays by phone number. With this tool, you can independently control when each of your locations is open, giving you full flexibility as to when each of your locations can be contacted. In essence, each of your locations can operate like a traditional call center, with set open hours and closed on local holidays, while still being configured and connected from one common platform for your agents to operate on.</p><center><img src=/images/blog/20-seax-distributed-contact-center/4-open-hours.png alt="Operating hours for two different phone numbers in two different time zones on the same SeaX instance."></center>
+<center><img src=/images/blog/20-seax-distributed-contact-center/5-open-hours.png alt="Operating hours for two different phone numbers in two different time zones on the same SeaX instance."><p><em>Operating hours for two different phone numbers in two different time zones on the same SeaX instance.</em></p></center><h2 id=customize-distributed-location-messaging>Customize Distributed Location Messaging</h2><p>SeaX enables customer unavailable messages by phone number as well. The unavailable messages are automatically played to customers when there is no-one available to take their call. With the ability to customize this message by phone number, you can have messages in different languages or containing different information depending on what is most important to convey to customers calling that location.</p><center><img src=/images/blog/20-seax-distributed-contact-center/6-unavailable-message.png alt="Unavailable message for a specific phone number on the SeaX platform."><p><em>Unavailable message for a specific phone number on the SeaX platform.</em></p></center><p>A traditional one-location contact center can only effectively serve the area directly around it, though it is by nature on one platform. A distributed contact center greatly expands the customer base that it can serve with agents in multiple locations, but has some challenges with integrating all the services its agents need no matter where they are. With SeaX, you can get the reach to every part of your customer base, while still serving all of your agents on one easy platform.</p><p>Thanks for taking the time to read about how SeaX cloud contact center supports your distributed contact center on one platform. Please stay tuned for our next blog post, which will dive into our in-house text-to-speech and speech-to-text, and how they can enhance your contact center. If you’re interested in learning more right away, fill out our “<a href="https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true">Book a Demo</a>" form to get a first hand look at the SeaX platform.</p><div class="social-share pt-4"><h4>Share:</h4><a class=resp-sharing-button__link href="https://facebook.com/sharer/sharer.php?u=%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg></div></a><a class=resp-sharing-button__link href="https://twitter.com/intent/tweet/?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&url=%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><clipPath id="clip-path"><rect id="Rectangle_169" data-name="Rectangle 169" width="18" height="18" transform="translate(-933 -4063)" fill="#fff"/></clipPath></defs><g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(933 4063)" clip-path="url(#clip-path)"><path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M14.355 6.619c.01.142.01.284.01.426a9.266 9.266.0 01-9.33 9.33A9.267 9.267.0 010 14.9a6.784 6.784.0 00.792.041 6.567 6.567.0 004.071-1.4A3.285 3.285.0 011.8 11.269a4.135 4.135.0 00.619.051 3.468 3.468.0 00.863-.112A3.28 3.28.0 01.65 7.99V7.949a3.3 3.3.0 001.482.416A3.284 3.284.0 011.117 3.98 9.321 9.321.0 007.878 7.411 3.7 3.7.0 017.8 6.66a3.282 3.282.0 015.675-2.244 6.456 6.456.0 002.081-.792 3.27 3.27.0 01-1.442 1.807A6.574 6.574.0 0016 4.924a7.049 7.049.0 01-1.645 1.7z" transform="translate(-931 -4062.381)" fill="#fff"/></g></svg></div></a><a class=resp-sharing-button__link href="mailto:?subject=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&body=%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9.0 6v12c0 1.1.9 2 2 2h20c1.1.0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17.0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1.0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08.0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg></div></a><a class=resp-sharing-button__link href="https://reddit.com/submit/?url=%2fblog%2f20-seax-distributed-contact-center%2f&resubmit=true&title=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center" target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96.0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65.0 3-1.35 3-3s-1.35-3-3-3c-1.38.0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65.0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66.0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64.0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4.0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6.0.23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1.0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1.0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg></div></a><a class=resp-sharing-button__link href="whatsapp://send?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center%20%2fblog%2f20-seax-distributed-contact-center%2f" data-action=share/whatsapp/share target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3.0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7.0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1.0-5.2 4.2-9.4 9.4-9.4 2.5.0 4.9 1 6.7 2.8s2.8 4.2 2.8 6.7c-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6.3-.3.4-.5c.2-.1.3-.3.4-.5s0-.4.0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg></div></a><a class=resp-sharing-button__link href="https://telegram.me/share/url?text=Expand%20Your%20Contact%20Center%20Footprint%20with%20a%20Distributed%20Contact%20Center&url=%2fblog%2f20-seax-distributed-contact-center%2f" target=_blank rel=noopener aria-label><div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><clipPath id="telegram-clip-path"><rect id="Rectangle_168" data-name="Rectangle 168" width="18" height="18" transform="translate(-933 -4121)" fill="#fff"/></clipPath></defs><g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(933 4121)" clip-path="url(#telegram-clip-path)"><path id="Icon_simple-telegram" data-name="Icon simple-telegram" d="M15.939 4.129 13.531 15.5c-.167.807-.654 1-1.334.627L8.529 13.412 6.755 15.126a.935.935.0 01-.734.373c-.48.0-.4-.18-.56-.634L4.194 10.738.56 9.6c-.787-.23-.794-.77.173-1.163L14.912 2.968c.647-.287 1.267.16 1.02 1.154z" transform="translate(-932.987 -4121.596)" fill="#fff"/></g></svg></div></a></div></div></div></section></div><section class="newSection contain-footer"><div class="footer-links section-inner"><div class=footer-links-texts><div class=links-texts-column><span class=links-texts-title>Products</span>
+<a class=links-texts-link href=https://suite.seasalt.ai/ target=_blank>SeaSuite</a>
+<a class="links-texts-link indent-1" href=https://code.seasalt.ai/ target=_blank>SeaCode</a>
+<a class="links-texts-link indent-1" href=https://chat.seasalt.ai/ target=_blank>SeaChat</a>
+<a class="links-texts-link indent-1" href=https://word.seasalt.ai/ target=_blank>SeaWord</a><div class="links-texts-link is-light indent-1">SeaVoice</div><a class="links-texts-link indent-2" href=https://suite.seasalt.ai/stt target=_blank>Speech To Text</a>
+<a class="links-texts-link indent-2" href=https://suite.seasalt.ai/tts target=_blank>Text To Speech</a>
+<a class=links-texts-link href=https://meet.seasalt.ai target=_blank>SeaMeet</a>
+<a class=links-texts-link href=https://seax.seasalt.ai/ target=_blank>SeaX</a></div><div class=links-texts-column><span class=links-texts-title>Solutions</span>
+<a class=links-texts-link href=https://nearme.seasalt.ai/>Near Me Messaging</a>
+<a class=links-texts-link href=/managed-contact-center/>Managed Contact Center</a>
 <span class=links-texts-title>Resources</span>
-<a class=links-texts-link href=https://wiki.seasalt.ai/>
-Product Wiki
-</a>
-<a class=links-texts-link href=https://docs.seasalt.ai/>
-Developer Docs
-</a>
+<a class=links-texts-link href=https://wiki.seasalt.ai/>Product Wiki</a>
+<a class=links-texts-link href=https://docs.seasalt.ai/>Developer Docs</a>
 <span class=links-texts-title>Company</span>
-<a class=links-texts-link href=/careers/>
-Careers
-</a>
-<div class=links-texts-blog><a class=links-texts-link href=/blog/>Blog</a><a class=links-texts-link href=https://www.linkedin.com/company/seasalt-ai target=_blank><img class=icon src=/images/new/LinkedIn.png></a></div>
-<a class=links-texts-link href=/events/>
-Events
-</a>
-<div id=bookDemo_footer-contact class="links-texts-link ga-event" data-event-name=book_a_demo data-event-label=home-footer-contact>
-Contact
-</div>
-</div>
-</div>
-<div class=footer-links-form>
-<img class=footer-links-form-svg src=/images/new/stay-in-mail.svg>
-<span class=footer-links-form-title>Stay in the know</span>
-<div id=footer-links-form-submit class="footer-links-form-submit ga-event" data-event-name=mail_submit data-event-label=home-footer>
-<span>* Work Email</span>
-</div>
-<div id=submit-message class=submit-message data-successmsg="Thanks for submitting your email!" data-errormsg="Please Provide Business Email Address."></div>
-</div>
-</div>
-</section>
-<footer id=footer class=newSection>
-<div class=section-inner>
-<div class="copyright text-center">
-<a href=https://seasalt.ai/>
-<img src=https://seasalt.ai/images/logo.png alt=Meghna>
-</a>
-<br>
-<p>Made with <i class="fa fa-heart"></i> in the city of
+<a class=links-texts-link href=/careers/>Careers</a><div class=links-texts-blog><a class=links-texts-link href=/blog/>Blog</a><a class=links-texts-link href=https://www.linkedin.com/company/seasalt-ai target=_blank><img class=icon src=/images/new/LinkedIn.png></a></div><a class=links-texts-link href=/events/>Events</a><div id=bookDemo_footer-contact class="links-texts-link ga-event" data-event-name=book_a_demo data-event-label=home-footer-contact>Contact</div></div></div><div class=footer-links-form><img class=footer-links-form-svg src=/images/new/stay-in-mail.svg>
+<span class=footer-links-form-title>Stay in the know</span><div id=footer-links-form-submit class="footer-links-form-submit ga-event" data-event-name=mail_submit data-event-label=home-footer><span>* Work Email</span></div><div id=submit-message class=submit-message data-successmsg="Thanks for submitting your email!" data-errormsg="Please Provide Business Email Address."></div></div></div></section><footer id=footer class=newSection><div class=section-inner><div class="copyright text-center"><a href=/><img src=/images/logo.png alt=Meghna></a><br><p>Made with <i class="fa fa-heart"></i> in the city of
 <i class="fa fa-coffee"></i>
 <i class="fa fa-umbrella"></i>
 <i class="fa fa-plane"></i>
-<i class="fa fa-diamond"></i></p>
-<p>Copyright &copy; 2019-<script>document.write((new Date).getFullYear())</script>. All Rights Reserved.</p>
-</div>
-<div class=termsPrivacy>
-<a class=termsPrivacy-terms href=/terms/>Terms</a>
-<a class=termsPrivacy-privacy href=/privacy/>Privacy statement</a>
-</div>
-</div>
-</footer>
-<script type=text/javascript src=https://seasalt.ai/plugins/jquery/dist/jquery.min.js></script>
-<script type=text/javascript src=https://seasalt.ai/plugins/slick-carousel/slick/slick.min.js></script>
-<script type=text/javascript src=https://seasalt.ai/plugins/magnific-popup/dist/jquery.magnific-popup.min.js></script>
-<script type=text/javascript src=https://seasalt.ai/plugins/wow/dist/wow.min.js></script>
-<script src=https://seasalt.ai/js/scroll-behavior-polyfill.min.js></script>
-<script src=https://seasalt.ai/js/script.min.js></script>
-<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-10405841-7','auto'),ga('send','pageview')</script>
-<link type=text/css href=https://www.gstatic.com/business-messages/v2/bm_widget_button.css rel=stylesheet>
-<link type=text/css href=https://wiki.seasalt.ai/google-widget.css rel=stylesheet>
-<script crossorigin=use-credentials src="https://businessmessages.google.com/widget/v2/js?cb=initWidget"></script>
-<div id=google-widget>
-<button id=google-chat data-bm-widget-layout=floating>
-<span id=google-tip class="bm-widget-button-text tip" role=tooltip>Chat with Seasalt.ai</span>
-</button>
-</div>
-<script src=https://seasalt.ai/js/custom.js></script>
-<script src=https://seasalt.ai/js/emailCheck.js></script>
-<script src=https://seasalt.ai/js/toast.js></script>
-<script src=https://seasalt.ai/js/chat.js></script>
-<div class=video-mask-container>
-<video class=video-media-fullscreen muted playsinline=true loop=false></video>
+<i class="fa fa-diamond"></i></p><p>Copyright &copy; 2019-<script>document.write((new Date).getFullYear())</script>. All Rights Reserved.</p></div><div class=termsPrivacy><a class=termsPrivacy-terms href=/terms/>Terms</a>
+<a class=termsPrivacy-privacy href=/privacy/>Privacy statement</a></div></div></footer><script type=text/javascript src=/plugins/jquery/dist/jquery.min.js></script>
+<script type=text/javascript src=/plugins/slick-carousel/slick/slick.min.js></script>
+<script type=text/javascript src=/plugins/magnific-popup/dist/jquery.magnific-popup.min.js></script>
+<script type=text/javascript src=/plugins/wow/dist/wow.min.js></script>
+<script src=/js/scroll-behavior-polyfill.min.js></script>
+<script src=/js/script.min.js></script>
+<script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-10405841-7","auto"),ga("send","pageview")</script><link type=text/css href=https://www.gstatic.com/business-messages/v2/bm_widget_button.css rel=stylesheet><link type=text/css href=https://wiki.seasalt.ai/google-widget.css rel=stylesheet><script crossorigin=use-credentials src="https://businessmessages.google.com/widget/v2/js?cb=initWidget"></script><div id=google-widget><button id=google-chat data-bm-widget-layout=floating>
+<span id=google-tip class="bm-widget-button-text tip" role=tooltip>Chat with Seasalt.ai</span></button></div><script src=/js/custom.js></script>
+<script src=/js/emailCheck.js></script>
+<script src=/js/toast.js></script>
+<script src=/js/chat.js></script><div class=video-mask-container><video class=video-media-fullscreen muted playsinline=true loop=false></video>
 <button class=video-fullscreen-play>
-<img class="w-100 h-100" src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAWCAYAAAAinad/AAABCElEQVQ4jaXVsSvGQRjA8c/79qaURRmYZZaUlOw2ZfMPUJKoNwOrkrIqq8UomwwGiyQm0puSWAwMBmUw/HR1N1Dv6/d777vcdd19e56n5+5qRVFM4xkvMqljCi1sojdHV49jkGzhFrO5ssQwjnGCkVxZYgZ32EFfrizQg3U8YB61HFliCIc4x1iuLBFa6Ap76M+VBRpYiqkv/j1fVZYYwD6uMZkrS4QaXuAAg7mywDfe8NnIFJ1iNV7HrtN8wlxs7lZarBrZF7axG+e/qCI7wlqnp6qM7B4rOPtvY6eafaCJ0TKidpEVsW828FpG0k52g2VcVpEkUprvWMBEt6JA+FDG8Rhr1D34AYrCMscwUNrDAAAAAElFTkSuQmCC>
-</button>
+<img class="w-100 h-100" src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAWCAYAAAAinad/AAABCElEQVQ4jaXVsSvGQRjA8c/79qaURRmYZZaUlOw2ZfMPUJKoNwOrkrIqq8UomwwGiyQm0puSWAwMBmUw/HR1N1Dv6/d777vcdd19e56n5+5qRVFM4xkvMqljCi1sojdHV49jkGzhFrO5ssQwjnGCkVxZYgZ32EFfrizQg3U8YB61HFliCIc4x1iuLBFa6Ap76M+VBRpYiqkv/j1fVZYYwD6uMZkrS4QaXuAAg7mywDfe8NnIFJ1iNV7HrtN8wlxs7lZarBrZF7axG+e/qCI7wlqnp6qM7B4rOPtvY6eafaCJ0TKidpEVsW828FpG0k52g2VcVpEkUprvWMBEt6JA+FDG8Rhr1D34AYrCMscwUNrDAAAAAElFTkSuQmCC></button>
 <button class=video-fullscreen-pause>
-<img class="w-100 h-100" src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAJElEQVQokWP8////fwZUwIjEQ5FjYiABjCoeVTyqmCBgYGAAAKbZBSSCnzASAAAAAElFTkSuQmCC>
-</button>
-<div class=video-fullscreen-progress></div>
-</div>
-<div class="popup-toast-overlay is-hidden">
-<div class=popup-toast-container>
-<div class=popup-toast-icon style=--success-icon:url(https://seasalt.ai/images/locationBasedMessaging/success.png);--fail-icon:url(https://seasalt.ai/images/locationBasedMessaging/fail.png)></div>
-<div class=popup-toast-content>
-<h1 class=popup-toast-title></h1>
-<div class=popup-toast-text></div>
-</div>
-</div>
-</div><div class=form-popup>
-<div class=form-popup__background></div>
-<div class=form-popup__container>
-<div class=form-popup__closeBtn><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 8 8"><defs><style>.cls-1{fill:#fff}</style></defs><g id="icon-close" transform="translate(0 0)"><path id="Union_10" data-name="Union 10" class="cls-1" d="M7.411 7.9 4 4.488.589 7.9A.345.345.0 11.1 7.411L3.512 4 .1.588A.344.344.0 01.588.1L4 3.512 7.411.1A.345.345.0 117.9.589L4.488 4 7.9 7.411a.345.345.0 01-.488.488z"/></g></svg>
-</div>
-<iframe id=form-popup-iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true"></div>
-</div>
-</body>
-</html>
+<img class="w-100 h-100" src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAJElEQVQokWP8////fwZUwIjEQ5FjYiABjCoeVTyqmCBgYGAAAKbZBSSCnzASAAAAAElFTkSuQmCC></button><div class=video-fullscreen-progress></div></div><div class="popup-toast-overlay is-hidden"><div class=popup-toast-container><div class=popup-toast-icon style=--success-icon:url(/);--fail-icon:url(/)></div><div class=popup-toast-content><h1 class=popup-toast-title></h1><div class=popup-toast-text></div></div></div></div><div class=form-popup><div class=form-popup__background></div><div class=form-popup__container><div class=form-popup__closeBtn><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 8 8"><defs><style>.cls-1{fill:#fff}</style></defs><g id="icon-close" transform="translate(0 0)"><path id="Union_10" data-name="Union 10" class="cls-1" d="M7.411 7.9 4 4.488.589 7.9A.345.345.0 11.1 7.411L3.512 4 .1.588A.344.344.0 01.588.1L4 3.512 7.411.1A.345.345.0 117.9.589L4.488 4 7.9 7.411a.345.345.0 01-.488.488z"/></g></svg></div><iframe id=form-popup-iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true"></div></div></body></html>

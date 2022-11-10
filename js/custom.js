@@ -92,13 +92,13 @@ const initScroll = (() => {
 
 // 全螢幕影片
 function initVideo({
-  buttonSelector = '.index .header button.button-arrow',
-  containerSelector = '.video-mask-container',
-  videoSelector = '.video-mask-container .video-media-fullscreen',
-  playSelector = '.video-mask-container .video-fullscreen-play',
-  pauseSelector = '.video-mask-container .video-fullscreen-pause',
-  progressSelector = '.video-mask-container .video-fullscreen-progress',
-  closeSelector = 'label.menu-label',
+  buttonSelector = ".index .header button.button-arrow",
+  containerSelector = ".video-mask-container",
+  videoSelector = ".video-mask-container .video-media-fullscreen",
+  playSelector = ".video-mask-container .video-fullscreen-play",
+  pauseSelector = ".video-mask-container .video-fullscreen-pause",
+  progressSelector = ".video-mask-container .video-fullscreen-progress",
+  closeSelector = "label.menu-label",
 }) {
   const select = (selector) => document.querySelectorAll(selector);
   // const { body } = document;
@@ -111,7 +111,7 @@ function initVideo({
   const closes = select(closeSelector);
 
   // 影片時間事件
-  const events = ['timeupdate', 'progress'];
+  const events = ["timeupdate", "progress"];
 
   // 影片狀態紀錄
   const record = {
@@ -123,17 +123,21 @@ function initVideo({
     const { currentTarget, target } = event;
     const dom = currentTarget ?? target;
     const { attributes } = dom ?? {};
-    const { 'media-source': source, 'media-poster': poster } = attributes ?? {};
-    const [{ value: videoSrc }, { value: imageSrc }] = [source ?? {}, poster ?? {}];
-    
+    const { "media-source": source, "media-poster": poster } = attributes ?? {};
+    const [{ value: videoSrc }, { value: imageSrc }] = [
+      source ?? {},
+      poster ?? {},
+    ];
+
     videos.forEach((video) => {
-      const currentSrc =  video.children?.[0]?.src.replace(/^(\/\/|https?):/, '') ?? '';
-      const triggeredSrc = videoSrc?.replace(/^(\/\/|https?):/, '');
+      const currentSrc =
+        video.children?.[0]?.src.replace(/^(\/\/|https?):/, "") ?? "";
+      const triggeredSrc = videoSrc?.replace(/^(\/\/|https?):/, "");
 
       if (imageSrc) {
         video.poster = imageSrc;
       }
-      if (videoSrc && (currentSrc !== triggeredSrc)) {
+      if (videoSrc && currentSrc !== triggeredSrc) {
         video.src = videoSrc;
       }
       // source 有快取 bug
@@ -148,10 +152,9 @@ function initVideo({
       //     video.insertBefore(sourceDom, video.firstChild);
       //   }
       // }
-      video.play()
-        .catch((err) => {
-          console.log('debug : playVideos -> err', err);
-        });
+      video.play().catch((err) => {
+        console.log("debug : playVideos -> err", err);
+      });
       video.muted = false;
     });
   }
@@ -165,12 +168,12 @@ function initVideo({
 
   // 改變 開啟/關閉 影片 class
   function toggleClasses() {
-    const method = record.show ? 'add' : 'remove';
+    const method = record.show ? "add" : "remove";
     containers.forEach((container) => {
-      container.classList[method]('is-shown');
+      container.classList[method]("is-shown");
     });
     closes.forEach((close) => {
-      close.classList[method]('is-close');
+      close.classList[method]("is-close");
     });
   }
 
@@ -188,7 +191,7 @@ function initVideo({
   buttons.forEach((button) => {
     button.onclick = (e) => {
       const { attributes } = button ?? {};
-      const { 'media-source': source } = attributes ?? {};
+      const { "media-source": source } = attributes ?? {};
       const { value: videoSrc } = source;
       if (videoSrc) {
         record.show = !0;
@@ -228,9 +231,9 @@ function initVideo({
   videos.forEach((video) => {
     video.onclick = (event) => {
       event.preventDefault();
-      video[video.paused ? 'play' : 'pause']();
+      video[video.paused ? "play" : "pause"]();
     };
-  })
+  });
 
   // 按下進度條
   progresses.forEach((progress) => {
@@ -238,11 +241,11 @@ function initVideo({
       event.preventDefault();
       const { offsetX, target, srcElement, toElement } = event;
       const timeRatio = offsetX / progress.clientWidth;
-  
+
       videos.forEach((video) => {
         const { buffered, duration, currentTime } = video;
         video.currentTime = timeRatio * duration;
-      })
+      });
     };
   });
 
@@ -258,8 +261,8 @@ function initVideo({
         last.remove();
       }
       while (loadedBars.length < bufferedLength) {
-        const dom = document.createElement('div');
-        dom.classList.add('loaded');
+        const dom = document.createElement("div");
+        dom.classList.add("loaded");
         progress.append(dom);
         loadedBars.push(dom);
       }
@@ -267,10 +270,13 @@ function initVideo({
         const loadedBar = loadedBars[index];
         const [start, end] = [buffered.start(index), buffered.end(index)];
         // console.log('debug : updateBar -> index, start, end, duration', index, start, end, duration);
-        loadedBar.style.width = `${100 * (end - start) / duration}%`;
+        loadedBar.style.width = `${(100 * (end - start)) / duration}%`;
         loadedBar.style.left = `${start / duration}%`;
       }
-      progress.style.setProperty('--time', `${100 * currentTime / duration}%`);
+      progress.style.setProperty(
+        "--time",
+        `${(100 * currentTime) / duration}%`
+      );
     });
   }
   // 影片時間改變事件
@@ -284,67 +290,70 @@ function initVideo({
 // white paer 頁面輸入
 function initWhitePaper({
   list = [],
-  selector = 'white-paper-data',
-  inputSelector = '.whitepaper-form-input',
-  buttonSelector = '.location-whitepaper-submit'
+  selector = "white-paper-data",
+  inputSelector = ".whitepaper-form-input",
+  buttonSelector = ".location-whitepaper-submit",
 }) {
   const select = (selector) => document.querySelectorAll(selector);
   const buttons = select(buttonSelector);
   const formList = list
     .map((str) => {
       const div = document.querySelector(`[${selector}=${str}]`);
-      const input = document.querySelector(`[${selector}=${str}] > ${inputSelector}`);
+      const input = document.querySelector(
+        `[${selector}=${str}] > ${inputSelector}`
+      );
       const dataString = str;
       return { div, input, dataString };
     })
     .filter(({ div, input, dataString }) => div && input);
 
   formList.forEach(({ div, input }) => {
-    input.addEventListener('change', () => {
-      div.classList.remove('has-error');
-    })
-    input.addEventListener('input', () => {
-      div.classList.remove('has-error');
-    })
+    input.addEventListener("change", () => {
+      div.classList.remove("has-error");
+    });
+    input.addEventListener("input", () => {
+      div.classList.remove("has-error");
+    });
   });
 
-  buttons.forEach(( button ) => {
-    button.addEventListener('click', () => {
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
       let valid = true;
       const params = {};
       formList.forEach(({ div, input, dataString }) => {
-        if (!input?.value
-          || (dataString === 'mail' && !emailCheck(input?.value) )
+        if (
+          !input?.value ||
+          (dataString === "mail" && !emailCheck(input?.value))
         ) {
-          div.classList.add('has-error');
+          div.classList.add("has-error");
           valid = false;
         } else {
           params[dataString] = input?.value;
         }
       });
-      params['block'] = 'Voice_Index';
+      params["block"] = "Voice_Index";
       if (valid) {
         $.post(
           "https://cors.seasalt.ai/https://script.google.com/macros/s/AKfycbzmVEBYVXnDqPCpeKjxP0SAX5dMNSy5OWEPj0w4OiPVOEifoRvPNLGq_bk9nKoMmZTa_Q/exec",
           params,
           (data) => {
-            console.log(`debug -> button.addEventListener -> data`, data)
+            console.log(`debug -> button.addEventListener -> data`, data);
             toast({
               type: toast.types.success,
-              text: 'Your submit is complete.',
-            })
+              text: "Your submit is complete.",
+            });
           }
-        )
-        .fail((err) => {
-          const errorMessage = err?.message || err?.responseText || err?.statusText || 'error';
+        ).fail((err) => {
+          const errorMessage =
+            err?.message || err?.responseText || err?.statusText || "error";
           toast({
             type: toast.types.fail,
             text: `Your submit is failed. ${errorMessage}`,
-          })
+          });
         });
       }
-    })
-  })
+    });
+  });
 }
 
 const calculateIndex = ({ clientWidth, scrollWidth, scrollLeft }, length) => {
@@ -448,42 +457,41 @@ const initProductScroll = ({
 
 const eventNameUrlMapping = {
   mail_submit:
-    'https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16',
+    "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
   book_a_demo:
-    'https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true',
-  voice_intelligence_white_paper: 'https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16'
+    "https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true",
+  voice_intelligence_white_paper:
+    "https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16",
 };
 
 const openFormPopup = (e) => {
-  e.preventDefault()
-  const iframe = document.querySelector('#form-popup-iframe');
+  e.preventDefault();
+  const iframe = document.querySelector("#form-popup-iframe");
   iframe.onload = () => {
-    const popup = document.querySelector('.form-popup');
-    popup.classList.add('form-popup--display');
-    const popupOuter = document.querySelector('.form-popup__background');
-    const closeButton = document.querySelector('.form-popup__closeBtn');
+    const popup = document.querySelector(".form-popup");
+    popup.classList.add("form-popup--display");
+    const popupOuter = document.querySelector(".form-popup__background");
+    const closeButton = document.querySelector(".form-popup__closeBtn");
     const closeFormHandler = () => {
-      popup.classList.remove('form-popup--display');
+      popup.classList.remove("form-popup--display");
     };
 
-    closeButton.addEventListener('click', closeFormHandler);
-    popupOuter.addEventListener('click', closeFormHandler);
+    closeButton.addEventListener("click", closeFormHandler);
+    popupOuter.addEventListener("click", closeFormHandler);
   };
 
-  const eventName = e.currentTarget.getAttribute('data-event-name');
+  const eventName = e.currentTarget.getAttribute("data-event-name");
   iframe.src = eventNameUrlMapping[eventName];
 };
 
 function clickBookDemo() {
-  const bookDemoLink = 'https://forms.gle/RdNoQYseQ8DVpTu66';
+  const bookDemoLink = "https://forms.gle/RdNoQYseQ8DVpTu66";
   window.open(bookDemoLink);
 }
 
 $(document).ready(function () {
-  $('[id^=bookDemo_]').on('click', openFormPopup);
+  $("[id^=bookDemo_]").on("click", openFormPopup);
 });
-
-
 
 /* ========================================================================= */
 /*	email submit
@@ -546,13 +554,13 @@ $("#hero-section-submit-button").click(function (e) {
 });
 
 // footer email submit
-$('#footer-links-form-submit').click((e) => {
+$("#footer-links-form-submit").click((e) => {
   openFormPopup(e);
 });
 
-$('#get-voice-intelligence-white-paper').click(e => {
+$("#get-voice-intelligence-white-paper").click((e) => {
   openFormPopup(e);
-})
+});
 
 // location-based messaging whitePaper submit
 $("#location-based-submit-button").click(function (e) {
@@ -604,8 +612,17 @@ $(window).load(function () {
   });
 
   initWhitePaper({
-    list: ['mail', 'block', 'first', 'last', 'company', 'designation', 'phone', 'country']
-  })
+    list: [
+      "mail",
+      "block",
+      "first",
+      "last",
+      "company",
+      "designation",
+      "phone",
+      "country",
+    ],
+  });
 
   $(".seaSuite-container__content .zoom-btn").click(function () {
     $(".seaSuite-container__img").toggleClass("is-full-mode");
@@ -665,3 +682,47 @@ $(window).load(function () {
     $heroSectionTyping.addClass("typingAnimate" + textCount.toString());
   }
 });
+
+/* ========================================================================= */
+/*	landing main cards animation
+/* ========================================================================= */
+
+// const content = document.querySelector(".sui-slider_content");
+// const selector = document.querySelector(".sui-slider_selector");
+// const dots = selector.querySelectorAll(".sui-slider_selector__dot");
+
+// function setCardsOffset(value) {
+//   content.style.setProperty("--transform-offset", value);
+// }
+// function resetSelectorStyle() {
+//   dots.forEach((dot) => {
+//     dot.classList.remove("selected");
+//   });
+// }
+// function resetOffset() {
+//   if (window.innerWidth > 767) {
+//     setCardsOffset("0px , 0px");
+//     resetSelectorStyle();
+//     dots[1].classList.add("selected");
+//   }
+// }
+// function handleSelectorClick(e) {
+//   if (e.target.id === "dot-1") {
+//     setCardsOffset("33.5% , 0px");
+//     resetSelectorStyle();
+//     dots[0].classList.add("selected");
+//   }
+//   if (e.target.id === "dot-2") {
+//     setCardsOffset("0px , 0px");
+//     resetSelectorStyle();
+//     dots[1].classList.add("selected");
+//   }
+//   if (e.target.id === "dot-3") {
+//     setCardsOffset("-33.5% , 0px");
+//     resetSelectorStyle();
+//     dots[2].classList.add("selected");
+//   }
+// }
+
+// selector.addEventListener("click", handleSelectorClick);
+// window.addEventListener("resize", resetOffset);
