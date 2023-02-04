@@ -2,7 +2,7 @@
 <script>(function(b,d,e,a,g){b[a]=b[a]||[],b[a].push({'gtm.start':(new Date).getTime(),event:'gtm.js'});var f=d.getElementsByTagName(e)[0],c=d.createElement(e),h=a!='dataLayer'?'&l='+a:'';c.async=!0,c.src='https://www.googletagmanager.com/gtm.js?id='+g+h,f.parentNode.insertBefore(c,f)})(window,document,'script','dataLayer','GTM-N26SF8T')</script>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"Corporation","url":"https://seasalt.ai/","logo":"https://seasalt.ai/images/logo.png","name":"Seasalt.ai","description":"Seasalt.ai is a Seattle-based Cloud Communication AI company. Try SeaSuite and SeaX, the next-gen voice solution for the contact centers of the future."}</script>
 <meta charset=utf-8>
-<meta name=description content="In this blog we’ll discuss our findings on how real Discord users utilize our services after reviewing several weeks of authentic speech-to-text data.">
+<meta name=description content="In this blog we’ll discuss our findings on how real Discord users utilize SeaVoice services after reviewing several weeks of authentic speech-to-text data.">
 <meta name=author content="Kim Dodds">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.92.2">
@@ -158,7 +158,7 @@ Book A Demo
 <li class="list-inline-item author-name">Kim Dodds</li>
 <li class=list-inline-item>Monday, Jan 23, 2023</li>
 </ul>
-<div class=single-article-pic><img class="img-fluid article-picture" src=https://seasalt.ai/images/blog/30-stt-case-study/thumbnail.jpg alt=blog-image></div>
+<div class=single-article-pic><img class="img-fluid article-picture" src=https://seasalt.ai/images/blog/30-stt-case-study/discord-stt-bot-case-study.jpg alt=blog-image></div>
 </div>
 <div class=post-single-content>
 <p><em>After launching SeaVoice, one of the fastest and most accurate text-to-speech and speech-to-text bots on Discord, we wanted to understand how users were actually interacting with the services. In this blog we’ll discuss our findings after reviewing several weeks of real speech-to-text user data.</em></p>
@@ -167,20 +167,20 @@ Book A Demo
 <h2 id=seavoice-stt-usage>SeaVoice STT Usage</h2>
 <p>At the time of writing, the SeaVoice Bot has been added to nearly 900 servers! About 260 servers totalling over 600 participants have actually tried out the STT command at least once. In the past 3 weeks we have hosted nearly 1,800 STT sessions and output a total of <strong>over half a million transcription lines</strong>.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/sessions-per-day.png alt="SeaVoice Discord Bot daily speech-to-text sessions over 3 weeks.">
+<img src=/images/blog/30-stt-case-study/discord-stt-sessions-per-day.png alt="SeaVoice Discord Bot daily speech-to-text sessions over 3 weeks.">
 <p><em>SeaVoice Discord Bot daily speech-to-text sessions over 3 weeks.</em></p>
 </center>
 <p>If we look at the total number of STT sessions per day, we’ve found that it can fluctuate from as little as 40 to over 140 (with an average of about 70). We can also consider the total number of transcription lines we are producing. On the slowest day, we produce as few as 10 thousand lines, however, on a busy day we have produced upwards of 40 thousand lines. To put that into perspective, on January 18th, we hosted 102 STT sessions with a total of just under 30 thousand transcription lines; that amounted to nearly 40 hours of recording time.</p>
 <p>We also found that while most sessions are used for shorter conversations (median of 57 lines per session), there are a significant number of very long sessions that draw the average up to 650 lines per session. Our longest session was over 30 thousand lines, more than an average day’s worth! Finally we also took a look at how many users tend to be in each session and found that there are typically 4 to 5 users in each session - however we did once use the bot to support live transcription at a virtual seminar which had 45 participants!</p>
 <center>
-<img src=/images/blog/30-stt-case-study/lines-per-day.png alt="SeaVoice Discord Bot lines transcribed per day over 3 weeks.">
+<img src=/images/blog/30-stt-case-study/discord-transcription-lines-per-day.png alt="SeaVoice Discord Bot lines transcribed per day over 3 weeks.">
 <p><em>SeaVoice Discord Bot lines transcribed per day over 3 weeks.</em></p>
 </center>
 <p>While the majority of servers have not used the STT session more than a few times, there are quite a few that use the service extensively. Since we started recording the STT usage data in late December, the average total number of sessions per server is about 7; however, our #1 server has logged 131 sessions - That’s an average of over 6 sessions per day! That same server has transcribed over 150 thousand lines of speech in just 3 weeks! Perhaps more impressive than that, our #1 user is from the same server and has had over 60 thousand lines of their own speech transcribed!</p>
 <h2 id=observations>Observations</h2>
 <h3 id=why-people-use-speech-to-text>Why People Use Speech-to-Text</h3>
 <center>
-<img src=/images/blog/30-stt-case-study/user-quote.jpg alt="A SeaVoice Discord bot user expresses excitement about the persisted audio and transcription files.">
+<img src=/images/blog/30-stt-case-study/discord-audio-transcript-download-user-quote.jpg alt="A SeaVoice Discord bot user expresses excitement about the persisted audio and transcription files.">
 <p><em>A SeaVoice Discord bot user expresses excitement about the persisted audio and transcription files.</em></p>
 </center>
 <p>So our first question after seeing the usage data is: <strong>why are the frequent users utilizing speech-to-text in the first place?</strong></p>
@@ -212,55 +212,55 @@ Book A Demo
 </ul>
 <p>The vast majority of transcriptions fall into the “just chatting” and “casual gaming” categories. As we saw above, I think most users in this case utilize the bot to improve the accessibility of the Discord voice channel and/or enjoy the convenience of seeing the live transcription to fill any gaps they missed in the conversation. In some cases (like when used for MMO raids), the gaming discussions are very complex and users are coordinating with each other in real-time; live transcriptions could prove extremely useful to the success of the team as users can reference the transcripts as they’re playing.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/mmo.jpg alt="Example of complex discussion during an MMO raid.">
+<img src=/images/blog/30-stt-case-study/discord-stt-for-mmo-raid.jpg alt="Example of complex discussion during an MMO raid.">
 <p><em>Example of complex discussion during an MMO raid.</em></p>
 </center>
 <p>It also seems that a lot of users are using the bot to transcribe more serious conversations such as school, professional and/or volunteer community meetings. We also had our bot used to transcribe an online tech conference, <a href=https://gfsc.studio/2022/11/14/announcing-untechcon.html>UnTechCon</a>. In these cases the final recording and transcription files may prove very helpful to users for review after the meeting. One last interesting example I found was a user recording content for their stream. Because the final transcript comes with timestamps, users could potentially upload the transcript file as subtitles for their recorded audio or video content.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/valentine.jpg alt="A SeaVoice user expresses thanks for making Discord voice channels more accessible.">
+<img src=/images/blog/30-stt-case-study/discord-stt-accessibility-user-quote.jpg alt="A SeaVoice user expresses thanks for making Discord voice channels more accessible.">
 <p><em>A SeaVoice user expresses thanks for making Discord voice channels more accessible.</em></p>
 </center>
 <p>But regardless of the exact reason they use the STT service, many users expressed excitement that they were able to participate in the voice channel conversations when they otherwise would not be able to. We believe that the STT service makes Discord voice channels more accessible, and that is the main reason our regular users keep utilizing the service.</p>
 <h3 id=commentary-about-the-seavoice-discord-bot>Commentary about the SeaVoice Discord Bot</h3>
 <p>Another interesting topic found in the logs was commentary about the bot itself. Thankfully, we saw several very positive comments about the bot and its performance.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/transcription-accuracy.png alt="A SeaVoice user comments on the transcription accuracy.">
+<img src=/images/blog/30-stt-case-study/discord-seavoice-transcription-accuracy.png alt="A SeaVoice user comments on the transcription accuracy.">
 <p><em>A SeaVoice comments on the transcription accuracy.</em></p>
 </center>
 <p>We also found several bits of constructive feedback.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/british-accent.png alt="A SeaVoice user suggests improvement for British accents.">
+<img src=/images/blog/30-stt-case-study/discord-stt-accuracy-british-accent.png alt="A SeaVoice user suggests improvement for British accents.">
 <p><em>A SeaVoice suggests improvement for British accents.</em></p>
 </center>
 <center>
-<img src=/images/blog/30-stt-case-study/accent-accuracy.png alt="A user compares SeaVoice's performance on accented English to Siri's.">
+<img src=/images/blog/30-stt-case-study/discord-stt-siri-accent-accuracy-comparison.png alt="A user compares SeaVoice's performance on accented English to Siri's.">
 <p><em>A user compares SeaVoice&rsquo;s performance on accented English to Siri&rsquo;s.</em></p>
 </center>
 <p>Most of the constructive comments had to do with the bot not performing well on non-American accented English; in particular users mentioned British and Scottish accents. For the future of our STT services, we could put significant effort into improving our speech recognition for various accents of English. Of course, English isn’t the only language our users speak, so we also plan to add more language support to the bot. In fact, we are currently finalizing our Taiwanese Mandarin STT and TTS integrations, and will be releasing an updated version of the bot shortly.</p>
 <h2 id=privacy-data-sensitivity--potentially-offensive-content>Privacy, Data Sensitivity, & Potentially Offensive Content</h2>
 <p>AI development is surrounded by a torrent of ethical dilemmas. Our models need massive amounts of real user data to perform well, <em>but how do we collect that data ethically while respecting our users’ privacy?</em> Models learn only based on the data they are provided and therefore have (potentially unforeseen) biases; <em>so how can we make sure our models serve all our users equally well?</em> Furthermore, our models have no concept of social acceptability and may produce results that some users find offensive. As one of our users put it so eloquently: <em>“Is it racist if the bot does it though, that’s the question”</em>.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/racial-slur.png alt="A SeaVoice user points out a problematic inaccurate transcription.">
+<img src=/images/blog/30-stt-case-study/stt-accidental-racial-slur.png alt="A SeaVoice user points out a problematic inaccurate transcription.">
 <p><em>A SeaVoice user points out a problematic inaccurate transcription.</em></p>
 </center>
 <p>The reason I bring up these points is because of a few concerning transcriptions in the logs. The first issue is that the bot occasionally transcribes offensive content. In the example above, the bot accidentally transcribed someone’s username as a racial slur. Obviously this an error on the bot’s end which may be offensive to our users and should be investigated. But this leads to more questions: <em>where do we draw the line between offense and harm?</em></p>
 <center>
-<img src=/images/blog/30-stt-case-study/n-word.png alt="A SeaVoice user comments on trying to censor certain words from the transcription.">
+<img src=/images/blog/30-stt-case-study/discord-transcription-censor.png alt="A SeaVoice user comments on trying to censor certain words from the transcription.">
 <p><em>A SeaVoice user comments on trying to censor certain words from the transcription.</em></p>
 </center>
 <p>Well, to start we’ve decided to give that power to the users. One of the next features we will work on is configurable censorship of TTS and STT. This will allow servers to optionally apply censors for swear words, sexual content, racial slurs, etc.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/careful.png alt="A SeaVoice user warns another participant to be conscious that what they say will end up in the transcript.">
+<img src=/images/blog/30-stt-case-study/discord-careful-transcript-content.png alt="A SeaVoice user warns another participant to be conscious that what they say will end up in the transcript.">
 <p><em>A SeaVoice user warns another participant to be conscious that what they say will end up in the transcript.</em></p>
 </center>
 <p>Interestingly, another related issue we saw was users self-censoring themselves to avoid having certain things appear in the transcript. This was surprisingly common, and I saw many cases where users explained that they didn’t want the bot to transcribe what they were about to say so they stopped and then restarted the STT. This is a completely valid concern on the user’s end if for example they don’t want the bot to transcribe some sensitive information.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/deafen.png alt="How to pause the STT by deafening the bot.">
+<img src=/images/blog/30-stt-case-study/discord-stt-pause-deafen.png alt="How to pause the STT by deafening the bot.">
 <p><em>How to pause the STT by deafening the bot.</em></p>
 </center>
 <p>I’m not sure that there’s any way we can improve the user experience in this case, but I would advise users that they can “deafen” the bot temporarily to stop sending any audio to the bot. In this case, the bot will receive zero audio data until it is un-deafened, so the user can essentially pause the STT session without stopping and starting a new one.</p>
 <center>
-<img src=/images/blog/30-stt-case-study/muted.jpg alt="A SeaVoice user comments on another participant's discomfort with the bot.">
+<img src=/images/blog/30-stt-case-study/discord-stt-opt-out-mute.jpg alt="A SeaVoice user comments on another participant's discomfort with the bot.">
 <p><em>A SeaVoice user comments on another participant&rsquo;s discomfort with the bot.</em></p>
 </center>
 <p>Finally, the last issue we saw is that some users feel so uncomfortable with the bot transcribing that they actively avoid speaking in the voice channel while the bot is present. This is the <strong><em>complete opposite</em></strong> of our goal, which is to make Discord voice channels more accessible for everyone. While we hope that users will accept our <a href=https://seasalt.ai/privacy>privacy policy</a> and trust us to use their data responsibly, we absolutely respect everyone’s right to privacy. As such, <strong>the next feature we will be implementing is an STT opt-out setting</strong>. This will allow any user to exclude themselves from the STT recording and transcription, and their audio data will not be accessed or collected in any way by the bot.</p>

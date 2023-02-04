@@ -158,7 +158,7 @@ Book A Demo
 <li class="list-inline-item author-name">Kim Dodds</li>
 <li class=list-inline-item>Tuesday, Dec 27, 2022</li>
 </ul>
-<div class=single-article-pic><img class="img-fluid article-picture" src=https://seasalt.ai/images/blog/29-tts-case-study/accessibility.jpg alt=blog-image></div>
+<div class=single-article-pic><img class="img-fluid article-picture" src=https://seasalt.ai/images/blog/29-tts-case-study/discord-tts-accessibility.jpg alt=blog-image></div>
 </div>
 <div class=post-single-content>
 <p><em>After launching SeaVoice, one of the fastest and most accurate text-to-speech and speech-to-text bots on Discord, we wanted to understand how users were actually interacting with the services. In this blog we’ll discuss our findings after reviewing several months of real text-to-speech user data.</em></p>
@@ -170,7 +170,7 @@ In November of the same year, we released a new version with significant backend
 In this blog we’ll take a look at 1 month of user data from the text-to-speech command.</p>
 <h2 id=seavoice-tts-usage>SeaVoice TTS Usage</h2>
 <center>
-<img src=/images/blog/29-tts-case-study/tts-usage.jpg alt="SeaVoice Discord Bot daily text-to-speech usage over 7 weeks.">
+<img src=/images/blog/29-tts-case-study/discord-tts-usage.jpg alt="SeaVoice Discord Bot daily text-to-speech usage over 7 weeks.">
 <p><em>SeaVoice Discord Bot daily text-to-speech usage over 7 weeks.</em></p>
 </center>
 <p>At the time of writing, the SeaVoice Bot has been added to nearly 800 servers!
@@ -183,7 +183,7 @@ Our top 5 users have submitted over 1,000 requests each in the last two months, 
 <h2 id=observations>Observations</h2>
 <h3 id=why-people-use-text-to-speech>Why People Use Text-to-Speech</h3>
 <center>
-<img src=/images/blog/29-tts-case-study/why-arent-you-talking.jpg alt="Reasons SeaVoice Discord Bot users utilize text-to-speech.">
+<img src=/images/blog/29-tts-case-study/why-mute-on-discord.jpg alt="Reasons SeaVoice Discord Bot users utilize text-to-speech.">
 <p><em>Reasons SeaVoice Discord Bot users utilize text-to-speech.</em></p>
 </center>
 <p>So our first question after seeing the usage data is: <strong>why are the frequent users utilizing the TTS in the first place?</strong>
@@ -214,13 +214,13 @@ We believe that the TTS service makes Discord voice channels more accessible, an
 <p>One thing that stood out to me while reviewing the conversations, was that many users tried using the text-to-speech command with different languages.
 While some users just wanted to see if it would work or thought the pronunciation was funny, others however, continued to use the TTS in non-english languages for extended periods of time!</p>
 <center>
-<img src=/images/blog/29-tts-case-study/spanish-test.png alt="A user tests out the Spanish pronunciation of the English SeaVoice TTS model.">
+<img src=/images/blog/29-tts-case-study/discord-spanish-tts-test.png alt="A user tests out the Spanish pronunciation of the English SeaVoice TTS model.">
 <p><em>A user tests out the Spanish pronunciation of the English SeaVoice TTS model.</em></p>
 </center>
 <p>This was particularly the case with Spanish speakers even though (as the user above notes) the TTS performance is not good for Spanish, as the model is only trained on English.
 I started noting down any time I encountered a user trying to use the TTS command on a language other than English.</p>
 <center>
-<img src=/images/blog/29-tts-case-study/non-english-tts.jpg alt="Count of attempts to send non-English requests to TTS.">
+<img src=/images/blog/29-tts-case-study/discord-non-english-tts.jpg alt="Count of attempts to send non-English requests to TTS.">
 <p><em>Count of attempts to send non-English requests to TTS.</em></p>
 </center>
 <p>The table above shows a count of every conversation I found that had at least one instance of someone using the corresponding language in the TTS command.
@@ -230,13 +230,13 @@ In either case, people are trying to use our TTS service for other languages, so
 <p>Another interesting topic found in the logs was commentary about the bot itself.
 Thankfully, we saw several very positive comments about the bot and its performance.</p>
 <center>
-<img src=/images/blog/29-tts-case-study/positive-comment.png alt="A user comments that the bot makes them feel more included.">
+<img src=/images/blog/29-tts-case-study/discord-tts-inclusive-accessibility-user-comment.png alt="A user comments that the bot makes them feel more included.">
 <p><em>A user comments that the bot makes them feel more included.</em></p>
 </center>
 <p>The most touching comments were from those who felt excluded from voice channels, but are now able to participate thanks to the added accessibility the bot provides.</p>
 <p>We also found several bits of constructive feedback.</p>
 <center>
-<img src=/images/blog/29-tts-case-study/slow-comment.png alt="A user comments that the speed of the TTS is an issue.">
+<img src=/images/blog/29-tts-case-study/discord-tts-speed.png alt="A user comments that the speed of the TTS is an issue.">
 <p><em>A user comments that the speed of the TTS is an issue.</em></p>
 </center>
 <p>One user mentioned that, because users will first need to type the whole sentence and then send it out, the TTS is slower than just normal speaking, so sometimes their TTS utterance is spoken a little late in the conversation.
@@ -250,7 +250,7 @@ When you are given complete power to make a voice say whatever you want, I belie
 I remember sitting in the elementary school computer lab and being entertained for hours on end by Microsoft Sam (very high tech at the time), seeing if we could make it say things like “poop” or “butt”.
 Well, I suppose kids like me grew up, gained a more rich vocabulary, and ended up finding the same entertainment with our TTS service on Discord.</p>
 <center>
-<img src=/images/blog/29-tts-case-study/characters.png alt="Examples of strange TTS requests sent by users.">
+<img src=/images/blog/29-tts-case-study/discord-tts-stress-test.png alt="Examples of strange TTS requests sent by users.">
 <p><em>Examples of strange TTS requests sent by users.</em></p>
 </center>
 <p>Sometimes users just try and break the bot by typing things like: excessively long strings, special characters, emojis, URLs, etc.
