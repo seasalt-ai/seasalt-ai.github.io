@@ -2,12 +2,12 @@
 <script>(function(b,d,e,a,g){b[a]=b[a]||[],b[a].push({'gtm.start':(new Date).getTime(),event:'gtm.js'});var f=d.getElementsByTagName(e)[0],c=d.createElement(e),h=a!='dataLayer'?'&l='+a:'';c.async=!0,c.src='https://www.googletagmanager.com/gtm.js?id='+g+h,f.parentNode.insertBefore(c,f)})(window,document,'script','dataLayer','GTM-N26SF8T')</script>
 <script type=application/ld+json>{"@context":"http://schema.org","@type":"Corporation","url":"https://seasalt.ai/","logo":"https://seasalt.ai/images/logo.png","name":"Seasalt.ai","description":"Seasalt.ai is a Seattle-based Cloud Communication AI company. Try SeaSuite and SeaX, the next-gen voice solution for the contact centers of the future."}</script>
 <meta charset=utf-8>
-<meta name=description content="Throughout this blog series, follow Seasalt.ai’s journey to creating a well rounded Modern Meetings Experience, starting with its humble beginnings, to optimizing our service on different hardware and models, to integrating state-of-the-art NLP systems and finally ending on the full realization of SeaMeet, our collaborative modern meeting solutions.">
+<meta name=description content="In the third part of this blog series, follow Seasalt.ai’s journey to creating SeaMeet, our collaborative modern meeting solutions.">
 <meta name=author content="Cody Kim, Shayne Mei">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.92.2">
 <title>
-From Demo to Success: Beyond the Speech Algorithms of Modern Meetings (3/5)
+Demo to Success (3/5): Beyond the Speech Algorithms
 </title>
 <link rel="shortcut icon" type=image/x-icon href=https://seasalt.ai/images/favicon.ico>
 <link rel=stylesheet href=https://seasalt.ai/plugins/themefisher-font/style.min.css>
@@ -171,7 +171,7 @@ There are four major components of Modern Meetings, as illustrated below:</p>
 </ol>
 <p>Next we will detail all the important components.</p>
 <center>
-<img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/tech_stack.png alt="SeaMeet architect with 4 major components">
+<img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/tech-stack.png alt="SeaMeet architect with 4 major components">
 <p><em>We adapted all 4 major components of Modern Meetings with our own tech stack: 1. Signal processing with the microphone array; 2. Speaker diarization and identification; 3. Customized speech recognition; 4. A modern web UI.</em></p>
 </center>
 <h3 id=signal-processing-on-the-microphone-array>Signal Processing on the Microphone Array</h3>
@@ -197,14 +197,14 @@ Azure Cognitive Services offered a plethora of models to choose from across many
 <p>So far, we have swapped out all the internal core algorithms of Azure Speech Services with our in-house solution. This made the system extremely versatile and independent. Enterprise customers favor this also due to the capabilities of on-premise deployment to protect privacy. After working hard on the backend, we finally came to the point of improving the frontend user experience.</p>
 <h3 id=a-modern-ui-and-seameet-is-born>A Modern UI and SeaMeet is Born</h3>
 <p>There was just one piece left for us to finally complete our departure from Azure’s Speech Service: a fresh user interface that would be the definitive face of Modern Meetings. We set our sights beyond the merely functional design from Azure and the “clean” interface from the Microsoft Build 2019 showcase. This time we aimed for elegance and added value.</p>
-<p><img src=/images/blog/5-beyond-algorithm/seameet.png alt></p>
+<p><img src=/images/blog/5-beyond-algorithm/seameet.png alt="SeaMeet UI showing live transcriptions, topic extraction, and AI generated meeting minutes"></p>
 <p>We first deliver real time transcriptions followed by additional offline processing to perform speaker diarization and identification. Finally, we walked the extra mile to draw insights from the meeting by extracting meeting topics, actions, minutes, and summaries . We will detail these insights in the next blog.</p>
 <p>Finally, SeaMeet, a modern meeting re-implementation and enhancement of Microsoft Modern Meetings was born. The user interface is responsive and informative, providing much more value than the original proposition.</p>
 <table>
 <thead>
 <tr>
-<th><img src=/images/blog/5-beyond-algorithm/modern_meetings_ms.png alt></th>
-<th><img src=/images/blog/5-beyond-algorithm/modern_meetings_seameet.png alt></th>
+<th><img src=/images/blog/5-beyond-algorithm/modern-meetings-ms.png alt="Demo of Microsoft Azure&rsquo;s speech-to-text using a Kinect microhpne array and simple UI"></th>
+<th><img src=/images/blog/5-beyond-algorithm/modern-meetings-seameet.png alt="SeaMeet&rsquo;s improved interface showing speaker identification and AI topic extraction"></th>
 </tr>
 </thead>
 </table>
