@@ -456,14 +456,15 @@ const initProductScroll = ({
 /* ========================================================================= */
 
 const eventNameUrlMapping = {
-  mail_submit:
-    "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
-  book_a_demo:
-    "https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true",
-  voice_intelligence_white_paper:
-    "https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16",
-  press_subscribe: 
-    "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
+  // mail_submit:
+  //   "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
+  // book_a_demo:
+  //   "https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true",
+  // voice_intelligence_white_paper:
+  //   "https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16",
+  press_subscribe: "https://share.hsforms.com/1ARvihbCkSz2aCzwDJiqbvwcq2ym",
+  // press_subscribe_old:
+  //   "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
 };
 
 const openFormPopup = (e) => {
@@ -490,10 +491,6 @@ function clickBookDemo() {
   const bookDemoLink = "https://forms.gle/RdNoQYseQ8DVpTu66";
   window.open(bookDemoLink);
 }
-
-$(document).ready(function () {
-  $("[id^=bookDemo_]").on("click", openFormPopup);
-});
 
 /* ========================================================================= */
 /*	email submit
