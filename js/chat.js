@@ -20,33 +20,33 @@ function openPage() {
   );
 }
 // Convert HTML element with ID = myCustomButton into a Business Messages widget
-function initWidget() {
-  // Check that the user has a supported device
-  if (window.bmwidget.supported) {
-    document.getElementById("google-widget").style.display = "block";
-    window.bmwidget.init(document.getElementById("google-chat"), {
-      agentId: "c4ec38e1-69d1-43d3-8bf8-64b96ad28a43",
-      context: "eyJwcm9kdWN0IjoiZHJ5ZXIiLCJvZmZlci1jb2RlIjoiQVNEQURTQSJ9Cg==",
-    });
-  } else if (window.mobileCheck()) {
-    document.getElementById("google-widget").style.display = "block";
-    document.getElementById("google-chat").onclick = function () {
-      openPage();
-    };
-  } else {
-    document.getElementById("google-widget").style.display = "block";
-    document.getElementById("google-tip").style.opacity = 0;
-    document.getElementById("google-tip").style.visibility = "hidden";
-    document.getElementById("google-tip").textContent =
-      "Chat is only supported on mobile devices. Please open this page on your Android or iPhone.";
-    document.getElementById("google-chat").onclick = function () {
-      if (document.getElementById("google-tip").style.opacity == 1) {
-        document.getElementById("google-tip").style.opacity = 0;
-        document.getElementById("google-tip").style.visibility = "hidden";
-      } else {
-        document.getElementById("google-tip").style.opacity = 1;
-        document.getElementById("google-tip").style.visibility = "visible";
-      }
-    };
-  }
-}
+// function initWidget() {
+//   // Check that the user has a supported device
+//   if (window.bmwidget.supported) {
+//     document.getElementById("google-widget").style.display = "block";
+//     window.bmwidget.init(document.getElementById("google-chat"), {
+//       agentId: "c4ec38e1-69d1-43d3-8bf8-64b96ad28a43",
+//       context: "eyJwcm9kdWN0IjoiZHJ5ZXIiLCJvZmZlci1jb2RlIjoiQVNEQURTQSJ9Cg==",
+//     });
+//   } else if (window.mobileCheck()) {
+//     document.getElementById("google-widget").style.display = "block";
+//     document.getElementById("google-chat").onclick = function () {
+//       openPage();
+//     };
+//   } else {
+//     document.getElementById("google-widget").style.display = "block";
+//     document.getElementById("google-tip").style.opacity = 0;
+//     document.getElementById("google-tip").style.visibility = "hidden";
+//     document.getElementById("google-tip").textContent =
+//       "Chat is only supported on mobile devices. Please open this page on your Android or iPhone.";
+//     document.getElementById("google-chat").onclick = function () {
+//       if (document.getElementById("google-tip").style.opacity == 1) {
+//         document.getElementById("google-tip").style.opacity = 0;
+//         document.getElementById("google-tip").style.visibility = "hidden";
+//       } else {
+//         document.getElementById("google-tip").style.opacity = 1;
+//         document.getElementById("google-tip").style.visibility = "visible";
+//       }
+//     };
+//   }
+// }
