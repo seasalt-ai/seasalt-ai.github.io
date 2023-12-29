@@ -4,6 +4,8 @@
 <meta charset=utf-8>
 <meta name=description content="Xuchen Yao shares his recent experience with United Airlines' customer service during flight delays and cancellations and proposes solutions to address the challenge of dynamically scaling customer support during surge traffic.">
 <meta name=author content="Xuchen Yao">
+<meta property="og:image" content="https://seasalt.ai/images/image-logo.png">
+<meta name=twitter:card content="summary_large_image">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.92.2">
 <title>
@@ -25,8 +27,7 @@ Customer Service at United Airlines: the Good, the Bad and the Ugly
 <script>(()=>{window.addEventListener('load',()=>{const a={accountSid:'AC41b16a5f90c65a13c4d5a3f44a0d1d79',flexFlowSid:'FOadf3d4566db52c9b9f327b49bd6376f6',context:{friendlyName:'Customer',isWebchatDemo:!0},colorTheme:{overrides:{EntryPoint:{Container:{background:'#F22F46',color:'#FFFFFF','&:hover':{backgroundColor:'#DE2137'}}}}},fileAttachment:{enabled:!0}}})})()</script>
 <style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style>
 <link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
-</head>
-<body id=body data-spy=scroll data-target=.navbar data-offset=52>
+</head><body id=body data-spy=scroll data-target=.navbar data-offset=52>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
 <div id=content>
 <header class=seasalt-header-container>
@@ -58,17 +59,12 @@ SeaSuite
 SeaCode
 </span>
 </a>
-<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://chat.seasalt.ai/>
-<span class=links-text-span>
-SeaChat
-</span>
-</a>
 <a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://word.seasalt.ai/>
 <span class=links-text-span>
 SeaWord
 </span>
 </a>
-<a class="links-dropdown-row indent-1">
+<a class="links-dropdown-row indent-1" target=_blank rel="noreferrer noopener" href=https://suite.seasalt.ai/voice>
 <span class=links-text-span>
 SeaVoice
 </span>
@@ -96,6 +92,11 @@ SeaMeet
 <a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://seax.seasalt.ai/>
 <span class=links-text-span>
 SeaX
+</span>
+</a>
+<a class=links-dropdown-row target=_blank rel="noreferrer noopener" href=https://chat.seasalt.ai/>
+<span class=links-text-span>
+SeaChat
 </span>
 </a>
 </div>
@@ -352,13 +353,12 @@ SeaSuite
 <a class="links-texts-link indent-1" href=https://code.seasalt.ai/ target=_blank>
 SeaCode
 </a>
-<a class="links-texts-link indent-1" href=https://chat.seasalt.ai/ target=_blank>
-SeaChat
-</a>
 <a class="links-texts-link indent-1" href=https://word.seasalt.ai/ target=_blank>
 SeaWord
 </a>
-<div class="links-texts-link is-light indent-1">SeaVoice</div>
+<a class="links-texts-link indent-1" href=https://suite.seasalt.ai/voice target=_blank>
+SeaVoice
+</a>
 <a class="links-texts-link indent-2" href=https://suite.seasalt.ai/stt target=_blank>
 Speech To Text
 </a>
@@ -370,6 +370,9 @@ SeaMeet
 </a>
 <a class=links-texts-link href=https://seax.seasalt.ai/ target=_blank>
 SeaX
+</a>
+<a class=links-texts-link href=https://chat.seasalt.ai/ target=_blank>
+SeaChat
 </a>
 </div>
 <div class=links-texts-column>
@@ -448,12 +451,11 @@ Contact
 <script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','UA-10405841-7','auto'),ga('send','pageview')</script>
 <link type=text/css href=https://www.gstatic.com/business-messages/v2/bm_widget_button.css rel=stylesheet>
 <link type=text/css href=https://wiki.seasalt.ai/google-widget.css rel=stylesheet>
-<script crossorigin=use-credentials src="https://businessmessages.google.com/widget/v2/js?cb=initWidget"></script>
-<div id=google-widget>
-<button id=google-chat data-bm-widget-layout=floating>
-<span id=google-tip class="bm-widget-button-text tip" role=tooltip>Chat with Seasalt.ai</span>
+<button id=sui-webchat-btn>
 </button>
-</div>
+<iframe id=sui-webchat src></iframe>
+<style>#sui-webchat-btn{position:fixed;display:block;width:56px;height:56px;bottom:16px;right:16px;padding:0;font-size:0;color:transparent;background:50%/24px no-repeat url(https://ngchat-api-dev.s3.us-west-2.amazonaws.com/icon-web-chat_white.svg)#19b9c3;border:none;border-radius:50%;z-index:9999;cursor:pointer}#sui-webchat{position:fixed;display:none;width:30%;min-width:375px;height:500px;bottom:80px;right:80px;margin-top:24px;border:none;border-radius:10px;box-shadow:0 0 6px rgba(0,0,0,.9);z-index:9998}@media only screen and (max-width:460px){#sui-webchat{right:50%;transform:translate(50%,0%)}}</style>
+<script>const button=document.querySelector('#sui-webchat-btn'),iframe=document.querySelector('#sui-webchat'),handleClick=()=>{iframe.src!=="https://chat.seasalt.ai/chat/9e4cef8823b94d019b954db6f4328a93"&&(iframe.src="https://chat.seasalt.ai/chat/9e4cef8823b94d019b954db6f4328a93"),iframe.style.display!=='block'?iframe.style.display='block':iframe.style.display='none'};button.addEventListener('click',handleClick)</script>
 <script type=text/javascript id=hs-script-loader async defer src=//js.hs-scripts.com/21372286.js></script>
 <script src=https://seasalt.ai/js/custom.js></script>
 <script src=https://seasalt.ai/js/emailCheck.js></script>
