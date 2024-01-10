@@ -688,6 +688,26 @@ $(window).load(function () {
 });
 
 /* ========================================================================= */
+/*	header language dropdown
+/* ========================================================================= */
+$(".header-language-display-text").click(function () {
+  $('#header-language').toggleClass("is-show");
+});
+
+$("#header-language-setting").click(function () {
+  $('#header-language').toggleClass("is-show");
+});
+
+$(".header-language-inner").blur(function (e) {
+  const currentTarget = e.currentTarget;
+  setTimeout(() => {
+    if (!currentTarget.contains(document.activeElement)) {
+      $('#header-language').removeClass("is-show");
+    }
+  }, 0);
+});
+
+/* ========================================================================= */
 /*	landing main cards animation
 /* ========================================================================= */
 

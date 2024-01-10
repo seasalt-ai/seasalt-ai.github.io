@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="2ezzh55smb" x1=".5" y1=".011" x2=".5" y2=".984" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#50ffc5"/>
+            <stop offset=".36" stop-color="#3fe9c4"/>
+            <stop offset="1" stop-color="#19b9c3"/>
+        </linearGradient>
+        <clipPath id="bfi7qjgsna">
+            <path data-name="Rectangle 1887" style="fill:none" d="M0 0h18v18H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 1791">
+        <path data-name="Rectangle 1883" style="fill:transparent" d="M0 0h24v24H0z"/>
+        <g data-name="Layer 2">
+            <g data-name="Group 1796" style="clip-path:url(#bfi7qjgsna)" transform="translate(3 3)">
+                <path data-name="Path 43744" d="M294.949 452a.439.439 0 0 0-.439.439v1.23a.439.439 0 0 0 .879 0v-1.23a.439.439 0 0 0-.44-.439z" transform="translate(-289.333 -444.055)" style="fill:#bfbfbf"/>
+                <path data-name="Path 43745" d="M525.939 452a.439.439 0 0 0-.439.439v1.23a.439.439 0 0 0 .879 0v-1.23a.439.439 0 0 0-.44-.439z" transform="translate(-516.263 -444.055)" style="fill:#bfbfbf"/>
+                <rect data-name="Rectangle 1885" width=".879" height="2.109" rx=".439" transform="translate(11.944 7.945)" style="fill:#bfbfbf"/>
+                <path data-name="Path 43746" d="M371.949 412a.439.439 0 0 0-.439.439v2.637a.439.439 0 0 0 .879 0v-2.637a.439.439 0 0 0-.44-.439z" transform="translate(-364.98 -404.758)" style="fill:#bfbfbf"/>
+                <rect data-name="Rectangle 1886" width=".879" height="3.516" rx=".439" transform="translate(10.591 7.242)" style="fill:#bfbfbf"/>
+                <path data-name="Path 43747" d="M448.939 372a.439.439 0 0 0-.439.439v4.043a.439.439 0 0 0 .879 0v-4.043a.439.439 0 0 0-.44-.439z" transform="translate(-440.616 -365.461)" style="fill:#bfbfbf"/>
+                <path data-name="Path 43748" d="m68.262.2-6.913 3.993a1.017 1.017 0 0 0-.509.881v7.983a1.017 1.017 0 0 0 .509.881l6.913 3.991a1.017 1.017 0 0 0 1.017 0l6.913-3.991a1.017 1.017 0 0 0 .509-.881V5.074a1.017 1.017 0 0 0-.509-.881L69.279.2a1.017 1.017 0 0 0-1.017 0zm6.169 12.719-5.15 2.974a1.017 1.017 0 0 1-1.017 0l-5.154-2.972a1.017 1.017 0 0 1-.509-.881V6.092a1.017 1.017 0 0 1 .509-.881l5.15-2.974a1.017 1.017 0 0 1 1.017 0l5.153 2.974a1.017 1.017 0 0 1 .509.881v5.948a1.017 1.017 0 0 1-.509.881z" transform="translate(-59.771 -.064)" style="fill:url(#2ezzh55smb)"/>
+            </g>
+        </g>
+    </g>
+</svg>

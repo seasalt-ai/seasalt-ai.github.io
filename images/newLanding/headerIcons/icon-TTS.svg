@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="onf69c7eva" x1=".196" y1=".067" x2=".671" y2=".741" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#50ffc5"/>
+            <stop offset=".1" stop-color="#43efc5"/>
+            <stop offset=".3" stop-color="#31d7c4"/>
+            <stop offset=".5" stop-color="#23c6c3"/>
+            <stop offset=".72" stop-color="#1cbcc3"/>
+            <stop offset="1" stop-color="#19b9c3"/>
+        </linearGradient>
+        <linearGradient id="4ubggmop9b" x1=".5" y1=".005" x2=".5" y2="1.009" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#50ffc5"/>
+            <stop offset=".23" stop-color="#4dfbc5"/>
+            <stop offset=".48" stop-color="#43eec5"/>
+            <stop offset=".73" stop-color="#32d9c4"/>
+            <stop offset=".98" stop-color="#1bbcc3"/>
+            <stop offset="1" stop-color="#19b9c3"/>
+        </linearGradient>
+        <linearGradient id="zpollvyflc" x1=".5" y1=".065" x2=".5" y2=".97" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#50ffc5"/>
+            <stop offset=".13" stop-color="#3ce6c4"/>
+            <stop offset=".28" stop-color="#2cd2c4"/>
+            <stop offset=".44" stop-color="#21c4c3"/>
+            <stop offset=".65" stop-color="#1bbbc3"/>
+            <stop offset="1" stop-color="#19b9c3"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Group 1797">
+        <path data-name="Rectangle 1883" style="fill:transparent" d="M0 0h24v24H0z"/>
+        <g data-name="Layer 2">
+            <g data-name="圖層 1" transform="translate(3.001 3.9)">
+                <path data-name="Path 43749" d="M17.286 14.985a6.63 6.63 0 0 1-1.118-1.49 1.311 1.311 0 0 1 0-1.638A521.41 521.41 0 0 1 17.69 9.24a2.286 2.286 0 0 0 0-2.279L14.327 1.14A2.285 2.285 0 0 0 12.354 0H5.633a2.285 2.285 0 0 0-1.974 1.139L.3 6.96a2.285 2.285 0 0 0 0 2.279l3.249 5.627A2.667 2.667 0 0 0 5.857 16.2h2.8a.387.387 0 0 0 .333-.189l.381-.639a.388.388 0 0 0-.333-.586h-3.4a.867.867 0 0 1-.749-.432L1.635 8.726a1.253 1.253 0 0 1 0-1.253l3.249-5.627a.867.867 0 0 1 .749-.432h6.721a.867.867 0 0 1 .749.433l3.36 5.82a.867.867 0 0 1 0 .865l-.326.583-.009-.006c-.036.06-.892 1.484-1.211 2.082a2.667 2.667 0 0 0-.011 2.94l.044.085a.387.387 0 0 1-.342.568h-1.419a.387.387 0 0 0-.334.191l-.377.639a.388.388 0 0 0 .334.585h4.768a.388.388 0 0 0 .27-.665z" transform="translate(.006)" style="fill:url(#onf69c7eva)"/>
+                <rect data-name="Rectangle 1888" width="1.459" height="8.349" rx=".729" transform="translate(8.208 4.267)" style="fill:url(#4ubggmop9b)"/>
+                <rect data-name="Rectangle 1889" width="1.459" height="5.888" rx=".729" transform="translate(5.782 4.917)" style="fill:url(#zpollvyflc)"/>
+                <rect data-name="Rectangle 1890" width="1.459" height="2.935" rx=".729" transform="translate(3.708 7.061)" style="fill:#19b9c3"/>
+                <rect data-name="Rectangle 1891" width="1.459" height="2.935" rx=".729" transform="translate(13.006 7.061)" style="fill:#19b9c3"/>
+                <rect data-name="Rectangle 1892" width="1.459" height="5.888" rx=".729" transform="translate(10.774 4.917)" style="fill:url(#zpollvyflc)"/>
+            </g>
+        </g>
+    </g>
+</svg>
