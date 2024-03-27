@@ -462,7 +462,7 @@ const eventNameUrlMapping = {
   //   "https://docs.google.com/forms/d/e/1FAIpQLSfFXRa-A1z91vQZ6Xs2FtrSTc2AFpZ97U5SWBYlpsIW5T-yrg/viewform?embedded=true",
   // voice_intelligence_white_paper:
   //   "https://cdn.forms-content.sg-form.com/4de7f466-cffd-11ec-aa53-6a68201efa16",
-  press_subscribe: "https://share.hsforms.com/1ARvihbCkSz2aCzwDJiqbvwcq2ym",
+  // press_subscribe: "https://share.hsforms.com/1ARvihbCkSz2aCzwDJiqbvwcq2ym",
   // press_subscribe_old:
   //   "https://cdn.forms-content.sg-form.com/9fc07fb0-cfff-11ec-aa53-6a68201efa16",
 };
@@ -691,18 +691,18 @@ $(window).load(function () {
 /*	header language dropdown
 /* ========================================================================= */
 $(".header-language-display-text").click(function () {
-  $('#header-language').toggleClass("is-show");
+  $("#header-language").toggleClass("is-show");
 });
 
 $("#header-language-setting").click(function () {
-  $('#header-language').toggleClass("is-show");
+  $("#header-language").toggleClass("is-show");
 });
 
 $(".header-language-inner").blur(function (e) {
   const currentTarget = e.currentTarget;
   setTimeout(() => {
     if (!currentTarget.contains(document.activeElement)) {
-      $('#header-language').removeClass("is-show");
+      $("#header-language").removeClass("is-show");
     }
   }, 0);
 });
