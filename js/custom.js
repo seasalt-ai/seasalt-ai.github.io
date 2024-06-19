@@ -615,6 +615,9 @@ $(window).load(function () {
     classList: ["selected-1", "selected-2", "selected-3"],
   });
 
+  // bindWidgets
+  bindWidgets.init();
+
   initWhitePaper({
     list: [
       "mail",
@@ -684,7 +687,7 @@ $(window).load(function () {
     let content = $heroSectionTyping.attr("data-text" + textCount.toString());
     $heroSectionTyping.text(content);
     $heroSectionTyping.addClass("typingAnimate" + textCount.toString());
-  }
+  } 
 });
 
 /* ========================================================================= */
