@@ -28,22 +28,19 @@ const bindWidgets = (() => {
         const widgetBtn = select("#sui-widget-btn");
 
         const handleWidgetBtnClick = () => {
-            const controlButtonImg = select("#sui-widget-btn--img");
-            const widgetIcon = selectAll(".widget-btn");
+            const widgetIcons = selectAll(".widget-btn");
 
-            if (widgetBtn.className == "showClose") {
-                controlButtonImg.src = "https://seasalt-cdn.s3.us-west-2.amazonaws.com/f2e/icon-widget.svg";
-                widgetIcon?.forEach((div) => {
+            if (widgetBtn.className == "is-closed") {
+                widgetIcons?.forEach((div) => {
                     div?.classList?.remove('show');
                 })
-                widgetBtn.classList.remove("showClose");
+                widgetBtn.classList.remove("is-closed");
                 select("#sui-webchat").style.display = "none";
             } else {
-                controlButtonImg.src = "https://seasalt-cdn.s3.us-west-2.amazonaws.com/f2e/icon-close.svg";
-                widgetIcon?.forEach((div) => {
+                widgetIcons?.forEach((div) => {
                     div?.classList?.add('show');
                 })
-                widgetBtn.classList.add("showClose");
+                widgetBtn.classList.add("is-closed");
             }
         };
 
@@ -61,6 +58,8 @@ const bindWidgets = (() => {
             iframeContainer.id = "sui-webchat";
 
             const handleClick = () => {
+                const widgetIcons = selectAll(".widget-btn");
+                
                 if (
                     iframeContainer.src !==
                     "https://chat.seasalt.ai/chat/9e4cef8823b94d019b954db6f4328a93"
@@ -70,8 +69,14 @@ const bindWidgets = (() => {
                 }
                 if (iframeContainer.style.display !== "block") {
                     iframeContainer.style.display = "block";
+                    widgetIcons?.forEach((div) => {
+                        div?.classList?.add('show-iframe');
+                    })
                 } else {
                     iframeContainer.style.display = "none";
+                    widgetIcons?.forEach((div) => {
+                        div?.classList?.remove('show-iframe');
+                    })
                 }
             };
             webChatButton.addEventListener("click", handleClick);
@@ -85,12 +90,6 @@ const bindWidgets = (() => {
             widgetButton.href = url;
             widgetButton.rel = "noopener noreferrer";
             widgetButton.target = "_blank";
-
-            const widgetIcon = document.createElement("img");
-            widgetIcon.className = "icon-widget";
-            widgetIcon.src = `https://seasalt-cdn.s3.us-west-2.amazonaws.com/f2e/icon-${channel}.svg`;
-
-            widgetButton.appendChild(widgetIcon);
 
             widgetContainer.prepend(widgetButton);
         }
