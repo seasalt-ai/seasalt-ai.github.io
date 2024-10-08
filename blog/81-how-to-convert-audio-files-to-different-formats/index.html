@@ -657,11 +657,10 @@ if __name__ == &quot;__main__&quot;:
 <p>After pushing an input chunk, the code attempts to pull immediately available converted data using pull_converted_data. This mimics how a streaming application might need to process and potentially play back the converted audio as soon as possible, without waiting for the entire file to be converted.</p>
 <h4 id=sleep-for-potential-catch-up>Sleep for Potential Catch-up</h4>
 <p>The calculated sleep time, though likely not perfect, introduces a delay between pushing new data and attempting to pull converted data. This simulates the potential time it might take for the converter (GStreamer pipeline) to process the received chunk. It allows the converter some time to catch up before feeding it with more data.</p>
-<h1 id=one-more-thing>One More Thing</h1>
-<p>We use on-the-fly audio conversion extensively for our conversation intelligence software named SeaMeet. It allows users to upload audio in different formats and download in WAV format. At some point, we would like to incorporate support for downloading in different formats as well.</p>
-<h1 id=you-can-do-much-more-with-audio-data-on-seameet>You can do much more with audio data on SeaMeet</h1>
-<p><a href="https://seasalt.ai/?utm_source=blog">Seasalt.ai</a> will support transcribing YouTube audio directly, either live or offline. Using SeaMeet, you not only can have a library of audios (from YouTube or not), but also generates conversation transcripts, topics, action items, and summaries.</p>
-<p>Email us for more details at <a href=mailto:seameet@seasalt.ai>seameet@seasalt.ai</a> or <a href=https://meetings.hubspot.com/seasalt-ai/seasalt-meeting>book a demo</a>.</p>
+<h1 id=why-doing-it-all-by-yourself>Why doing it all by yourself?</h1>
+<p>While converting audio files to different formats is essential, why stop there? Enhance your audio experience with <a href="https://meet.seasalt.ai/?utm_source=blog">SeaMeet</a>.</p>
+<p><strong>SeaMeet offers accurate, real-time transcription and summaries for all your audio needs.</strong> Whether you&rsquo;re converting audio files, recording a podcast, or just want to have a conversation transcript, SeaMeet provides instant, high-quality transcripts and insightful summaries. This powerful tool can save you hours of manual work and help you extract maximum value from your audio content.</p>
+<p><a href="https://meet.seasalt.ai/?utm_source=blog">Sign up for SeaMeet today</a> and experience the joy of tracking your conversation.</p>
 <h1 id=more-from-audio-toolbox-series>More from Audio Toolbox Series</h1>
 <ul>
 <li><a href="https://seasalt.ai/blog/65-how-to-download-audio-from-youtube/?utm_source=blog">How to Download Audio Data from YouTube, One and Many Videos</a></li>
