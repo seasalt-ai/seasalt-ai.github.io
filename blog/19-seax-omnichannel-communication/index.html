@@ -29,7 +29,6 @@ Unify Customer Contact with SeaX Omnichannel Communication
 <style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style>
 <link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
 </head>
-<link rel=canonical href=https://seasalt.ai/blog/seax-omnichannel-communication/>
 </head>
 <body id=body data-spy=scroll data-target=.navbar data-offset=52>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
@@ -39,7 +38,7 @@ Unify Customer Contact with SeaX Omnichannel Communication
 Download the Voice Intelligence whitepaper for GPT-powered contact centers here
 </a>
 <div class=page-sidebar-hamburger></div>
-<a class=seasalt-header-logo href=https://seasalt.ai/>
+<a class=seasalt-header-logo href=/>
 <img class=header-logo-svg src=https://seasalt.ai/images/logo.png>
 </a>
 <div class="seasalt-header-settings is-closed">
@@ -275,7 +274,7 @@ Transcribe audio & calls to discover insights
 </div>
 <div class=header-links-dropdown>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/blog/>
+<a class=links-dropdown-row href=/blog/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-blog.png>
 <div class=links-text-span>
 Blog
@@ -284,7 +283,7 @@ Blog
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/press/>
+<a class=links-dropdown-row href=/press/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-press.png>
 <div class=links-text-span>
 Press
@@ -293,7 +292,7 @@ Press
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/events/>
+<a class=links-dropdown-row href=/events/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-events.png>
 <div class=links-text-span>
 Events
@@ -302,7 +301,7 @@ Events
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/careers/>
+<a class=links-dropdown-row href=/careers/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-career.png>
 <div class=links-text-span>
 Careers
@@ -364,7 +363,7 @@ SeaX
 <p>To start, what does “omnichannel” actually mean? To break it down, “omni” is a prefix meaning “all”, and “channels” are the various platforms through which you can interact with your customers. So simply put, “omnichannel communication” means the ability to communicate through any and all channels available. And more than that, omnichannel communication means that the experience between channels is seamless. On the agent side, communication from all channels is presented in one unified interface. For the customer, their interaction data is persisted across channels .</p>
 <p>A traditional call center typically supports only phone calls. More advanced contact centers that connect with customers via multiple channels (such as email, webchat, and phone) have a multichannel contact center. However, just because a contact center utilizes multiple channels doesn’t mean that their experience is seamless. In multichannel contact centers, the different channels may be accessed through individual platforms and/or the customer data may not be linked across channels. In contrast, the omnichannel contact center lets agents follow a customer conversation wherever it goes, without being locked into one channel or spread across dozens of platforms.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/1-contact-center-comparison.png alt="Feature comparison: traditional call center vs contact center; multichannel vs omnichannel.">
+<img src=/images/blog/19-seax-omnichannel-communication/1-contact-center-comparison.png alt="Feature comparison: traditional call center vs contact center; multichannel vs omnichannel.">
 <p><em>Feature comparison: traditional call center vs contact center; multichannel vs omnichannel.</em></p>
 </center>
 <p>SeaX has the ability to integrate with virtually any channel, including by default: text, phone, webchat, Facebook, and more. All messages and calls are surfaced on one unified platform, and user data from all channels is readily available.</p>
@@ -374,34 +373,34 @@ SeaX
 <p>SeaX is built on top of <a href=https://www.twilio.com/flex>Twilio Flex</a>, a cloud-based contact center that utilizes Twilio&rsquo;s cloud communications platform. Twilio provides the basic building blocks for SeaX, such as telecom infrastructure, message & task routing, and a basic contact center UI. Now let’s track the lifecycle of an incoming user message and see how SeaX uses basic Twilio architecture combined with custom components to route the message to the live agent on the SeaX platform.</p>
 <h2 id=channel>Channel</h2>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/2-example-message.jpg alt="User sends a message to a business via Google Business Messages." , style=width:50%>
+<img src=/images/blog/19-seax-omnichannel-communication/2-example-message.jpg alt="User sends a message to a business via Google Business Messages." , style=width:50%>
 <p><em>Sending a message to a business via Google Business Messages.</em></p>
 </center>
 <p>A message’s journey starts with the user writing the message and sending it on a supported platform. The example above shows someone sending a message to the Seasalt.ai chatbot on Google Business Messages. Google Business Messages is not supported by Twilio by default, so we utilize a custom channel connector developed by Seasalt.ai to connect the Google platform to Twilio and SeaX.</p>
 <p>Once the message is sent, it is delivered by the custom connector to the Twilio messaging API. At this point, Twilio creates a new conversation context for the user, and prepares to route the message.</p>
 <h2 id=message-routing>Message Routing</h2>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/3-studio-flow.png alt="A simple Studio Flow which routes messages to a chatbot or a live agent.">
+<img src=/images/blog/19-seax-omnichannel-communication/3-studio-flow.png alt="A simple Studio Flow which routes messages to a chatbot or a live agent.">
 <p><em>A simple Studio Flow which routes messages to a chatbot or a live agent.</em></p>
 </center>
 <p>Once the message has been received by Twilio, it needs to be routed to the correct place. For this purpose, we use <a href=https://www.twilio.com/studio>Twilio Studio Flows</a> to determine whether to provide an automated response, forward the message to a chatbot, connect the user with a live agent, or perform some other action.</p>
 <p>In the simple example provided above, all incoming messages will be forwarded to a chatbot unless they contain the words “live agent”, in which case the user will be transferred to a live agent on the SeaX platform.</p>
 <h2 id=taskrouter>TaskRouter</h2>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/4-taskrouter.png alt="Diagram of TaskRouter architecture.">
+<img src=/images/blog/19-seax-omnichannel-communication/4-taskrouter.png alt="Diagram of TaskRouter architecture.">
 <p><em>Diagram of TaskRouter architecture. <a href=https://twilio-cms-prod.s3.amazonaws.com/images/taskrouter-diagram.width-800.png>Source</a>.</em></p>
 </center>
 <p>Once a message is transferred to SeaX, the next step is to decide which agent will receive it. <a href=https://www.twilio.com/taskrouter>Twilio’s TaskRouter</a> distributes tasks such as messages and phone calls to the agents in SeaX that can best handle them. Each agent in SeaX can be assigned skills such as which languages they speak, what department they work in, whether they should handle VIP customers, etc. The TaskRouter will check the known information about the user and message and then select the most appropriate worker to handle the issue. The Studio Flow from the previous step can be customized to get additional information (such as preferred language) and customer information can be persisted across conversations and channels to ensure that their experience is seamless.</p>
 <h2 id=seax-platform>SeaX Platform</h2>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/5-seax-incoming-messages.png alt="Incoming calls and messages surfaced on the SeaX platform." , style=width:50%>
+<img src=/images/blog/19-seax-omnichannel-communication/5-seax-incoming-messages.png alt="Incoming calls and messages surfaced on the SeaX platform." , style=width:50%>
 <p><em>Incoming calls and messages surfaced on the SeaX platform.</em></p>
 </center>
 <p>Finally, the incoming message will be surfaced to the appropriate agent on the SeaX platform. Agents can handle multiple tasks from multiple channels simultaneously. In the image above, an agent has an incoming call, Facebook message, and webchat message. The agent can accept the task or decline it to have it passed to the next available agent.</p>
 <h1 id=supported-channels>Supported Channels</h1>
 <p>Hopefully now it is more clear what omnichannel communication is, and how it enhances user and agent experience. The final question is: what channels are actually supported out of the box?</p>
 <center>
-<img src=https://seasalt.ai/images/blog/19-seax-omnichannel-communication/6-channel-comparison.png alt="Supported channel comparison between traditional call center, basic Twilio Flex, and SeaX.">
+<img src=/images/blog/19-seax-omnichannel-communication/6-channel-comparison.png alt="Supported channel comparison between traditional call center, basic Twilio Flex, and SeaX.">
 <p><em>Supported channel comparison between traditional call center, basic Twilio Flex, and SeaX.</em></p>
 </center>
 <p>As mentioned previously, a traditional call center typically only supports phone calls. Companies may still interact with customers on social media or through email, but these messages are not integrated into a unified platform.</p>
@@ -492,16 +491,16 @@ Developer Docs
 <div class=links-texts-title>
 Company
 </div>
-<a class=links-texts-link href=https://seasalt.ai/blog/>
+<a class=links-texts-link href=/blog/>
 Blog
 </a>
-<a class=links-texts-link href=https://seasalt.ai/press/>
+<a class=links-texts-link href=/press/>
 Press
 </a>
-<a class=links-texts-link href=https://seasalt.ai/events/>
+<a class=links-texts-link href=/events/>
 Events
 </a>
-<a class=links-texts-link href=https://seasalt.ai/careers/>
+<a class=links-texts-link href=/careers/>
 Careers
 </a>
 <a id=bookDemo_footer-contact class="links-texts-link ga-event" data-event-name=book_a_demo data-event-label=home-footer-contact href=https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/ target=_blank rel="noopener noreferrer">
@@ -518,14 +517,14 @@ Contact
 </div>
 <div class=lower-section>
 <span class="footer-links-form-title has-partner">
-<img class=footer-links-form-svg src=https://seasalt.ai/images/new/stay-in-mail.svg>Subscribe</span>
+<img class=footer-links-form-svg src=/images/new/stay-in-mail.svg>Subscribe</span>
 <span class=footer-links-form-desc>Sign up for our newsletter to stay up to date on everything about Conversational AI</span>
 <script>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"script","https://assets.mailerlite.com/js/universal.js","ml"),ml("account","672229")</script>
 <div class="ml-embedded mailerlite_form-container" data-form=Q9FeaC></div>
 <div class=news-letter-section>
 <p>Newsletter Archive</p>
 <a href=//seasalt.ai/press/ rel="noopener noreferrer" target=_blank>
-<img class=icon-link src=https://seasalt.ai/images/new/icon-link.svg alt>
+<img class=icon-link src=/images/new/icon-link.svg alt>
 </a>
 </div>
 <div class=footer-links-social>
@@ -560,8 +559,8 @@ Contact
 </p>
 </div>
 <div class=termsPrivacy>
-<a class=termsPrivacy-terms href=https://seasalt.ai/terms/>Terms</a>
-<a class=termsPrivacy-privacy href=https://seasalt.ai/privacy/>Privacy statement</a>
+<a class=termsPrivacy-terms href=/terms/>Terms</a>
+<a class=termsPrivacy-privacy href=/privacy/>Privacy statement</a>
 </div>
 </div>
 </footer>

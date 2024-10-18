@@ -29,7 +29,6 @@ Demo to Success (3/5): Beyond the Speech Algorithms
 <style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style>
 <link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
 </head>
-<link rel=canonical href=https://seasalt.ai/blog/seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/>
 </head>
 <body id=body data-spy=scroll data-target=.navbar data-offset=52>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
@@ -39,7 +38,7 @@ Demo to Success (3/5): Beyond the Speech Algorithms
 Download the Voice Intelligence whitepaper for GPT-powered contact centers here
 </a>
 <div class=page-sidebar-hamburger></div>
-<a class=seasalt-header-logo href=https://seasalt.ai/>
+<a class=seasalt-header-logo href=/>
 <img class=header-logo-svg src=https://seasalt.ai/images/logo.png>
 </a>
 <div class="seasalt-header-settings is-closed">
@@ -275,7 +274,7 @@ Transcribe audio & calls to discover insights
 </div>
 <div class=header-links-dropdown>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/blog/>
+<a class=links-dropdown-row href=/blog/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-blog.png>
 <div class=links-text-span>
 Blog
@@ -284,7 +283,7 @@ Blog
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/press/>
+<a class=links-dropdown-row href=/press/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-press.png>
 <div class=links-text-span>
 Press
@@ -293,7 +292,7 @@ Press
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/events/>
+<a class=links-dropdown-row href=/events/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-events.png>
 <div class=links-text-span>
 Events
@@ -302,7 +301,7 @@ Events
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/careers/>
+<a class=links-dropdown-row href=/careers/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-career.png>
 <div class=links-text-span>
 Careers
@@ -358,7 +357,7 @@ There are four major components of Modern Meetings, as illustrated below:</p>
 </ol>
 <p>Next we will detail all the important components.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/tech-stack.png alt="SeaMeet architect with 4 major components">
+<img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/tech-stack.png alt="SeaMeet architect with 4 major components">
 <p><em>We adapted all 4 major components of Modern Meetings with our own tech stack: 1. Signal processing with the microphone array; 2. Speaker diarization and identification; 3. Customized speech recognition; 4. A modern web UI.</em></p>
 </center>
 <h3 id=signal-processing-on-the-microphone-array>Signal Processing on the Microphone Array</h3>
@@ -376,7 +375,7 @@ Azure Cognitive Services offered a plethora of models to choose from across many
 <p>Once we had a solid foundational model, the next step was expanding <strong>useability</strong> and <strong>customizability</strong>. Every industry comes with a host of its own jargon making it difficult for ASR models to decipher between esoteric vocabulary and a string of common, phonetically similar words.</p>
 <p>Our response is <a href=https://suite.seasalt.ai/stt/>SeaVoice</a>, which provides a centralized location where users can easily tune models for their particular needs.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/seavoice.png alt="Seasalt.ai’s speech recognition product SeaVoice provides deep customization of speech models">
+<img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/seavoice.png alt="Seasalt.ai’s speech recognition product SeaVoice provides deep customization of speech models">
 <p><em>Seasalt.ai’s speech recognition product SeaVoice provides deep customization of speech models.</em></p>
 </center>
 <p>SeaVoice allows users to easily customize every component in an ASR pipeline: lexicon, language models, and acoustic models. Teaching the model new vocabulary is as simple as pairing the new words with a phonetic transcription.</p>
@@ -384,14 +383,14 @@ Azure Cognitive Services offered a plethora of models to choose from across many
 <p>So far, we have swapped out all the internal core algorithms of Azure Speech Services with our in-house solution. This made the system extremely versatile and independent. Enterprise customers favor this also due to the capabilities of on-premise deployment to protect privacy. After working hard on the backend, we finally came to the point of improving the frontend user experience.</p>
 <h3 id=a-modern-ui-and-seameet-is-born>A Modern UI and SeaMeet is Born</h3>
 <p>There was just one piece left for us to finally complete our departure from Azure’s Speech Service: a fresh user interface that would be the definitive face of Modern Meetings. We set our sights beyond the merely functional design from Azure and the “clean” interface from the Microsoft Build 2019 showcase. This time we aimed for elegance and added value.</p>
-<p><img src=https://seasalt.ai/images/blog/5-beyond-algorithm/seameet.png alt="SeaMeet UI showing live transcriptions, topic extraction, and AI generated meeting minutes"></p>
+<p><img src=/images/blog/5-beyond-algorithm/seameet.png alt="SeaMeet UI showing live transcriptions, topic extraction, and AI generated meeting minutes"></p>
 <p>We first deliver real time transcriptions followed by additional offline processing to perform speaker diarization and identification. Finally, we walked the extra mile to draw insights from the meeting by extracting meeting topics, actions, minutes, and summaries . We will detail these insights in the next blog.</p>
 <p>Finally, SeaMeet, a modern meeting re-implementation and enhancement of Microsoft Modern Meetings was born. The user interface is responsive and informative, providing much more value than the original proposition.</p>
 <table>
 <thead>
 <tr>
-<th><img src=https://seasalt.ai/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/modern-meetings-ms.png alt="Demo of Microsoft Azure&rsquo;s speech-to-text using a Kinect microhpne array and simple UI"></th>
-<th><img src=https://seasalt.ai/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/modern-meetings-seameet.png alt="SeaMeet&rsquo;s improved interface showing speaker identification and AI topic extraction"></th>
+<th><img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/modern-meetings-ms.png alt="Demo of Microsoft Azure&rsquo;s speech-to-text using a Kinect microhpne array and simple UI"></th>
+<th><img src=/images/blog/5-seameet-voice-intelligence-meeting-transcription-speech-recognition-algorithm-of-modern-meeting/modern-meetings-seameet.png alt="SeaMeet&rsquo;s improved interface showing speaker identification and AI topic extraction"></th>
 </tr>
 </thead>
 </table>
@@ -481,16 +480,16 @@ Developer Docs
 <div class=links-texts-title>
 Company
 </div>
-<a class=links-texts-link href=https://seasalt.ai/blog/>
+<a class=links-texts-link href=/blog/>
 Blog
 </a>
-<a class=links-texts-link href=https://seasalt.ai/press/>
+<a class=links-texts-link href=/press/>
 Press
 </a>
-<a class=links-texts-link href=https://seasalt.ai/events/>
+<a class=links-texts-link href=/events/>
 Events
 </a>
-<a class=links-texts-link href=https://seasalt.ai/careers/>
+<a class=links-texts-link href=/careers/>
 Careers
 </a>
 <a id=bookDemo_footer-contact class="links-texts-link ga-event" data-event-name=book_a_demo data-event-label=home-footer-contact href=https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/ target=_blank rel="noopener noreferrer">
@@ -507,14 +506,14 @@ Contact
 </div>
 <div class=lower-section>
 <span class="footer-links-form-title has-partner">
-<img class=footer-links-form-svg src=https://seasalt.ai/images/new/stay-in-mail.svg>Subscribe</span>
+<img class=footer-links-form-svg src=/images/new/stay-in-mail.svg>Subscribe</span>
 <span class=footer-links-form-desc>Sign up for our newsletter to stay up to date on everything about Conversational AI</span>
 <script>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"script","https://assets.mailerlite.com/js/universal.js","ml"),ml("account","672229")</script>
 <div class="ml-embedded mailerlite_form-container" data-form=Q9FeaC></div>
 <div class=news-letter-section>
 <p>Newsletter Archive</p>
 <a href=//seasalt.ai/press/ rel="noopener noreferrer" target=_blank>
-<img class=icon-link src=https://seasalt.ai/images/new/icon-link.svg alt>
+<img class=icon-link src=/images/new/icon-link.svg alt>
 </a>
 </div>
 <div class=footer-links-social>
@@ -549,8 +548,8 @@ Contact
 </p>
 </div>
 <div class=termsPrivacy>
-<a class=termsPrivacy-terms href=https://seasalt.ai/terms/>Terms</a>
-<a class=termsPrivacy-privacy href=https://seasalt.ai/privacy/>Privacy statement</a>
+<a class=termsPrivacy-terms href=/terms/>Terms</a>
+<a class=termsPrivacy-privacy href=/privacy/>Privacy statement</a>
 </div>
 </div>
 </footer>

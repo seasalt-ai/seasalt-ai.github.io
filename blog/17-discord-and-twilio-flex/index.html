@@ -29,7 +29,6 @@ Discord (3/3): Twilio Flex Contact Center in Discord
 <style type=text/css>#twilio-customer-frame .Twilio.Twilio-EntryPoint{background-color:#19b9c3;bottom:65px}#twilio-customer-frame .Twilio.Twilio-MainContainer{border-radius:20px}#twilio-customer-frame .Twilio.Twilio-MessageBubble{border-radius:10px}#twilio-customer-frame .Twilio.Twilio-MessageBubble.css-10rv2ev{background-color:#19b9c3}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-track{background-color:#d8d8d8}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar{width:4px;height:4px;background-color:#57cbcc}#twilio-customer-frame .Twilio.Twilio-MessageList::-webkit-scrollbar-thumb{background-color:#57cbcc}</style>
 <link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous>
 </head>
-<link rel=canonical href=https://seasalt.ai/blog/discord-and-twilio>
 </head>
 <body id=body data-spy=scroll data-target=.navbar data-offset=52>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N26SF8T" height=0 width=0 style=display:none;visibility:hidden></iframe></noscript>
@@ -39,7 +38,7 @@ Discord (3/3): Twilio Flex Contact Center in Discord
 Download the Voice Intelligence whitepaper for GPT-powered contact centers here
 </a>
 <div class=page-sidebar-hamburger></div>
-<a class=seasalt-header-logo href=https://seasalt.ai/>
+<a class=seasalt-header-logo href=/>
 <img class=header-logo-svg src=https://seasalt.ai/images/logo.png>
 </a>
 <div class="seasalt-header-settings is-closed">
@@ -275,7 +274,7 @@ Transcribe audio & calls to discover insights
 </div>
 <div class=header-links-dropdown>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/blog/>
+<a class=links-dropdown-row href=/blog/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-blog.png>
 <div class=links-text-span>
 Blog
@@ -284,7 +283,7 @@ Blog
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/press/>
+<a class=links-dropdown-row href=/press/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-press.png>
 <div class=links-text-span>
 Press
@@ -293,7 +292,7 @@ Press
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/events/>
+<a class=links-dropdown-row href=/events/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-events.png>
 <div class=links-text-span>
 Events
@@ -302,7 +301,7 @@ Events
 </a>
 </div>
 <div class=links-dropdown-area>
-<a class=links-dropdown-row href=https://seasalt.ai/careers/>
+<a class=links-dropdown-row href=/careers/>
 <img class=links-text-icon src=https://seasalt.ai/images/newLanding/headerIcons/icon-career.png>
 <div class=links-text-span>
 Careers
@@ -394,31 +393,31 @@ Discord
 <h1 id=demo-server>Demo Server</h1>
 <p>Now we will walk through how we set up our Discord server. For the purposes of the demo, we imagined a scenario where our server was used as a community for a game like Pokémon Go! The following table overviews some of the features demonstrated in our Discord server.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-features-2.png alt="Feature overview of the demo customer service Discord server.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-features-2.png alt="Feature overview of the demo customer service Discord server.">
 <p><em>Feature overview of the demo Discord server.</em></p>
 </center>
 <h2 id=1-to-many-help-official-channels>1-to-Many Help: Official Channels</h2>
 <p>Several channels in the server are set up to provide a direct stream between official admins/developers and players.
 The <strong>announcement channel</strong> can only be posted in by admins and mods, and can include (manual or automated) posts from the Twitter account, website, or other official sources.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-announcement-channel.jpg alt="The accouncements channel on the Discord server, featuring a post from an official Twitter account.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-announcement-channel.jpg alt="The accouncements channel on the Discord server, featuring a post from an official Twitter account.">
 <p><em>The #announcements channel on the demo Discord server.</em></p>
 </center>
 <p>The <strong>bug-report channel</strong> allows players to discuss bugs and game-breaking issues. Admins can keep an eye on this channel to identify any issues in the game that should be targeted. Additionally, users can submit an official bug report using the <code>/bug</code> slash command from within the channel.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-bug-report-channel.jpg alt="The bug report channel on the Discord server, featuring a submitted bug report.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-bug-report-channel.jpg alt="The bug report channel on the Discord server, featuring a submitted bug report.">
 <p><em>The #bug-report channel on the demo Discord server, featuring a submitted bug report.</em></p>
 </center>
 <p>The <strong>feature-request channel</strong> allows players to discuss gameplay changes, quality of life improvements, content additions, etc. that they would like to see added to the game. Similar to the bug request channel, their input can be seen by the discord mods and they can use the <code>/new_feature</code> slash command to submit an official request.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-feature-request-channel.jpg alt="The feature request channel on the Discord server, featuring a user performing a slash command.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-feature-request-channel.jpg alt="The feature request channel on the Discord server, featuring a user performing a slash command.">
 <p><em>The #feature-request channel on the demo Discord server, featuring a user performing a slash command.</em></p>
 </center>
 <h2 id=1-to-1-help-customer-service-agent>1-to-1 Help: Customer Service Agent</h2>
 <p>Players can use the <code>/helpme</code> slash command to trigger a direct message with an agent. The Customer Service Agent can be either automated (virtual agent) or manned by a live agent.</p>
 <p>For our demo, we set up a simple FAQ bot which queries the company knowledge base to provide relevant article suggestions to the user. The user can also request a live agent, and will be transferred in the same chat to a live agent on SeaX.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-customer-service-channel.jpg alt="The customer service channel on the Discord server, featuring a user triggering a DM.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-customer-service-channel.jpg alt="The customer service channel on the Discord server, featuring a user triggering a DM.">
 <p><em>The #feature-request channel on the demo Discord server, featuring a user triggering a DM.</em></p>
 </center>
 <h3 id=knowledge-base>Knowledge Base</h3>
@@ -426,20 +425,20 @@ The <strong>announcement channel</strong> can only be posted in by admins and mo
 <h3 id=live-agent-transfer>Live Agent Transfer</h3>
 <p>Once a user is in a direct message with the bot, they can request a live agent. They will immediately be notified that a case has been created for them, and that they are being transferred to a live agent. When the live agent joins the chat, they’ll also get a notification.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-customer-service-dm.jpg alt="A direct message with customer service, featuring KB article suggestions, live agent transfer, and case management.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-demo-customer-service-dm.jpg alt="A direct message with customer service, featuring KB article suggestions, live agent transfer, and case management.">
 <p><em>A direct message with customer service, featuring KB article suggestions, live agent transfer, and case management.</em></p>
 </center>
 <p>On the backend, the live agents can handle incoming calls and chat messages from all channels (SMS, Facebook, Discord, voice call, etc.) through a single platform. In this case, the backend platform is SeaX.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/flex-discord-channel.jpg alt="The SeaX interface displaying the live agent's view of a conversation with a user on Discord.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/flex-discord-channel.jpg alt="The SeaX interface displaying the live agent's view of a conversation with a user on Discord.">
 <p><em>The SeaX interface displaying the live agent&rsquo;s view of a conversation with a user on Discord.</em></p>
 </center>
 <h2 id=case-management>Case Management</h2>
 <p>One feature we wanted to emphasize in this demo is the case management. Seasalt.ai’s Discord solution integrates with the SeaX case management system to properly track various cases from users. When a user interacts with the Discord bot (such as requesting a live agent or reporting a bug), we can automatically open a new case and log all the important information about the user and the issue they’re experiencing. This allows the live agent to have easy access to all the reported issues, and make sure that they follow up with users until the case is resolved.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-new-case.png alt="Creating a new case in the SeaX case management system.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-new-case.png alt="Creating a new case in the SeaX case management system.">
 <p><em>Creating a new case in the SeaX case management system.</em></p>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-existing-case.png alt="Viewing an existing case in the SeaX case management system.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-existing-case.png alt="Viewing an existing case in the SeaX case management system.">
 <p><em>Viewing an existing case in the SeaX case management system.</em></p>
 </center>
 <h1 id=technical-deep-dive>Technical Deep Dive</h1>
@@ -449,7 +448,7 @@ The <strong>announcement channel</strong> can only be posted in by admins and mo
 <h2 id=define-the-flex-flow>Define the Flex Flow</h2>
 <p>The first step is to make sure that any messages we send to Twilio will be routed to the correct place. We set up a simple Twilio flow that first checks if the user requested a live agent, and if so forwards the following messages to SeaX. If the user did not request a live agent, then we forward the message to the chatbot to get a response. For more information about how to set up the flow, refer to the <a href=https://www.twilio.com/docs/studio>Twilio Studio Flow documentation</a>.</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-flow.png alt="A simple Flex Studio Flow that routes incoming messages to a chatbot or to SeaX.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-flow.png alt="A simple Flex Studio Flow that routes incoming messages to a chatbot or to SeaX.">
 <p><em>A simple Flex Studio Flow that routes incoming messages to a chatbot or to SeaX.</em></p>
 </center>
 <h2 id=create-a-custom-channel>Create a Custom Channel</h2>
@@ -552,7 +551,7 @@ configuration_url<span style=color:#f92672>=</span><span style=color:#e6db74>f</
                 <span style=color:#66d9ef>await</span> channel<span style=color:#f92672>.</span>send(item<span style=color:#f92672>.</span>get(<span style=color:#960050;background-color:#1e0010>“</span>text<span style=color:#960050;background-color:#1e0010>”</span>))
 </code></pre></div><p>Make sure that the Twilio Studio Flow has the correct webhook to route messages to the bot. Now we’ve finished our message routing! We can see a top-level view of all the message routing in this diagram:</p>
 <center>
-<img src=https://seasalt.ai/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-routing-diagram.jpg alt="Message routing diagram.">
+<img src=/images/blog/17-discord-and-twilio-flex-bringing-flex-contact-center-into-uncharted-territory/discord-flex-routing-diagram.jpg alt="Message routing diagram.">
 <p><em>Message routing diagram.</em></p>
 </center>
 <h1 id=summary>Summary</h1>
@@ -642,16 +641,16 @@ Developer Docs
 <div class=links-texts-title>
 Company
 </div>
-<a class=links-texts-link href=https://seasalt.ai/blog/>
+<a class=links-texts-link href=/blog/>
 Blog
 </a>
-<a class=links-texts-link href=https://seasalt.ai/press/>
+<a class=links-texts-link href=/press/>
 Press
 </a>
-<a class=links-texts-link href=https://seasalt.ai/events/>
+<a class=links-texts-link href=/events/>
 Events
 </a>
-<a class=links-texts-link href=https://seasalt.ai/careers/>
+<a class=links-texts-link href=/careers/>
 Careers
 </a>
 <a id=bookDemo_footer-contact class="links-texts-link ga-event" data-event-name=book_a_demo data-event-label=home-footer-contact href=https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/ target=_blank rel="noopener noreferrer">
@@ -668,14 +667,14 @@ Contact
 </div>
 <div class=lower-section>
 <span class="footer-links-form-title has-partner">
-<img class=footer-links-form-svg src=https://seasalt.ai/images/new/stay-in-mail.svg>Subscribe</span>
+<img class=footer-links-form-svg src=/images/new/stay-in-mail.svg>Subscribe</span>
 <span class=footer-links-form-desc>Sign up for our newsletter to stay up to date on everything about Conversational AI</span>
 <script>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"script","https://assets.mailerlite.com/js/universal.js","ml"),ml("account","672229")</script>
 <div class="ml-embedded mailerlite_form-container" data-form=Q9FeaC></div>
 <div class=news-letter-section>
 <p>Newsletter Archive</p>
 <a href=//seasalt.ai/press/ rel="noopener noreferrer" target=_blank>
-<img class=icon-link src=https://seasalt.ai/images/new/icon-link.svg alt>
+<img class=icon-link src=/images/new/icon-link.svg alt>
 </a>
 </div>
 <div class=footer-links-social>
@@ -710,8 +709,8 @@ Contact
 </p>
 </div>
 <div class=termsPrivacy>
-<a class=termsPrivacy-terms href=https://seasalt.ai/terms/>Terms</a>
-<a class=termsPrivacy-privacy href=https://seasalt.ai/privacy/>Privacy statement</a>
+<a class=termsPrivacy-terms href=/terms/>Terms</a>
+<a class=termsPrivacy-privacy href=/privacy/>Privacy statement</a>
 </div>
 </div>
 </footer>
