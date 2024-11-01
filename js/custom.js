@@ -661,9 +661,7 @@ $(window).load(function () {
   });
 
   // first section(hero-section) description typing animation
-  const heroSectionTyingArea = document.querySelector(
-    "#hero-section__paragraph"
-  );
+  const heroSectionTyingArea = document.querySelector("#animation-title");
 
   if (!heroSectionTyingArea) return;
   var textCount = 0;
@@ -677,7 +675,7 @@ $(window).load(function () {
   );
 
   function setTypingAnimate() {
-    const $heroSectionTyping = $("#hero-section__paragraph");
+    const $heroSectionTyping = $("#animation-title");
     $heroSectionTyping.removeClass("typingAnimate" + textCount.toString());
     if (textCount === 3) {
       textCount = 1;
@@ -687,7 +685,7 @@ $(window).load(function () {
     let content = $heroSectionTyping.attr("data-text" + textCount.toString());
     $heroSectionTyping.text(content);
     $heroSectionTyping.addClass("typingAnimate" + textCount.toString());
-  } 
+  }
 });
 
 /* ========================================================================= */
