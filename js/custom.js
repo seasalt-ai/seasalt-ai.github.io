@@ -586,6 +586,38 @@ $("#location-based-submit-button").click(function (e) {
   }
 });
 
+let typingTimer;
+const MAX_COUNT = 4;
+const mainTyingArea = document.querySelector("#main-typing-effect");
+
+function setTypingEffect(target) {
+  let displayText = "";
+  let currentIndex = 0;
+  let currentTextIndex = 0;
+
+  typingTimer = setInterval(() => {
+    const currentColor = target.getAttribute(`data-color${currentIndex + 1}`);
+    const currentText = target.getAttribute(`data-text${currentIndex + 1}`);
+    displayText = currentText.substring(0, currentTextIndex);
+
+    if (currentTextIndex < currentText.length) {
+      currentTextIndex++;
+    } else if (currentIndex < MAX_COUNT - 1) {
+      currentTextIndex = 0;
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+      currentTextIndex = 0;
+    }
+
+    mainTyingArea.innerHTML = displayText;
+    mainTyingArea.innerText = displayText;
+    mainTyingArea.style.color = currentColor;
+  }, 100);
+}
+
+setTypingEffect(mainTyingArea);
+
 $(window).load(function () {
   // scroll effect
   initScroll("#content", "career-mission-section");
@@ -659,33 +691,10 @@ $(window).load(function () {
   initVideo({
     buttonSelector: ".location-section-video .section-video-card",
   });
+});
 
-  // first section(hero-section) description typing animation
-  const heroSectionTyingArea = document.querySelector("#animation-title");
-
-  if (!heroSectionTyingArea) return;
-  var textCount = 0;
-
-  setTypingAnimate();
-
-  heroSectionTyingArea.addEventListener(
-    "animationend",
-    setTypingAnimate,
-    false
-  );
-
-  function setTypingAnimate() {
-    const $heroSectionTyping = $("#animation-title");
-    $heroSectionTyping.removeClass("typingAnimate" + textCount.toString());
-    if (textCount === 3) {
-      textCount = 1;
-    } else {
-      textCount += 1;
-    }
-    let content = $heroSectionTyping.attr("data-text" + textCount.toString());
-    $heroSectionTyping.text(content);
-    $heroSectionTyping.addClass("typingAnimate" + textCount.toString());
-  }
+$(window).unload(function () {
+  clearInterval(typingTimer);
 });
 
 /* ========================================================================= */
