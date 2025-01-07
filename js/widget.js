@@ -3,10 +3,11 @@ const bindWidgets = (() => {
     const selectAll = selector => document.querySelectorAll(selector);
 
     const channelTypes = {
-        line: "line",
         facebook: "facebook",
-        whatsapp: "whatsapp",
-        webchat: "webchat"
+        instagram: "instagram",
+        line: "line",
+        webchat: "webchat",
+        whatsapp: "whatsapp"        
     };
 
     const widgetContainer = select("#sui-right-widgets");
@@ -22,6 +23,10 @@ const bindWidgets = (() => {
         bindWidgetContent(
             channelTypes.whatsapp,
             "https://api.whatsapp.com/send/?phone=%2B14252987474&text&type=phone_number&app_absent=0"
+        );
+        bindWidgetContent(
+            channelTypes.instagram,
+            "https://www.instagram.com/seasalt.ai/"
         );
 
         // for mobile use --- start
