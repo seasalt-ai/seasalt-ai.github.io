@@ -6,6 +6,7 @@ const bindWidgets = (() => {
         facebook: "facebook",
         instagram: "instagram",
         line: "line",
+        voice: "voice",
         webchat: "webchat",
         whatsapp: "whatsapp"        
     };
@@ -27,6 +28,10 @@ const bindWidgets = (() => {
         bindWidgetContent(
             channelTypes.instagram,
             "https://www.instagram.com/seasalt.ai/"
+        );
+        bindWidgetContent(
+            channelTypes.voice,
+            "https://docs.google.com/forms/d/e/1FAIpQLSe1Z3Yq1u4w-eMZvCYdLoexkFRiJNirN7Ksr6I_et15DJBobA/viewform"
         );
 
         // for mobile use --- start
