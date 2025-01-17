@@ -29,10 +29,7 @@ const bindWidgets = (() => {
             channelTypes.instagram,
             "https://www.instagram.com/seasalt.ai/"
         );
-        bindWidgetContent(
-            channelTypes.voice,
-            "https://docs.google.com/forms/d/e/1FAIpQLSe1Z3Yq1u4w-eMZvCYdLoexkFRiJNirN7Ksr6I_et15DJBobA/viewform"
-        );
+        bindWidgetContent(channelTypes.voice);
 
         // for mobile use --- start
         const widgetBtn = select("#sui-widget-btn");
@@ -93,6 +90,48 @@ const bindWidgets = (() => {
 
             widgetContainer.prepend(iframeContainer);
             widgetContainer.prepend(webChatButton);
+        } else if (channel === channelTypes.voice) {
+            const callButton = document.createElement("a");
+            callButton.id = "sui-voice-btn";
+            callButton.className = "widget-btn";
+    
+            const callFormIframeContainer = document.createElement("iframe");
+            callFormIframeContainer.id = "sui-call-form";
+            
+            const handleClick = () => {
+                const widgetIcons = Array.from(document.querySelectorAll(".widget-btn")).filter(
+                    (btn) => btn.id !== callButton.id
+                );
+                const webChatButton = select("#sui-webchat-btn");
+                if (
+                    callFormIframeContainer.src !==
+                    "https://docs.google.com/forms/d/e/1FAIpQLSe1Z3Yq1u4w-eMZvCYdLoexkFRiJNirN7Ksr6I_et15DJBobA/viewform"
+                ) {
+                    callFormIframeContainer.src =
+                        "https://docs.google.com/forms/d/e/1FAIpQLSe1Z3Yq1u4w-eMZvCYdLoexkFRiJNirN7Ksr6I_et15DJBobA/viewform";
+                }
+                if (callFormIframeContainer.style.display !== "block") {
+                    callFormIframeContainer.style.display = "block";
+                    widgetIcons?.forEach((div) => {
+                        div?.classList?.add('show-iframe');
+                    })
+                    webChatButton.classList.add("show-call-form");
+                    callButton.classList.add("show-call-form");
+                    callFormIframeContainer.classList.add("show-call-form");
+                } else {
+                    callFormIframeContainer.style.display = "none";
+                    widgetIcons?.forEach((div) => {
+                        div?.classList?.remove('show-iframe');
+                    })
+                    webChatButton.classList.remove("show-call-form");
+                    callButton.classList.remove("show-call-form");
+                    callFormIframeContainer.classList.remove("show-call-form");
+                }
+            };
+            callButton.addEventListener("click", handleClick);
+
+            widgetContainer.prepend(callFormIframeContainer);
+            widgetContainer.prepend(callButton);
         } else {
             const widgetButton = document.createElement("a");
             widgetButton.id = `sui-${channel}-btn`;
