@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1366" height="557" viewBox="0 0 1366 557">
+    <defs>
+        <clipPath id="havvdu2u9a">
+            <path data-name="Rectangle 2061" transform="translate(0 4287)" style="fill:#19b9c3" d="M0 0h1366v557H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="GTA bg" transform="translate(0 -4287)" style="clip-path:url(#havvdu2u9a)">
+        <g data-name="Group 4076">
+            <g data-name="Group 4062" transform="translate(1188.477 4370.893)">
+                <circle data-name="Ellipse 257" cx="4.723" cy="4.723" r="4.723" style="fill:#f2fdfa"/>
+                <circle data-name="Ellipse 258" cx="4.723" cy="4.723" r="4.723" transform="translate(0 24.354)" style="fill:#f2fdfa"/>
+                <circle data-name="Ellipse 259" cx="4.723" cy="4.723" r="4.723" transform="translate(23.764)" style="fill:#f2fdfa"/>
+                <circle data-name="Ellipse 260" cx="4.723" cy="4.723" r="4.723" transform="translate(23.764 24.354)" style="fill:#f2fdfa"/>
+            </g>
+            <g data-name="Group 4063" transform="translate(126.504 4617.642)">
+                <circle data-name="Ellipse 261" cx="4.723" cy="4.723" r="4.723" style="fill:#fff"/>
+                <circle data-name="Ellipse 262" cx="4.723" cy="4.723" r="4.723" transform="translate(0 24.354)" style="fill:#fff"/>
+                <circle data-name="Ellipse 263" cx="4.723" cy="4.723" r="4.723" transform="translate(23.764)" style="fill:#fff"/>
+                <circle data-name="Ellipse 264" cx="4.723" cy="4.723" r="4.723" transform="translate(23.764 24.354)" style="fill:#fff"/>
+            </g>
+            <g data-name="Group 4064">
+                <path data-name="Line 54" style="stroke:#ebb064;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M0 154.118 154.118 0" transform="translate(1243.211 4216.775)"/>
+            </g>
+            <g data-name="Group 4065">
+                <path data-name="Line 55" style="stroke:#ebb064;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M0 143.954 143.954 0" transform="translate(1268.944 4750.701)"/>
+            </g>
+            <g data-name="Group 4066">
+                <path data-name="Line 56" style="stroke:#ebb064;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M0 118.532 118.624 0" transform="translate(-30.183 4345.428)"/>
+            </g>
+            <g data-name="Group 4068">
+                <path data-name="Line 58" style="stroke:#ebb064;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M0 106.238 106.33 0" transform="translate(-88.44 4351.575)"/>
+            </g>
+            <g data-name="Group 4069" transform="translate(948.907 4384.581)">
+                <circle data-name="Ellipse 265" cx="10.056" cy="10.056" style="fill:#fff" r="10.056"/>
+            </g>
+            <g data-name="Group 4070" transform="translate(198.907 4465.145)">
+                <circle data-name="Ellipse 266" cx="10.056" cy="10.056" style="fill:#fff" r="10.056"/>
+            </g>
+            <g data-name="Group 4071">
+                <path data-name="Path 44607" d="M31.985 576.444c2.633-.94 103.257-102.5 141.625-141.437a20.664 20.664 0 0 1 29.529 0 21 21 0 0 1 0 29.529l-31.6 31.6a10.444 10.444 0 0 0 0 14.859 10.444 10.444 0 0 0 14.858 0l13.166-13.166a22.705 22.705 0 0 1 32.35 0 22.705 22.705 0 0 1 0 32.35 9.763 9.763 0 0 0 0 13.73l37.052 37.052H28.6" transform="translate(1056.298 4296.795)" style="fill:#fff"/>
+            </g>
+            <g data-name="Group 4072">
+                <path data-name="Path 44608" d="M835.514 178.181 975.107 38.588a33.066 33.066 0 0 0 0-46.99 33.065 33.065 0 0 0-46.989 0l-74.5 74.725a11.486 11.486 0 0 1-16.045 0 11.486 11.486 0 0 1 0-16.045l25.214-25.443a17.848 17.848 0 0 0 0-25.443 17.848 17.848 0 0 0-25.443 0L769.041 67.7c-15.358 15.358-101.78 112.808-119.888 103.181-4.355-2.292 55.02-99.514-83.428 27.931-.225.228 269.789-19.026 269.789-20.631z" transform="translate(-825.192 4711.368)" style="fill:#fff"/>
+            </g>
+            <g data-name="Group 4073">
+                <path data-name="Line 59" style="stroke:#f2fdfa;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M0 132.752 132.752 0" transform="translate(-6.248 4780.45)"/>
+            </g>
+            <g data-name="Group 4074">
+                <path data-name="Line 60" style="stroke:#f2fdfa;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M88.541 0 0 88.465" transform="translate(1276 4662.235)"/>
+            </g>
+            <g data-name="Group 4075">
+                <path data-name="Line 61" style="stroke:#f2fdfa;fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" d="M88.541 0 0 88.465" transform="translate(1252.38 4920.419)"/>
+            </g>
+        </g>
+    </g>
+</svg>
