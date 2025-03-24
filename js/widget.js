@@ -89,6 +89,25 @@ const bindWidgets = (() => {
 
       widgetContainer.prepend(iframeContainer);
       widgetContainer.prepend(webChatButton);
+
+      // for bubble message
+      const tooltipElement = document.querySelector('#sui-widget-tooltip');
+      const handleTooltipClose = () => {
+        tooltipElement.style.display = 'none';
+      }
+      const tooltipCloseButton = document.querySelector('#sui-widget-tooltip-close');
+      tooltipCloseButton.addEventListener('click', handleTooltipClose);
+
+      tooltipElement.style.display = 'block';
+      const handleAutoCloseTooltip = () => {
+          const closeMilliseconds =
+            Number(30) * 1000;
+          setTimeout(() => {
+            handleTooltipClose();
+          }, closeMilliseconds);
+      }      
+      handleAutoCloseTooltip()
+
     } else if (channel === channelTypes.voice) {
       const callButton = document.createElement("a");
       callButton.id = "sui-voice-btn";
