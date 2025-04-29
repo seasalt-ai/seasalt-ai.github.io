@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en-us" class="h-full">
+  <head><script src="/health/health/health/health/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    
+
+
+
+    
+    <title>
+      
+        Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action |
+        SeaHealth
+      
+
+    </title>
+
+    
+    <meta
+      name="description"
+      content="
+        Learn how SeaMeet Dashboard helps Emergency Care facilities capture and manage unattended calls, improving patient communication and operational efficiency.
+      "
+    />
+    <meta
+      name="author"
+      content="Chaoming Li"
+    />
+    <meta
+      name="robots"
+      content="
+        index, follow
+      
+      "
+    />
+
+    
+    <meta
+      property="og:title"
+      content="
+        Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action |
+        SeaHealth
+      "
+    />
+    <meta
+      property="og:description"
+      content="
+        Learn how SeaMeet Dashboard helps Emergency Care facilities capture and manage unattended calls, improving patient communication and operational efficiency.
+      "
+    />
+    <meta
+      property="og:type"
+      content="
+        article
+      "
+    />
+    <meta property="og:url" content="//localhost:1314/blog/19/" />
+    <meta property="og:site_name" content="SeaHealth" />
+    
+      
+    
+
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="
+        Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action |
+        SeaHealth
+      "
+    />
+    <meta
+      name="twitter:description"
+      content="
+        Learn how SeaMeet Dashboard helps Emergency Care facilities capture and manage unattended calls, improving patient communication and operational efficiency.
+      "
+    />
+    
+    
+      
+    
+
+
+    
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/health/health/health/health/images/favicon.ico"
+    />
+
+    
+    <link rel="canonical" href="/health/health/health/health//localhost:1314/blog/19/" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    
+    
+    
+    
+    <link rel="stylesheet" href="/health/health/health/health/css/main.css" />
+
+    
+    
+      <link
+        rel="stylesheet"
+        href="/health/health/health/health/css/style.min.10e50d1508121d1343623bc6efe3590bc80ff64a6d31d3e3919af6ce3e27e90e.css"
+        integrity="sha256-EOUNFQgSHRNDYjvG7&#43;NZC8gP9kptMdPjkZr2zj4n6Q4="
+        crossorigin="anonymous"
+      />
+    
+
+
+    
+    
+  </head>
+  <body class="seahealth-container min-h-screen flex flex-col">
+    
+    <div class="fixed top-0 left-0 right-0 z-50">
+      
+
+<div class="header-container">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <header
+    class="fixed w-full top-0 z-50 
+      bg-white/80 backdrop-blur-sm
+     
+      border-b border-gray-100
+    "
+  >
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <nav class="flex items-center justify-between h-16">
+        
+        <a href="/health/health/health/health//localhost:1314/" class="flex items-center space-x-4">
+          
+            <img
+              src="/health/health/health/health/images/logo-seahealth.svg"
+              alt="SeaHealth"
+            />
+          
+          
+        </a>
+
+        <div class="flex items-center gap-12">
+        
+        <div
+          class="hidden md:flex items-center 
+            space-x-8
+          "
+        >
+          
+            
+              <a
+                href="/health/health/health/health/blog"
+                class="
+                  text-base text-gray-900 hover:text-primary-600
+                  transition duration-200
+                "
+                >Blog</a
+              >
+            
+          
+        </div>
+
+        
+        
+          <div class="hidden md:flex items-center space-x-4">
+            
+              <a
+                href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+                class="btn-main"
+                target="_blank" rel="noopener noreferrer"
+              >
+                Book a Demo
+              </a>
+            
+          </div>
+        
+        </div>
+
+        
+        <div class="md:hidden">
+          <label
+            for="nav-toggle"
+            class="p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 transition-colors cursor-pointer"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+    
+    <div
+      class="nav-content md:hidden w-full fixed left-0 right-0 bg-white border-t border-gray-100 shadow-lg"
+    >
+      <div class="w-full px-6 py-4">
+        
+          
+            <a
+              href="/health/health/health/health/blog"
+              class="
+                block text-xl text-gray-900 hover:text-primary-600 font-bold
+                transition duration-200 py-2
+              "
+              >Blog</a
+            >
+          
+        
+
+        
+          <div class="text-center pt-4 space-y-4">
+            
+            <a
+              href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/"
+              class="btn-main"
+              target="_blank" rel="noopener noreferrer"
+            >
+              Book a Demo
+            </a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </header>
+</div>
+
+    </div>
+
+    
+    <div class="pt-16">
+      
+<div class="container mx-auto px-4 py-12">
+    
+    <div class="flex flex-col lg:flex-row gap-8 mb-12">
+        
+        <article class="flex-1">
+            <header class="mb-8">
+                
+                    <div class="mb-4">
+                        
+                            <a href="/health/health/health/health/categories/emergency-care" 
+                               class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100 mr-2">
+                                Emergency Care
+                            </a>
+                        
+                    </div>
+                
+
+                <h1 class="text-4xl font-bold mb-4">Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action</h1>
+                
+                <div class="flex flex-col space-y-4">
+
+
+    
+    <div class="flex items-center justify-between text-sm text-gray-500">
+        
+
+        <div class="flex items-center space-x-6">
+            <div class="flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <span>4 min read</span>
+            </div>
+
+            <div class="flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <time datetime="2025-04-20">
+                    April 20, 2025
+                </time>
+            </div>
+        </div>
+    </div>
+
+    
+    
+        <div class="flex items-center flex-wrap gap-2">
+            
+                <a href="/health/health/health/health/tags/seameetdashboard" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #SeaMeetDashboard
+                </a>
+            
+                <a href="/health/health/health/health/tags/emergencycallanalytics" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #EmergencyCallAnalytics
+                </a>
+            
+                <a href="/health/health/health/health/tags/zeromissedemergencycalls" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #ZeroMissedEmergencyCalls
+                </a>
+            
+                <a href="/health/health/health/health/tags/realtimetriage" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #RealTimeTriage
+                </a>
+            
+                <a href="/health/health/health/health/tags/hipaacompliantcomms" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #HIPAACompliantComms
+                </a>
+            
+                <a href="/health/health/health/health/tags/emergencycareai" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #EmergencyCareAI
+                </a>
+            
+                <a href="/health/health/health/health/tags/staffperformanceinsights" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #StaffPerformanceInsights
+                </a>
+            
+                <a href="/health/health/health/health/tags/patientsafetyfirst" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #PatientSafetyFirst
+                </a>
+            
+                <a href="/health/health/health/health/tags/datadrivenemergencycare" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #DataDrivenEmergencyCare
+                </a>
+            
+                <a href="/health/health/health/health/tags/aiforercoordination" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #AIForERCoordination
+                </a>
+            
+                <a href="/health/health/health/health/tags/reducecallwaittimes" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #ReduceCallWaitTimes
+                </a>
+            
+                <a href="/health/health/health/health/tags/voiceaitriage" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #VoiceAITriage
+                </a>
+            
+                <a href="/health/health/health/health/tags/emergencyresponseoptimization" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #EmergencyResponseOptimization
+                </a>
+            
+                <a href="/health/health/health/health/tags/seamlessehrintegration" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #SeamlessEHRIntegration
+                </a>
+            
+                <a href="/health/health/health/health/tags/proactivepatientsupport" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #ProactivePatientSupport
+                </a>
+            
+                <a href="/health/health/health/health/tags/medicaltriageai" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #MedicalTriageAI
+                </a>
+            
+                <a href="/health/health/health/health/tags/crisiscallmanagement" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #CrisisCallManagement
+                </a>
+            
+                <a href="/health/health/health/health/tags/realtimecalltranscription" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #RealTimeCallTranscription
+                </a>
+            
+                <a href="/health/health/health/health/tags/emergencyworkflowai" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #EmergencyWorkflowAI
+                </a>
+            
+                <a href="/health/health/health/health/tags/patientsatisfactionmetrics" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #PatientSatisfactionMetrics
+                </a>
+            
+                <a href="/health/health/health/health/tags/leadconversionhealthcare" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #LeadConversionHealthcare
+                </a>
+            
+                <a href="/health/health/health/health/tags/secureemergencycomms" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #SecureEmergencyComms
+                </a>
+            
+                <a href="/health/health/health/health/tags/futurereadyer" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #FutureReadyER
+                </a>
+            
+                <a href="/health/health/health/health/tags/seahealthinnovation" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #SeaHealthInnovation
+                </a>
+            
+                <a href="/health/health/health/health/tags/lifesavinganalytics" 
+                    class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition-colors duration-200">
+                    #LifeSavingAnalytics
+                </a>
+            
+        </div>
+    
+</div>
+
+            </header>
+
+            
+
+            <div class="prose prose-lg max-w-none">
+                <p>In emergency care, every second matters. Patient lives depend on immediate healthcare provider response to their inquiries since timely interventions prevent potential emergencies. However, medical facilities often encounter large call volumes, shortage of staff, resulting in poorly managed calls. Patients, then, are often frustrated at missed or unattended calls, which may also endanger their health.</p>
+<p>The <a href="https://usecase.seasalt.ai/hospital-phone-call-analytics-dashboard">SeaMeet Dashboard</a> provides streamlined call management by offering real-time insights which guarantee urgent calls receive immediate response. SeaMeet’s powerful dashboard is explored in this article as a means to improve communication in emergency care environments.</p>
+<p><img src="/health/health/health/health/images/blog/19-01.jpg" alt=""></p>
+<h2 id="what-are-the-challenges-in-reducing-unattended-calls-in-emergency-care">What Are the Challenges in Reducing Unattended Calls in Emergency Care?</h2>
+<p>Implementing call answering solutions in an emergency care facility involves various factors that should be addressed.</p>
+<h3 id="1-high-call-volumes">1. High Call Volumes</h3>
+<p>Emergency or Urgent care centers must take many calls daily. Appointments and urgent medical inquiries often overload front desk staff. This leads to <a href="https://www.hipaajournal.com/effects-of-poor-communication-in-healthcare/">delayed or missed responses</a> that could have a negative effect on patient care</p>
+<h3 id="2-difficulty-in-monitoring-staff-performance">2. Difficulty in Monitoring Staff Performance</h3>
+<p>Without a structured system to evaluate call handling, gauging the effectiveness of staff is very difficult. This can make it difficult for facilities to know whether employees are giving accurate information, securing inquiries into appointments, or practicing good patient communication practices.</p>
+<h3 id="3-understanding-common-reasons-for-patient-to-call">3. Understanding Common Reasons for Patient to Call</h3>
+<p>Like any other business, knowing <a href="https://medcitynews.com/2024/08/whats-keeping-healthcare-cios-up-at-night-how-to-improve-patient-satisfaction-by-handling-calls-more-efficiently/">why patients are calling</a> is key to managing resources and minimizing the number of unnecessary calls. Facilities are missing out on the use of valuable data that could help streamline operations and lead to better and more efficient service delivery.</p>
+<h2 id="how-does-the-seameet-dashboard-work">How Does the SeaMeet Dashboard Work?</h2>
+<p>The <strong>SeaMeet Dashboard</strong> call management solution puts an end to all these issues by providing comprehensive solutions. Here’s how it works:</p>
+<h3 id="1-call-transcription-and-analysis">1. Call Transcription and Analysis</h3>
+<p>It automatically transcribes calls and gives the structured insights to the conversation. Healthcare providers can review the calls, identify trends, and compliance to medical guidelines.</p>
+<h3 id="2-real-time-data-processing">2. Real-Time Data Processing</h3>
+<p>The dashboard updates every 15 minutes to give almost immediate look at call activity. It allows quick intervention in case of a call overflow, so no inquiry is left unanswered.</p>
+<h3 id="3-customization-for-facility-specific-needs">3. Customization for Facility-Specific Needs</h3>
+<p>The dashboard can be modified by medical facilities to define exactly how performance of the three data points (booking rates, triage accuracy, and staff responsiveness) is tracked. Because of this flexibility, it may be used in any setting of healthcare.</p>
+<h2 id="what-are-the-key-features-of-seameet-dashboard">What are the Key Features of SeaMeet Dashboard?</h2>
+<p>SeaMeet implements multiple features to enhance the management of emergency call situations. Two top capabilities of the <strong>SeaMeet Dashboard</strong> include:</p>
+<h3 id="1-call-reason-analysis">1. Call Reason Analysis</h3>
+<p>The dashboard groups patient phone inquiries into appointment requests as well as prescription refills and medical advice categories. <a href="https://usecase.seasalt.ai/hospital-phone-call-analytics-dashboard/">SeaMeet</a> provides insights that support facilities to use their resources wisely while managing calls more efficiently.</p>
+<h3 id="2-lead-conversion-metrics">2. Lead Conversion Metrics</h3>
+<p>Healthcare facilities need to monitor patient leads that transform into treatment or appointment engagements. The <strong>Seameet dashboard</strong> delivers conversion metrics about leads to help medical organizations enhance their patient acquisition approaches.</p>
+<h3 id="3-customer-satisfaction-assessment">3. Customer Satisfaction Assessment</h3>
+<p>SeaMeet generates evaluations through inspections of agent voice performance combined with assessment of call response skill and measurement of call-to-action results. The system provides patients with consistent access to polite service from qualified personnel who deliver detailed information throughout their support periods.</p>
+<h3 id="4-medical-triage-monitoring">4. Medical Triage Monitoring</h3>
+<p>It remains essential for staff members to handle appropriate phone triage duties in order to protect patient safety. SeaMeet helps ensure compliance with medical guidelines, minimizing organizational risks while enhancing patient care quality.</p>
+<p><img src="/health/health/health/health/images/blog/19-02.jpg" alt=""></p>
+<p>What Are the Benefits of Implementing SeaMeet in Emergency Care Settings?</p>
+<p>Aside from <strong>Reducing Unattended Calls in Emergency Care with SeaMeet Dashboard,</strong> there are multiple benefits to medical facilities, as follows:</p>
+<h3 id="1-efficient-call-management">1. Efficient Call Management</h3>
+<p>Real-time data analysis combined with automated call tracking enables medical facilities to manage their incoming calls more efficiently thereby keeping all patients from waiting for assistance.</p>
+<h3 id="2-improved-staff-performance">2. Improved Staff Performance</h3>
+<p>The SeaMeet platform provides continuous evaluation of staff interactions to help employees build better communication abilities and service quality standards.</p>
+<h3 id="3-enhanced-patient-satisfaction">3. Enhanced Patient Satisfaction</h3>
+<p>Everything from quick responses to adept handling of phone calls produces satisfied patients. Hearability coupled with quick aid delivery produces higher trust levels from patients in their medical care facilities.</p>
+<h3 id="4-data-driven-decision-making">4. Data-Driven Decision Making</h3>
+<p>Healthcare administrators gain knowledge from detailed call analytics to make improved decisions that optimize staffing numbers and boost operational efficiency as well as patient care quality.</p>
+<p>In emergency care, every call matters. Medical facilities using <strong>SeaMeet Dashboard</strong> can prevent adverse outcomes from unanswered calls by providing proper call management capabilities. The system improves efficiency in call handling operations and simultaneously creates better patient satisfaction during operational activities.<br>
+<a href="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting?uuid=650db5fd-2caa-433d-a3f4-947faf7557f8">Contact us</a> now to observe how SeaMeet enhances your emergency call center management process.</p>
+
+            </div>
+        </article>
+
+        
+        <aside class="lg:w-80 xl:w-96">
+            <div class="space-y-8">
+    
+    
+
+    
+    
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Recent Articles</h3>
+            <div class="space-y-4">
+                
+                
+                    <div class="group">
+                        <a href="/health/health/health/health/blog/21/" class="block">
+                            
+                                <div class="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-lg">
+                                    <img 
+                                        src="/health/health/health/health/images/blog/21-01.jpg" 
+                                        alt="Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action" 
+                                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            
+                            <h4 class="font-medium text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
+                                AI-Optimized Scheduling in Emergency Settings: Rapid Response &amp; Dynamic Rescheduling
+                            </h4>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <time datetime="2025-04-20">
+                                    Apr 20, 2025
+                                </time>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="group">
+                        <a href="/health/health/health/health/blog/20/" class="block">
+                            
+                                <div class="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-lg">
+                                    <img 
+                                        src="/health/health/health/health/images/blog/20-01.jpg" 
+                                        alt="Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action" 
+                                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            
+                            <h4 class="font-medium text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
+                                Around-the-Clock Emergency Support: The Power of SeaChat Voice AI
+                            </h4>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <time datetime="2025-04-20">
+                                    Apr 20, 2025
+                                </time>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="group">
+                        <a href="/health/health/health/health/blog/22/" class="block">
+                            
+                                <div class="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-lg">
+                                    <img 
+                                        src="/health/health/health/health/images/blog/22-01.jpg" 
+                                        alt="Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action" 
+                                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            
+                            <h4 class="font-medium text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
+                                Beyond the Crisis: Outbound Initiatives for Post-Emergency Follow-Up
+                            </h4>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <time datetime="2025-04-20">
+                                    Apr 20, 2025
+                                </time>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="group">
+                        <a href="/health/health/health/health/blog/23/" class="block">
+                            
+                                <div class="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-lg">
+                                    <img 
+                                        src="/health/health/health/health/images/blog/23-01.jpg" 
+                                        alt="Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action" 
+                                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            
+                            <h4 class="font-medium text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
+                                Cost-Efficiency in Emergencies: Voice AI vs. Traditional Models
+                            </h4>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <time datetime="2025-04-20">
+                                    Apr 20, 2025
+                                </time>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="group">
+                        <a href="/health/health/health/health/blog/19/" class="block">
+                            
+                                <div class="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-lg">
+                                    <img 
+                                        src="/health/health/health/health/images/blog/19-01.jpg" 
+                                        alt="Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action" 
+                                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                                        loading="lazy"
+                                    >
+                                </div>
+                            
+                            <h4 class="font-medium text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
+                                Ensuring Every Emergency Care Call Answered: SeaMeet Dashboard in Action
+                            </h4>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <time datetime="2025-04-20">
+                                    Apr 20, 2025
+                                </time>
+                            </div>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Categories</h3>
+            <div class="flex flex-wrap gap-2">
+                
+                    <a href="/health/health/health/health/categories/dental-clinics"
+                       class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
+                        dental clinics
+                        <span class="text-gray-500 ml-1">(6)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/categories/emergency-care"
+                       class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
+                        emergency care
+                        <span class="text-gray-500 ml-1">(6)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/categories/foundations"
+                       class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
+                        foundations
+                        <span class="text-gray-500 ml-1">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/categories/hospitals-clinics"
+                       class="inline-block px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full hover:bg-primary-100">
+                        hospitals clinics
+                        <span class="text-gray-500 ml-1">(6)</span>
+                    </a>
+                
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-bold mb-4">Popular Tags</h3>
+            <div class="flex flex-wrap gap-2">
+                
+                
+                    <a href="/health/health/health/health/tags/seahealthinnovation"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #seahealthinnovation
+                        <span class="text-gray-500">(13)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/seahealthvoiceai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #seahealthvoiceai
+                        <span class="text-gray-500">(10)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/hipaacompliantai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #hipaacompliantai
+                        <span class="text-gray-500">(8)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/futurereadydentistry"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #futurereadydentistry
+                        <span class="text-gray-500">(6)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/proactivepatientcare"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #proactivepatientcare
+                        <span class="text-gray-500">(5)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/seachatvoiceai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #seachatvoiceai
+                        <span class="text-gray-500">(5)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/24x7dentalsupport"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #24x7dentalsupport
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/dentalpracticeautomation"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #dentalpracticeautomation
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/futurereadyer"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #futurereadyer
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/healthcareautomation"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #healthcareautomation
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/patientretentionai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #patientretentionai
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/seahealthdentalai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #seahealthdentalai
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/seamlessclinicintegration"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #seamlessclinicintegration
+                        <span class="text-gray-500">(4)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/aiforclinics"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #aiforclinics
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/aiinhealthcare"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #aiinhealthcare
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/automatedschedulingai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #automatedschedulingai
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/cutoperationalcosts"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #cutoperationalcosts
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/ehrintegration"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #ehrintegration
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/emergencyworkflowai"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #emergencyworkflowai
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+                    <a href="/health/health/health/health/tags/nomoremissedcalls"
+                       class="text-sm text-gray-600 hover:text-primary-600">
+                        #nomoremissedcalls
+                        <span class="text-gray-500">(3)</span>
+                    </a>
+                
+            </div>
+        </div>
+    
+</div>
+
+        </aside>
+    </div>
+
+    
+    <nav class="border-t border-gray-200 mt-12 pt-8">
+        <div class="flex justify-between items-center">
+            
+                <a href="/health/health/health/health/blog/18/" 
+                   class="group flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-gray-600 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <div>
+                        <div class="text-sm text-gray-600">Previous Post</div>
+                        <div class="font-medium group-hover:text-primary-600">The Critical Role of Communication in Emergency Care</div>
+                    </div>
+                </a>
+            
+            
+            
+                <a href="/health/health/health/health/blog/23/" 
+                   class="group flex items-center text-right">
+                    <div>
+                        <div class="text-sm text-gray-600">Next Post</div>
+                        <div class="font-medium group-hover:text-primary-600">Cost-Efficiency in Emergencies: Voice AI vs. Traditional Models</div>
+                    </div>
+                    <svg class="w-5 h-5 ml-2 text-gray-600 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            
+        </div>
+    </nav>
+
+    
+    
+</div>
+
+    </div>
+
+    
+    <footer class="footer-container bg-white py-12 border-t border-gray-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div
+      class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0"
+    >
+      
+      <div class="flex-1">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <a href="https://seasalt.ai/" class="inline-block" target="_blank" rel="noopener noreferrer">
+            
+              <img
+                src="/health/health/health/health/images/logo.svg"
+                alt="SeaHealth"
+                class="h-12"
+              />
+            
+          </a>
+          
+        </div>
+        <div class="flex items-center justify-center space-x-3 p-2 text-base">
+            <p>Made with <i class="fa fa-heart"></i> in the city of
+				<i class="fa fa-coffee"></i>
+				<i class="fa fa-umbrella"></i>
+				<i class="fa fa-plane"></i>
+				<i class="fa fa-diamond"></i>
+			</p>
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div class="mt-0 pt-4">
+      <div
+        class="footer-bottom flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0"
+      >
+        <p class="text-gray-600 text-base">
+         Copyright © 2019-2025. All rights reserved.
+        </p>
+        
+        <div class="footer-right">
+          <a
+            href="https://seasalt.ai/terms/"
+            class="text-base text-gray-600 hover:text-primary-600"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms
+          </a>
+          <a
+            href="https://seasalt.ai/privacy/"
+            class="text-base text-gray-600 hover:text-primary-600"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy statement
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu) {
+            mobileMenu.classList.toggle("hidden");
+          }
+        });
+      }
+
+      let typingTimer;
+      const MAX_COUNT = 3;
+      const mainTyingArea = document.querySelector("#main-typing-effect");
+
+      
+      function setTypingEffect(target) {
+        let displayText = "";
+        let currentIndex = 0;
+        let currentTextIndex = 0;
+
+        typingTimer = setInterval(() => {
+          const currentColor = target.getAttribute(
+            `data-color${currentIndex + 1}`,
+          );
+          const currentText = target.getAttribute(
+            `data-text${currentIndex + 1}`,
+          );
+          displayText = currentText.substring(0, currentTextIndex);
+
+          if (currentTextIndex < currentText.length) {
+            currentTextIndex++;
+          } else if (currentIndex < MAX_COUNT - 1) {
+            currentTextIndex = 0;
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+            currentTextIndex = 0;
+          }
+
+          mainTyingArea.innerHTML = displayText;
+          mainTyingArea.innerText = displayText;
+          mainTyingArea.style.color = currentColor;
+        }, 100);
+      }
+      if (mainTyingArea) {
+        setTypingEffect(mainTyingArea);
+        window.addEventListener('unload', function () {
+          clearInterval(typingTimer);
+        });
+      }
+    </script>
+  </body>
+</html>
