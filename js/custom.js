@@ -586,37 +586,79 @@ $("#location-based-submit-button").click(function (e) {
   }
 });
 
-let typingTimer;
-const MAX_COUNT = 4;
-const mainTyingArea = document.querySelector("#main-typing-effect");
+function setTypingEffect(targetElement) {
+  // 防呆：確保目標元素存在
+  if (!targetElement || !(targetElement instanceof HTMLElement)) {
+    console.error('Invalid target element for typing effect');
+    return null;
+  }
 
-function setTypingEffect(target) {
-  let displayText = "";
+  // 動態獲取有效文字數量
+  const textEntries = [];
+  let index = 1;
+  while (true) {
+    const text = targetElement.getAttribute(`data-text${index}`);
+    const color = targetElement.getAttribute(`data-color${index}`) || '#000';
+    
+    // 當找不到文字屬性時停止收集
+    if (!text && textEntries.length === 0) {
+      console.warn('No valid typing content found');
+      return null;
+    }
+    if (!text) break;
+
+    textEntries.push({ text, color });
+    index++;
+  }
+
+  // 防呆：確保至少有一組有效文字
+  if (textEntries.length === 0) {
+    console.warn('No valid typing content found');
+    return null;
+  }
+
   let currentIndex = 0;
   let currentTextIndex = 0;
 
-  typingTimer = setInterval(() => {
-    const currentColor = target.getAttribute(`data-color${currentIndex + 1}`);
-    const currentText = target.getAttribute(`data-text${currentIndex + 1}`);
-    displayText = currentText.substring(0, currentTextIndex);
-
-    if (currentTextIndex < currentText.length) {
-      currentTextIndex++;
-    } else if (currentIndex < MAX_COUNT - 1) {
-      currentTextIndex = 0;
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-      currentTextIndex = 0;
+  const timer = setInterval(() => {
+    // 再次檢查元素是否存在
+    if (!document.body.contains(targetElement)) {
+      clearInterval(timer);
+      return;
     }
 
-    mainTyingArea.innerHTML = displayText;
-    mainTyingArea.innerText = displayText;
-    mainTyingArea.style.color = currentColor;
+    const currentEntry = textEntries[currentIndex];
+    const displayText = currentEntry.text.substring(0, currentTextIndex++);
+
+    // 合併 DOM 操作
+    targetElement.textContent = displayText;
+    targetElement.style.color = currentEntry.color;
+
+    // 循環邏輯
+    if (currentTextIndex > currentEntry.text.length) {
+      currentTextIndex = 0;
+      currentIndex = (currentIndex + 1) % textEntries.length;
+    }
   }, 100);
+
+  return timer;
 }
 
-setTypingEffect(mainTyingArea);
+// 初始化流程
+const typingElement = document.querySelector("#main-typing-effect");
+let typingTimer = null;
+
+// 防呆：只有當元素存在時才初始化
+if (typingElement) {
+  typingTimer = setTypingEffect(typingElement);
+  
+  // 視窗卸載時清除計時器
+  window.addEventListener('beforeunload', () => {
+    if (typingTimer) clearInterval(typingTimer);
+  });
+} else {
+  // console.error('Typing element not found');
+}
 
 $(window).load(function () {
   // scroll effect
@@ -691,10 +733,6 @@ $(window).load(function () {
   initVideo({
     buttonSelector: ".location-section-video .section-video-card",
   });
-});
-
-$(window).unload(function () {
-  clearInterval(typingTimer);
 });
 
 /* ========================================================================= */
