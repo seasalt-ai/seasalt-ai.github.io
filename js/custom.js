@@ -533,24 +533,24 @@ function writeToGoogleForm(type, email, msgElementId, inputElementId) {
 }
 
 // whitePaper submit
-$("#hero-section-submit-button").click(function (e) {
-  e.preventDefault();
-  let $emailInput = $("#hero-section__email");
-  let email = $emailInput.val();
+// $("#hero-section-submit-button").click(function (e) {
+//   e.preventDefault();
+//   let $emailInput = $("#hero-section__email");
+//   let email = $emailInput.val();
 
-  if (email.trim() !== "") {
-    if (emailCheck(email)) {
-      writeToGoogleForm(
-        "whitePaper",
-        email,
-        "whitePaper-submit-message",
-        "hero-section__email"
-      );
-    } else {
-      displayMessage("whitePaper-submit-message", true);
-    }
-  }
-});
+//   if (email.trim() !== "") {
+//     if (emailCheck(email)) {
+//       writeToGoogleForm(
+//         "whitePaper",
+//         email,
+//         "whitePaper-submit-message",
+//         "hero-section__email"
+//       );
+//     } else {
+//       displayMessage("whitePaper-submit-message", true);
+//     }
+//   }
+// });
 
 // press subscribe button
 $("#subscribe-email-submit").click((e) => {
@@ -567,29 +567,29 @@ $("#get-voice-intelligence-white-paper").click((e) => {
 });
 
 // location-based messaging whitePaper submit
-$("#location-based-submit-button").click(function (e) {
-  e.preventDefault();
-  let $emailInput = $("#location-based__email");
-  let email = $emailInput.val();
+// $("#location-based-submit-button").click(function (e) {
+//   e.preventDefault();
+//   let $emailInput = $("#location-based__email");
+//   let email = $emailInput.val();
 
-  if (email.trim() !== "") {
-    if (emailCheck(email)) {
-      writeToGoogleForm(
-        "LBM_whitepager",
-        email,
-        "location-based-submit-message",
-        "location-based__email"
-      );
-    } else {
-      displayMessage("location-based-submit-message", true);
-    }
-  }
-});
+//   if (email.trim() !== "") {
+//     if (emailCheck(email)) {
+//       writeToGoogleForm(
+//         "LBM_whitepager",
+//         email,
+//         "location-based-submit-message",
+//         "location-based__email"
+//       );
+//     } else {
+//       displayMessage("location-based-submit-message", true);
+//     }
+//   }
+// });
 
 function setTypingEffect(targetElement) {
   // 防呆：確保目標元素存在
   if (!targetElement || !(targetElement instanceof HTMLElement)) {
-    console.error('Invalid target element for typing effect');
+    console.error("Invalid target element for typing effect");
     return null;
   }
 
@@ -598,11 +598,11 @@ function setTypingEffect(targetElement) {
   let index = 1;
   while (true) {
     const text = targetElement.getAttribute(`data-text${index}`);
-    const color = targetElement.getAttribute(`data-color${index}`) || '#000';
-    
+    const color = targetElement.getAttribute(`data-color${index}`) || "#000";
+
     // 當找不到文字屬性時停止收集
     if (!text && textEntries.length === 0) {
-      console.warn('No valid typing content found');
+      console.warn("No valid typing content found");
       return null;
     }
     if (!text) break;
@@ -613,7 +613,7 @@ function setTypingEffect(targetElement) {
 
   // 防呆：確保至少有一組有效文字
   if (textEntries.length === 0) {
-    console.warn('No valid typing content found');
+    console.warn("No valid typing content found");
     return null;
   }
 
@@ -651,9 +651,9 @@ let typingTimer = null;
 // 防呆：只有當元素存在時才初始化
 if (typingElement) {
   typingTimer = setTypingEffect(typingElement);
-  
+
   // 視窗卸載時清除計時器
-  window.addEventListener('beforeunload', () => {
+  window.addEventListener("beforeunload", () => {
     if (typingTimer) clearInterval(typingTimer);
   });
 } else {
@@ -667,7 +667,7 @@ $(window).load(function () {
   initScroll(".career-detail-section", "career-department-title");
   initScroll(".career-detail-section", "career-position-item");
 
-  initScroll(".location-based-messaging", "location-based-section");
+  // initScroll(".location-based-messaging", "location-based-section");
 
   initScroll("#content", "managed", -150);
   initScroll("#content", "managed-what", -150);
@@ -688,9 +688,6 @@ $(window).load(function () {
     nextSelector: ".seaSuite-container__content .next-btn",
     classList: ["selected-1", "selected-2", "selected-3"],
   });
-
-  // bindWidgets
-  bindWidgets.init();
 
   initWhitePaper({
     list: [
