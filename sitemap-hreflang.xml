@@ -5640,4 +5640,10 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://seasalt.ai/zh-TW/terms" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://seasalt.ai/en/terms" />
   </url>
+  <url>
+    <loc>https://voice.seasalt.ai/discord/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://voice.seasalt.ai/discord/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://voice.seasalt.ai/discord/zh-tw" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voice.seasalt.ai/discord/" />
+  </url>
 </urlset>
