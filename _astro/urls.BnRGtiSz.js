@@ -1,0 +1,1 @@
+const e="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting/",s="https://meetings.hubspot.com/seasalt-ai/seasalt-meeting-taiwan",a=t=>["zh-cn","zh-tw"].includes(t.toLowerCase())?s:e;export{a as g};
