@@ -1,9 +1,11 @@
 Deployment Information
 ======================
-Date: 2025-10-07 03:35:54 UTC
+Date: 2025-10-13 01:40:16 UTC
+Type: Incremental Deployment
 Deployed from: new-seasalt-ai-website repository
-Source branch: main
-Source commit: ecaf05a24af27101151c631b8590b57c8ff1aa50
-Backup tag: -e [0;34m➤ Creating backup tag: prod-backup-20251007-033459[0m
--e [0;32m✔ Backup tag created: prod-backup-20251007-033459[0m
-prod-backup-20251007-033459
+Source branch: incremental
+Source commit: da1475422633e56ecfbdf101db5f9587e778dfa4
+Backup tag: -e [0;34m➤ Creating backup tag: prod-backup-20251013-013907[0m
+-e [0;32m✔ Backup tag created: prod-backup-20251013-013907[0m
+prod-backup-20251013-013907
+Changes log: /Users/anson/.deployment-cache/last-deployment-changes.log
