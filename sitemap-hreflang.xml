@@ -1076,6 +1076,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://seasalt.ai/en/industries/restaurants-hospitality" />
   </url>
   <url>
+    <loc>https://seasalt.ai/en/integrations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://seasalt.ai/en/integrations" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://seasalt.ai/es/integrations" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://seasalt.ai/zh-TW/integrations" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://seasalt.ai/zh-CN/integrations" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://seasalt.ai/ja/integrations" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://seasalt.ai/ko/integrations" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://seasalt.ai/fr/integrations" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://seasalt.ai/de/integrations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://seasalt.ai/ar/integrations" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://seasalt.ai/fa/integrations" />
+    <xhtml:link rel="alternate" hreflang="fil" href="https://seasalt.ai/fil/integrations" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://seasalt.ai/hi/integrations" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://seasalt.ai/id/integrations" />
+    <xhtml:link rel="alternate" hreflang="ms" href="https://seasalt.ai/ms/integrations" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://seasalt.ai/pl/integrations" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://seasalt.ai/pt/integrations" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://seasalt.ai/ru/integrations" />
+    <xhtml:link rel="alternate" hreflang="ta" href="https://seasalt.ai/ta/integrations" />
+    <xhtml:link rel="alternate" hreflang="th" href="https://seasalt.ai/th/integrations" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://seasalt.ai/vi/integrations" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://seasalt.ai/ro/integrations" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://seasalt.ai/en/integrations" />
+  </url>
+  <url>
     <loc>https://seasalt.ai/en/pricing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://seasalt.ai/en/pricing" />
     <xhtml:link rel="alternate" hreflang="es" href="https://seasalt.ai/es/pricing" />
