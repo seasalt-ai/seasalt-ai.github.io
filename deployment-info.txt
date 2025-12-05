@@ -1,11 +1,9 @@
 Deployment Information
 ======================
-Date: 2025-12-02 08:57:28 UTC
-Type: Incremental Deployment
+Date: 2025-12-05 22:21:39 UTC
 Deployed from: new-seasalt-ai-website repository
 Source branch: main
-Source commit: 58b67fe2693959e3e76a7034a7d0106a07f53bbc
-Backup tag: [0;34m➤ Creating backup tag: prod-backup-20251202-084505[0m
-[0;32m✔ Backup tag created: prod-backup-20251202-084505[0m
-prod-backup-20251202-084505
-Changes log: /Volumes/WD_BLACK/Projects/deployment-cache/last-deployment-changes.log
+Source commit: c1462f8d6689b710aa7dc0fdfd30d392561241e5
+Backup tag: [0;34m➤ Creating backup tag: prod-backup-20251205-222059[0m
+[0;32m✔ Backup tag created: prod-backup-20251205-222059[0m
+prod-backup-20251205-222059
