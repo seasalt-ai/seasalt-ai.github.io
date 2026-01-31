@@ -1,0 +1,1029 @@
+<!DOCTYPE html><html lang="ko"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- SEO Meta Tags --><title>WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래</title><meta name="description" content="WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다."><meta name="keywords" content="WhatsApp Coexistence, 하이브리드 메시징, 기업 통신, Cloud API, Business App, 고객 참여"><meta name="author" content="SeaSalt.ai"><!-- Canonical URL --><link rel="canonical" href="https://seasalt.ai/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><!-- Multi-language support (hreflang) --><link rel="alternate" hreflang="en" href="https://seasalt.ai/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="es" href="https://seasalt.ai/es/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="zh-TW" href="https://seasalt.ai/zh-TW/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="zh-CN" href="https://seasalt.ai/zh-CN/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ja" href="https://seasalt.ai/ja/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ko" href="https://seasalt.ai/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="fr" href="https://seasalt.ai/fr/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="de" href="https://seasalt.ai/de/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ar" href="https://seasalt.ai/ar/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="fa" href="https://seasalt.ai/fa/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="fil" href="https://seasalt.ai/fil/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="hi" href="https://seasalt.ai/hi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="id" href="https://seasalt.ai/id/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ms" href="https://seasalt.ai/ms/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="pl" href="https://seasalt.ai/pl/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="pt" href="https://seasalt.ai/pt/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ro" href="https://seasalt.ai/ro/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ru" href="https://seasalt.ai/ru/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="ta" href="https://seasalt.ai/ta/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="th" href="https://seasalt.ai/th/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="vi" href="https://seasalt.ai/vi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><link rel="alternate" hreflang="x-default" href="https://seasalt.ai/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><!-- Open Graph --><meta property="og:type" content="article"><meta property="og:title" content="WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래"><meta property="og:description" content="WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다."><meta property="og:url" content="https://seasalt.ai/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/"><meta property="og:image" content="https://seasalt.ai/images/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging.jpg"><meta property="og:site_name" content="SeaSalt.ai"><!-- Additional Open Graph images --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@seasalt_ai"><meta name="twitter:creator" content="@seasalt_ai"><meta name="twitter:title" content="WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래"><meta name="twitter:description" content="WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다."><meta name="twitter:image" content="https://seasalt.ai/images/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging.jpg"><meta name="twitter:image:alt" content="WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래"><!-- Robots --><meta name="robots" content="index,follow,max-image-preview:large"><meta name="googlebot" content="index,follow,max-image-preview:large"><!-- Custom Meta Tags --><!-- Website Verification --><!-- Favicon and Icons --><!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> --><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="/seasalt-ai-favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- PWA and Theme Colors --><meta name="theme-color" content="#0EA5E9"><meta name="background-color" content="#ffffff"><meta name="msapplication-TileColor" content="#0EA5E9"><meta name="msapplication-config" content="/browserconfig.xml"><!-- Mobile Optimization --><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="SeaSalt.ai"><!-- DNS Prefetch and Preconnect --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><!-- RSS Feeds --><!-- Security Headers --><meta http-equiv="X-Content-Type-Options" content="nosniff"><meta http-equiv="X-XSS-Protection" content="1; mode=block"><!-- Performance Hints --><meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width, Device-Memory"><!-- Structured Data --><script key="0" type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래","description":"WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다.","url":"https://seasalt.ai/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging/","image":"https://seasalt.ai/images/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging.jpg","inLanguage":"ko","headline":"WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래","datePublished":"2026-01-29T00:00:00.000Z","dateModified":"2026-01-29T00:00:00.000Z","author":{"@type":"Organization","name":"SeaMeet Copilot"},"publisher":{"@context":"https://schema.org","@type":"Organization","@id":"https://seasalt.ai/#organization","name":"Seasalt.ai","alternateName":"Seasalt AI","description":"모든 규모의 기업을 위한 옴니채널 고객 커뮤니케이션 솔루션을 제공하는 선도적인 AI 대화 인텔리전스 플랫폼.","url":"https://seasalt.ai","logo":{"@type":"ImageObject","url":"/seasalt-ai-logo.png","width":1200,"height":630},"sameAs":["https://www.linkedin.com/company/seasalt-ai/","https://twitter.com/SeasaltAI","https://www.youtube.com/@seasaltai","https://discord.gg/VgAWg3c7rU"],"foundingDate":"2020","contactPoint":{"@type":"ContactPoint","email":"info@seasalt.ai","contactType":"customer service","availableLanguage":["en","es","zh-TW","zh-CN","ja","ko","fr","de","ar","fa","fil","hi","id","ms","pl","pt","ro","ru","ta","th","vi"]},"address":{"@type":"PostalAddress","streetAddress":"Downtown","addressLocality":"Bellevue","addressRegion":"WA","addressCountry":"US","postalCode":"98004"},"areaServed":[{"@type":"Country","identifier":"US"},{"@type":"Country","identifier":"CA"},{"@type":"Country","identifier":"GB"},{"@type":"Country","identifier":"AU"},{"@type":"Country","identifier":"SG"},{"@type":"Country","identifier":"TW"},{"@type":"Country","identifier":"HK"},{"@type":"Country","identifier":"MO"},{"@type":"Country","identifier":"JP"},{"@type":"Country","identifier":"KR"},{"@type":"Country","identifier":"DE"},{"@type":"Country","identifier":"FR"},{"@type":"Country","identifier":"ES"},{"@type":"Country","identifier":"IT"},{"@type":"Country","identifier":"NL"},{"@type":"Country","identifier":"IN"},{"@type":"Country","identifier":"ID"},{"@type":"Country","identifier":"MY"},{"@type":"Country","identifier":"TH"},{"@type":"Country","identifier":"VN"},{"@type":"Country","identifier":"PH"},{"@type":"Country","identifier":"BR"},{"@type":"Country","identifier":"MX"},{"@type":"Country","identifier":"AR"},{"@type":"Country","identifier":"AE"},{"@type":"Country","identifier":"SA"}],"availableLanguage":[{"@type":"Language","name":"en"},{"@type":"Language","name":"es"},{"@type":"Language","name":"zh-TW"},{"@type":"Language","name":"zh-CN"},{"@type":"Language","name":"ja"},{"@type":"Language","name":"ko"},{"@type":"Language","name":"fr"},{"@type":"Language","name":"de"},{"@type":"Language","name":"ar"},{"@type":"Language","name":"fa"},{"@type":"Language","name":"fil"},{"@type":"Language","name":"hi"},{"@type":"Language","name":"id"},{"@type":"Language","name":"ms"},{"@type":"Language","name":"pl"},{"@type":"Language","name":"pt"},{"@type":"Language","name":"ro"},{"@type":"Language","name":"ru"},{"@type":"Language","name":"ta"},{"@type":"Language","name":"th"},{"@type":"Language","name":"vi"}]},"articleSection":"비즈니스 메시징","keywords":["WhatsApp Coexistence","하이브리드 메시징","기업 통신","Cloud API","Business App","고객 참여"]}</script><script key="1" type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://seasalt.ai/#organization","name":"Seasalt.ai","alternateName":"Seasalt AI","description":"모든 규모의 기업을 위한 옴니채널 고객 커뮤니케이션 솔루션을 제공하는 선도적인 AI 대화 인텔리전스 플랫폼.","url":"https://seasalt.ai","logo":{"@type":"ImageObject","url":"/seasalt-ai-logo.png","width":1200,"height":630},"sameAs":["https://www.linkedin.com/company/seasalt-ai/","https://twitter.com/SeasaltAI","https://www.youtube.com/@seasaltai","https://discord.gg/VgAWg3c7rU"],"foundingDate":"2020","contactPoint":{"@type":"ContactPoint","email":"info@seasalt.ai","contactType":"customer service","availableLanguage":["en","es","zh-TW","zh-CN","ja","ko","fr","de","ar","fa","fil","hi","id","ms","pl","pt","ro","ru","ta","th","vi"]},"address":{"@type":"PostalAddress","streetAddress":"Downtown","addressLocality":"Bellevue","addressRegion":"WA","addressCountry":"US","postalCode":"98004"},"areaServed":[{"@type":"Country","identifier":"US"},{"@type":"Country","identifier":"CA"},{"@type":"Country","identifier":"GB"},{"@type":"Country","identifier":"AU"},{"@type":"Country","identifier":"SG"},{"@type":"Country","identifier":"TW"},{"@type":"Country","identifier":"HK"},{"@type":"Country","identifier":"MO"},{"@type":"Country","identifier":"JP"},{"@type":"Country","identifier":"KR"},{"@type":"Country","identifier":"DE"},{"@type":"Country","identifier":"FR"},{"@type":"Country","identifier":"ES"},{"@type":"Country","identifier":"IT"},{"@type":"Country","identifier":"NL"},{"@type":"Country","identifier":"IN"},{"@type":"Country","identifier":"ID"},{"@type":"Country","identifier":"MY"},{"@type":"Country","identifier":"TH"},{"@type":"Country","identifier":"VN"},{"@type":"Country","identifier":"PH"},{"@type":"Country","identifier":"BR"},{"@type":"Country","identifier":"MX"},{"@type":"Country","identifier":"AR"},{"@type":"Country","identifier":"AE"},{"@type":"Country","identifier":"SA"}],"availableLanguage":[{"@type":"Language","name":"en"},{"@type":"Language","name":"es"},{"@type":"Language","name":"zh-TW"},{"@type":"Language","name":"zh-CN"},{"@type":"Language","name":"ja"},{"@type":"Language","name":"ko"},{"@type":"Language","name":"fr"},{"@type":"Language","name":"de"},{"@type":"Language","name":"ar"},{"@type":"Language","name":"fa"},{"@type":"Language","name":"fil"},{"@type":"Language","name":"hi"},{"@type":"Language","name":"id"},{"@type":"Language","name":"ms"},{"@type":"Language","name":"pl"},{"@type":"Language","name":"pt"},{"@type":"Language","name":"ro"},{"@type":"Language","name":"ru"},{"@type":"Language","name":"ta"},{"@type":"Language","name":"th"},{"@type":"Language","name":"vi"}]}</script><script key="2" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://seasalt.ai/ko/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://seasalt.ai/ko/blog/"},{"@type":"ListItem","position":3,"name":"WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래"}]}</script><!-- Google Analytics --><!-- Google Tag Manager --><script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N26SF8T');
+  </script><!-- Facebook Pixel --><!-- Mautic Tracking Script --><script>
+			(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+				w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+				m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://m.seasalt.ai/mtc.js','mt');
+
+			mt('send', 'pageview');
+		</script><meta name="generator" content="Astro v5.13.10"><link rel="stylesheet" href="/_astro/automotive-services.DPqnFFW8.css">
+<link rel="stylesheet" href="/_astro/automotive-services.BiCvSxjN.css"></head> <body> <div id="phone-banner" class="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white py-3 px-4 shadow-lg border-b-2 border-blue-500"> <div class="max-w-7xl mx-auto flex items-center justify-between"> <div class="flex items-center space-x-2 text-center flex-1 justify-center"> <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path> </svg> <span class="font-semibold text-lg"> 부르다 <a href="tel:+1-762-242-4368" class="text-yellow-300 hover:text-yellow-200 underline decoration-2 underline-offset-2"> +1 (SMB) -AI-Agent </a> Seavoice AI 요원과 회의를 예약합니다. </span> <div class="flex items-center space-x-1 text-yellow-300"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path> </svg> <span class="text-sm font-medium">24/7 사용 가능</span> </div> </div> <!-- Close button --> <button id="close-phone-banner" class="text-white/70 hover:text-white ml-4 p-1"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("phone-banner"),n=document.getElementById("close-phone-banner");if(localStorage.getItem("phoneBannerClosed")==="true"){e?.remove();return}n?.addEventListener("click",function(){e?.remove(),localStorage.setItem("phoneBannerClosed","true")})});</script> <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo Section --> <div class="relative flex items-center"> <a href="/ko" class="hover:opacity-80 transition-opacity flex items-center"> <img src="/seasalt-ai-logo.png" alt="Seasalt.ai" class="h-6 sm:h-8 w-auto flex-shrink-0"> </a> <!-- Product Dropdown Button --><button class="ml-1 p-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="products"> <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <!-- Products Dropdown --> <div class="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden dropdown-menu" data-dropdown-menu="products"> <!-- Back to main site --> <a href="/ko/" class="flex items-center px-4 py-3 text-sm hover:bg-gray-50 border-b border-gray-100"> <svg class="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path> </svg> <div> <div class="font-medium text-gray-900">Seasalt.ai Main Site</div> <div class="text-gray-600 text-xs mt-1">All products and solutions</div> </div> </a> <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide"> Products </div> <div> <a href="/ko/seachat" class="flex items-center px-4 py-3 text-sm hover:bg-gray-50 transition-colors "> <img src="/seachat-icon.png" alt="SeaChat" class="w-5 h-5 mr-3 flex-shrink-0"> <div> <div class="font-medium text-gray-900"> SeaChat  </div> <div class="text-gray-600 text-xs mt-1">Respond to customers 24/7</div> </div> </a>  </div><div> <a href="/ko/seax" class="flex items-center px-4 py-3 text-sm hover:bg-gray-50 transition-colors "> <img src="/seax-icon.png" alt="SeaX" class="w-5 h-5 mr-3 flex-shrink-0"> <div> <div class="font-medium text-gray-900"> SeaX  </div> <div class="text-gray-600 text-xs mt-1">Outreach to customers in bulk</div> </div> </a>  </div><div> <a href="https://seameet.ai/" target="_blank" rel="noopener noreferrer" class="flex items-center px-4 py-3 text-sm hover:bg-gray-50 transition-colors "> <img src="/seameet-icon.png" alt="SeaMeet" class="w-5 h-5 mr-3 flex-shrink-0"> <div> <div class="font-medium text-gray-900"> SeaMeet  </div> <div class="text-gray-600 text-xs mt-1">Copilot for meetings &amp; calls</div> </div> </a>  </div><div> <a href="/ko/seavoice" class="flex items-center px-4 py-3 text-sm hover:bg-gray-50 transition-colors "> <img src="/seavoice-icon.png" alt="SeaVoice" class="w-5 h-5 mr-3 flex-shrink-0"> <div> <div class="font-medium text-gray-900"> SeaVoice  </div> <div class="text-gray-600 text-xs mt-1">AI voice agents for calls</div> </div> </a> <div class="bg-gray-50 border-t border-gray-100"> <a href="https://suite.seasalt.ai/tts/" target="_blank" rel="noopener noreferrer" class="flex items-center px-8 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900"> <span class="text-gray-400 mr-2">→</span> Text To Speech </a><a href="https://suite.seasalt.ai/stt/" target="_blank" rel="noopener noreferrer" class="flex items-center px-8 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900"> <span class="text-gray-400 mr-2">→</span> Speech To Text </a><a href="https://voice.seasalt.ai/discord/" target="_blank" rel="noopener noreferrer" class="flex items-center px-8 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900"> <span class="text-gray-400 mr-2">→</span> Discord STT Bot </a> </div> </div> </div> </div> <!-- Desktop Navigation --> <nav class="hidden lg:flex items-center space-x-8"> <!-- Solutions Dropdown --> <div class="relative"> <button class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="solutions"> 솔루션 <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute top-full left-0 mt-2 w-[340px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 max-h-[80vh] overflow-y-auto z-50 hidden dropdown-menu" data-dropdown-menu="solutions"> <!-- Existing Solutions --> <a href="/ko/solutions/sales-marketing" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">📈</span> 영업 및 마케팅 용 </a><a href="/ko/solutions/customer-support" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🎧</span> 고객 지원을 위해 </a><a href="/ko/solutions/ai-automation" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🤖</span> AI &amp; 자동화 </a><a href="/ko/solutions/sme-owners" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🏢</span> 중소기업 소유자를 위해 </a> <!-- SeaHealth Entry --> <a href="/ko/seahealth" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg> SeaHealth- 최적화 된 건강 관리 </a> <!-- 
+            Use Cases Section - COMMENTED OUT
+            <div class="border-t border-gray-100 mt-2 pt-2">
+              <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                {t('header.solutionsDropdown.useCases')}
+              </div>
+              
+              Small & Medium Businesses
+              <div class="mb-2">
+                <div class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-800 bg-gray-50">
+                  <span class="text-sm" role="img" aria-label="building">🏢</span>
+                  Small & Medium Businesses
+                </div>
+                <div class="bg-white">
+                  <a href="https://usecase.seasalt.ai/approved-for-twilio-sms-campaign/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Get approved for Twilio SMS campaigns</a>
+                  <a href="https://usecase.seasalt.ai/bulk-send-sms/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Bulk send SMS</a>
+                  <a href="https://usecase.seasalt.ai/whatsapp-business-app-platform-api/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">WhatsApp your customers</a>
+                  <a href="https://usecase.seasalt.ai/call-your-customers-in-batch/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Call your customers in batch</a>
+                  <a href="https://usecase.seasalt.ai/auto-answer-calls-247/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Auto-answer calls 24/7</a>
+                </div>
+              </div>
+              
+              Healthcare
+              <div class="mb-2">
+                <div class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-800 bg-gray-50">
+                  <span class="text-sm" role="img" aria-label="plus">➕</span>
+                  Healthcare
+                </div>
+                <div class="bg-white">
+                  <a href="https://usecase.seasalt.ai/voice-ai-calls-to-check-on-seniors/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Voice AI calls to check on seniors</a>
+                  <a href="https://usecase.seasalt.ai/hospital-phone-call-analytics-dashboard/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Phone call analytics dashboard for hospitals</a>
+                </div>
+              </div>
+              
+              Education
+              <div class="mb-2">
+                <div class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-800 bg-gray-50">
+                  <span class="text-sm" role="img" aria-label="graduation-cap">🎓</span>
+                  Education
+                </div>
+                <div class="bg-white">
+                  <a href="https://usecase.seasalt.ai/education/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Conversational GenAI for classrooms</a>
+                </div>
+              </div>
+              
+              Campaign Messaging
+              <div class="mb-2">
+                <div class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-800 bg-gray-50">
+                  <span class="text-sm" role="img" aria-label="comment-alt">💬</span>
+                  Campaign Messaging
+                </div>
+                <div class="bg-white">
+                  <a href="https://usecase.seasalt.ai/win-campaigns-with-auto-texts-calls/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Win campaigns with automated texts & calls</a>
+                </div>
+              </div>
+              
+              Speech Analysis
+              <div class="mb-1">
+                <div class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium text-gray-800 bg-gray-50">
+                  <span class="text-sm" role="img" aria-label="circle">⚪</span>
+                  Speech Analysis
+                </div>
+                <div class="bg-white">
+                  <a href="https://usecase.seasalt.ai/transcribe-audio-to-discover-insights/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Transcribe audio & calls to discover insights</a>
+                  <a href="https://usecase.seasalt.ai/seameet-global-team-case-study/" class="block px-6 py-1.5 text-xs text-gray-700 hover:bg-gray-50 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Meeting analytics for remote teams</a>
+                </div>
+              </div>
+            </div>
+            --> </div> </div> <!-- Industries Dropdown --> <div class="relative"> <button class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="industries"> 산업 <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden dropdown-menu" data-dropdown-menu="industries"> <a href="/ko/industries/ecommerce" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🛒</span> E-commerce </a><a href="/ko/industries/healthcare" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">❤️</span> Healthcare </a><a href="/ko/industries/real-estate" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🏠</span> Real Estate </a><a href="/ko/industries/restaurants-hospitality" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🍽️</span> Restaurants &amp; Hospitality </a><a href="/ko/industries/education" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🎓</span> Education &amp; Training </a><a href="/ko/industries/automotive" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🚗</span> Automotive &amp; Services </a><a href="/ko/industries/professional-services" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">💼</span> Professional Services </a><a href="/ko/industries/financial-services" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🏢</span> Financial Services </a> </div> </div> <!-- Channels Dropdown --> <div class="relative"> <button class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="channels"> 채널 <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden dropdown-menu" data-dropdown-menu="channels"> <a href="/ko/channels/whatsapp" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="h-5 w-5 rounded-full object-cover" loading="lazy"> whatsapp </a><a href="/ko/channels/whatsapp-coexistence" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="/logos/WhatsApp-Business-App.jpg" alt="WhatsApp Coexistence" class="h-5 w-5 rounded-full object-cover" loading="lazy"> WhatsApp Coexistence </a><a href="/ko/channels/phone-calls" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">📞</span> 전화 통화 </a><a href="/ko/channels/sms" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">✉️</span> SMS </a><a href="/ko/channels/website-chat" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">💬</span> 웹 사이트 채팅 </a><a href="/ko/channels/instagram" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" class="h-5 w-5 rounded-full object-cover" loading="lazy"> 인스 타 그램 </a><a href="/ko/channels/facebook-messenger" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="https://cdn.simpleicons.org/messenger/00B2FF" alt="Facebook Messenger" class="h-5 w-5 rounded-full object-cover" loading="lazy"> 페이스 북 메신저 </a><a href="/ko/channels/contact-forms" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">📝</span> 연락 양식 </a><a href="/ko/channels/line" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="https://cdn.simpleicons.org/line/00C300" alt="LINE" class="h-5 w-5 rounded-full object-cover" loading="lazy"> 선 </a><a href="/ko/seavoice/platform/line-call-plus" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <img src="https://cdn.simpleicons.org/line/00C300" alt="LINE Call Plus" class="h-5 w-5 rounded-full object-cover" loading="lazy"> Line Call Plus </a><a href="/ko/channels/website-widget" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">🧩</span> 웹 사이트 위젯 </a> </div> </div> <!-- Integrations Dropdown (Mega Menu) --> <div class="relative"> <a id="integrations-trigger" href="/ko/integrations/" class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="integrations"> 통합 <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </a> <!-- Lightweight Mega Menu Container --> <div id="integrations-mega-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[95vw] max-w-7xl bg-white rounded-lg shadow-2xl border border-gray-200 z-50 hidden dropdown-menu" data-dropdown-menu="integrations"> <div class="p-6 max-h-[85vh] overflow-y-auto"> <div id="integrations-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"> <!-- Content will be injected by JavaScript on hover --> </div> <div class="mt-6 pt-4 border-t border-gray-200 text-center"> <p class="text-xs text-gray-500">Hover over any app to see available actions (SMS, WhatsApp, Phone Call)</p> </div> </div> </div> </div> <!-- Compare Dropdown --> <div class="relative"> <button class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 dropdown-trigger" data-dropdown="compare"> 우리를 비교하십시오 <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 hidden dropdown-menu" data-dropdown-menu="compare"> <a href="/ko/compare/aircall-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Aircall </a><a href="/ko/compare/ringcentral-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. RingCentral </a><a href="/ko/compare/genesys-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Genesys </a><a href="/ko/compare/five9-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Five9 </a><a href="/ko/compare/avaya-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Avaya </a><a href="/ko/compare/google-voice-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Google Voice </a><a href="/ko/compare/respond-io-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. respond.io </a><a href="/ko/compare/intercom-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Intercom </a><a href="/ko/compare/kustomer-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Kustomer </a><a href="/ko/compare/3cx-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. 3CX </a><a href="/ko/compare/dialpad-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. Dialpad </a><a href="/ko/compare/8x8-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. 8x8 </a><a href="/ko/compare/openphone-alternative" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"> vs. OpenPhone </a> </div> </div> <!-- Pricing Link --> <a href="/ko/pricing" class="text-gray-700 hover:text-blue-600 transition-colors duration-200"> 가격 </a> <!-- Blog Link --> <a href="/ko/blog" class="text-gray-700 hover:text-blue-600 transition-colors duration-200"> 블로그 </a> </nav> <!-- CTA Buttons --> <div class="hidden lg:flex items-center space-x-4"> <!-- Language Switcher --> <div class="relative inline-block text-left"> <button class="language-switcher-btn flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"> <span class="mr-1">KO</span> <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="language-menu hidden absolute right-0 z-[9999] mt-2 w-64 origin-top-right bg-white rounded-lg shadow-lg border border-gray-200 py-2 max-h-96 overflow-y-auto"> <div class="py-1"> <a href="/en/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">English</span> <span class="text-xs text-gray-500 ml-2">English</span> </div> </a><a href="/es/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Español</span> <span class="text-xs text-gray-500 ml-2">Spanish</span> </div> </a><a href="/zh-TW/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">繁體中文</span> <span class="text-xs text-gray-500 ml-2">Chinese (Traditional)</span> </div> </a><a href="/zh-CN/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">简体中文</span> <span class="text-xs text-gray-500 ml-2">Chinese (Simplified)</span> </div> </a><a href="/ja/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">日本語</span> <span class="text-xs text-gray-500 ml-2">Japanese</span> </div> </a><a href="/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 font-semibold text-blue-600 bg-blue-50"> <div class="flex justify-between items-center"> <span class="font-medium">한국어</span> <span class="text-xs text-gray-500 ml-2">Korean</span> </div> </a><a href="/fr/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Français</span> <span class="text-xs text-gray-500 ml-2">French</span> </div> </a><a href="/de/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Deutsch</span> <span class="text-xs text-gray-500 ml-2">German</span> </div> </a><a href="/ar/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">العربية</span> <span class="text-xs text-gray-500 ml-2">Arabic</span> </div> </a><a href="/fa/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">فارسی</span> <span class="text-xs text-gray-500 ml-2">Persian</span> </div> </a><a href="/fil/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Filipino</span> <span class="text-xs text-gray-500 ml-2">Filipino</span> </div> </a><a href="/hi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">हिन्दी</span> <span class="text-xs text-gray-500 ml-2">Hindi</span> </div> </a><a href="/id/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Bahasa Indonesia</span> <span class="text-xs text-gray-500 ml-2">Indonesian</span> </div> </a><a href="/ms/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Bahasa Melayu</span> <span class="text-xs text-gray-500 ml-2">Malay</span> </div> </a><a href="/pl/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Polski</span> <span class="text-xs text-gray-500 ml-2">Polish</span> </div> </a><a href="/pt/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Português</span> <span class="text-xs text-gray-500 ml-2">Portuguese</span> </div> </a><a href="/ro/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Română</span> <span class="text-xs text-gray-500 ml-2">Romanian</span> </div> </a><a href="/ru/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Русский</span> <span class="text-xs text-gray-500 ml-2">Russian</span> </div> </a><a href="/ta/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">தமிழ்</span> <span class="text-xs text-gray-500 ml-2">Tamil</span> </div> </a><a href="/th/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">ไทย</span> <span class="text-xs text-gray-500 ml-2">Thai</span> </div> </a><a href="/vi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Tiếng Việt</span> <span class="text-xs text-gray-500 ml-2">Vietnamese</span> </div> </a> </div> </div> </div> <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language switchers after DOM is loaded
+    function initLanguageSwitchers() {
+      const buttons = document.querySelectorAll('.language-switcher-btn');
+      
+      buttons.forEach(button => {
+        // Skip if already initialized
+        if (button.hasAttribute('data-initialized')) {
+          return;
+        }
+        
+        button.setAttribute('data-initialized', 'true');
+        const container = button.closest('.relative');
+        const menu = container ? container.querySelector('.language-menu') : null;
+        
+        if (button && menu) {
+          // Add data attribute to track state
+          button.setAttribute('data-open', 'false');
+          
+          // Remove existing event listeners if any
+          button.replaceWith(button.cloneNode(true));
+          const newButton = container.querySelector('.language-switcher-btn');
+          newButton.setAttribute('data-initialized', 'true');
+          
+          newButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Language switcher clicked'); // Debug log
+            
+            const isOpen = this.getAttribute('data-open') === 'true';
+            
+            // Close all other language menus first
+            document.querySelectorAll('.language-switcher-btn').forEach(otherButton => {
+              if (otherButton !== this) {
+                otherButton.setAttribute('data-open', 'false');
+                const otherContainer = otherButton.closest('.relative');
+                const otherMenu = otherContainer ? otherContainer.querySelector('.language-menu') : null;
+                if (otherMenu) {
+                  otherMenu.classList.add('hidden');
+                  otherMenu.style.display = 'none';
+                }
+                const otherChevron = otherButton.querySelector('svg');
+                if (otherChevron) {
+                  otherChevron.style.transform = 'rotate(0deg)';
+                }
+              }
+            });
+            
+            // Toggle current menu
+            if (isOpen) {
+              // Close current menu
+              menu.classList.add('hidden');
+              menu.style.display = 'none';
+              this.setAttribute('data-open', 'false');
+              console.log('Menu closed'); // Debug log
+            } else {
+              // Open current menu
+              menu.classList.remove('hidden');
+              menu.style.display = 'block';
+              this.setAttribute('data-open', 'true');
+              console.log('Menu opened'); // Debug log
+            }
+            
+            // Rotate chevron
+            const chevron = this.querySelector('svg');
+            if (chevron) {
+              chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+              chevron.style.transition = 'transform 0.2s ease';
+            }
+          });
+          
+          // Initialize as hidden
+          menu.classList.add('hidden');
+          menu.style.display = 'none';
+        }
+      });
+    }
+    
+    // Initialize immediately and also after a short delay
+    initLanguageSwitchers();
+    setTimeout(initLanguageSwitchers, 200);
+      
+    // Close menus when clicking outside (with higher priority)
+    document.addEventListener('click', function(e) {
+      const clickedButton = e.target.closest('.language-switcher-btn');
+      const clickedMenu = e.target.closest('.language-menu');
+      
+      if (!clickedButton && !clickedMenu) {
+        document.querySelectorAll('.language-switcher-btn').forEach(button => {
+          button.setAttribute('data-open', 'false');
+          const container = button.closest('.relative');
+          const menu = container ? container.querySelector('.language-menu') : null;
+          if (menu) {
+            menu.classList.add('hidden');
+            menu.style.display = 'none';
+          }
+          const chevron = button.querySelector('svg');
+          if (chevron) {
+            chevron.style.transform = 'rotate(0deg)';
+            chevron.style.transition = 'transform 0.2s ease';
+          }
+        });
+      }
+    }, true); // Use capture phase for higher priority
+  });
+</script> <!-- Sign In Button --> <a href="https://seax.seasalt.ai/signin" class="text-gray-700 hover:text-blue-600 font-medium transition-colors"> 로그인 </a> <!-- Start for Free Button --> <a href="https://seax.seasalt.ai/signup" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium"> 가입하십시오 </a> </div> <!-- Mobile menu button --> <div class="lg:hidden"> <button class="mobile-menu-toggle inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false"> <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="lg:hidden hidden mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-[80vh] overflow-y-auto"> <!-- Products Section --> <div class="border-b border-gray-200"> <button class="w-full flex justify-between items-center px-3 py-3 text-left text-gray-700 hover:bg-gray-50 mobile-accordion-trigger"> <span class="text-base font-medium">제품</span> <svg class="h-5 w-5 transform transition-transform duration-200 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="pl-3 pb-2 hidden mobile-accordion-content"> <a href="/ko/seachat" target="_self" rel class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="/seachat-icon.png" alt="SeaChat" class="w-5 h-5 flex-shrink-0"> <span>SeaChat</span> </a><a href="/ko/seax" target="_self" rel class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="/seax-icon.png" alt="SeaX" class="w-5 h-5 flex-shrink-0"> <span>SeaX</span> </a><a href="https://seameet.ai/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="/seameet-icon.png" alt="SeaMeet" class="w-5 h-5 flex-shrink-0"> <span>SeaMeet</span> </a><a href="/ko/seavoice" target="_self" rel class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="/seavoice-icon.png" alt="SeaVoice" class="w-5 h-5 flex-shrink-0"> <span>SeaVoice</span> </a> </div> </div> <!-- Solutions Section --> <div class="border-b border-gray-200"> <button class="w-full flex justify-between items-center px-3 py-3 text-left text-gray-700 hover:bg-gray-50 mobile-accordion-trigger"> <span class="text-base font-medium">솔루션</span> <svg class="h-5 w-5 transform transition-transform duration-200 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="pl-3 pb-2 hidden mobile-accordion-content"> <a href="/ko/solutions/sales-marketing" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">📈</span> <span>영업 및 마케팅 용</span> </a><a href="/ko/solutions/customer-support" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🎧</span> <span>고객 지원을 위해</span> </a><a href="/ko/solutions/ai-automation" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🤖</span> <span>AI &amp; 자동화</span> </a><a href="/ko/solutions/sme-owners" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="solution-icon">🏢</span> <span>중소기업 소유자를 위해</span> </a> <a href="/ko/seahealth" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg> <span>SeaHealth- 최적화 된 건강 관리</span> </a> </div> </div> <!-- Integrations Link --> <div class="border-b border-gray-200"> <a href="/ko/integrations/" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium"> 통합 </a> </div> <!-- Channels Section --> <div class="border-b border-gray-200"> <button class="w-full flex justify-between items-center px-3 py-3 text-left text-gray-700 hover:bg-gray-50 mobile-accordion-trigger"> <span class="text-base font-medium">채널</span> <svg class="h-5 w-5 transform transition-transform duration-200 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="pl-3 pb-2 hidden mobile-accordion-content"> <a href="/ko/channels/whatsapp" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>whatsapp</span> </a><a href="/ko/channels/whatsapp-coexistence" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="/logos/WhatsApp-Business-App.jpg" alt="WhatsApp Coexistence" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>WhatsApp Coexistence</span> </a><a href="/ko/channels/phone-calls" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">📞</span> <span>전화 통화</span> </a><a href="/ko/channels/sms" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">✉️</span> <span>SMS</span> </a><a href="/ko/channels/website-chat" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">💬</span> <span>웹 사이트 채팅</span> </a><a href="/ko/channels/instagram" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>인스 타 그램</span> </a><a href="/ko/channels/facebook-messenger" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="https://cdn.simpleicons.org/messenger/00B2FF" alt="Facebook Messenger" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>페이스 북 메신저</span> </a><a href="/ko/channels/contact-forms" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">📝</span> <span>연락 양식</span> </a><a href="/ko/channels/line" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="https://cdn.simpleicons.org/line/00C300" alt="LINE" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>선</span> </a><a href="/ko/seavoice/platform/line-call-plus" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <img src="https://cdn.simpleicons.org/line/00C300" alt="LINE Call Plus" class="h-5 w-5 rounded-full object-cover" loading="lazy"> <span>Line Call Plus</span> </a><a href="/ko/channels/website-widget" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="channel-emoji">🧩</span> <span>웹 사이트 위젯</span> </a> </div> </div> <!-- Industries Section --> <div class="border-b border-gray-200"> <button class="w-full flex justify-between items-center px-3 py-3 text-left text-gray-700 hover:bg-gray-50 mobile-accordion-trigger"> <span class="text-base font-medium">산업</span> <svg class="h-5 w-5 transform transition-transform duration-200 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="pl-3 pb-2 hidden mobile-accordion-content"> <a href="/ko/industries/e-commerce" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🛒</span> <span>E-commerce</span> </a><a href="/ko/industries/healthcare" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">❤️</span> <span>Healthcare</span> </a><a href="/ko/industries/real-estate" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🏠</span> <span>Real Estate</span> </a><a href="/ko/industries/restaurants-hospitality" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🍽️</span> <span>Restaurants &amp; Hospitality</span> </a><a href="/ko/industries/education-training" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🎓</span> <span>Education &amp; Training</span> </a><a href="/ko/industries/automotive-services" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🚗</span> <span>Automotive &amp; Services</span> </a><a href="/ko/industries/professional-services" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">💼</span> <span>Professional Services</span> </a><a href="/ko/industries/financial-services" class="flex items-center gap-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> <span class="h-5 w-5 flex items-center justify-center text-base" role="img" aria-label="industry-icon">🏢</span> <span>Financial Services</span> </a> </div> </div> <!-- Compare Us Section --> <div class="border-b border-gray-200"> <button class="w-full flex justify-between items-center px-3 py-3 text-left text-gray-700 hover:bg-gray-50 mobile-accordion-trigger"> <span class="text-base font-medium">우리를 비교하십시오</span> <svg class="h-5 w-5 transform transition-transform duration-200 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="pl-3 pb-2 hidden mobile-accordion-content"> <a href="/ko/compare/aircall-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Aircall </a><a href="/ko/compare/ringcentral-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. RingCentral </a><a href="/ko/compare/genesys-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Genesys </a><a href="/ko/compare/five9-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Five9 </a><a href="/ko/compare/avaya-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Avaya </a><a href="/ko/compare/google-voice-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Google Voice </a><a href="/ko/compare/respond-io-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. respond.io </a><a href="/ko/compare/intercom-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Intercom </a><a href="/ko/compare/kustomer-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Kustomer </a><a href="/ko/compare/3cx-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. 3CX </a><a href="/ko/compare/dialpad-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. Dialpad </a><a href="/ko/compare/8x8-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. 8x8 </a><a href="/ko/compare/openphone-alternative" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-2 rounded-md text-sm"> vs. OpenPhone </a> </div> </div> <!-- Other Links --> <div class="border-b border-gray-200"> <a href="/ko/pricing" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium"> 가격 </a> </div> <div class="border-b border-gray-200"> <a href="/ko/blog" class="text-gray-700 hover:bg-gray-50 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium"> 블로그 </a> </div> <!-- Login/Signup and Language controls for mobile --> <div class="pt-4 px-3"> <div class="pb-4"> <div class="relative inline-block text-left"> <button class="language-switcher-btn flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"> <span class="mr-1">KO</span> <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <div class="language-menu hidden absolute right-0 z-[9999] mt-2 w-64 origin-top-right bg-white rounded-lg shadow-lg border border-gray-200 py-2 max-h-96 overflow-y-auto"> <div class="py-1"> <a href="/en/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">English</span> <span class="text-xs text-gray-500 ml-2">English</span> </div> </a><a href="/es/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Español</span> <span class="text-xs text-gray-500 ml-2">Spanish</span> </div> </a><a href="/zh-TW/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">繁體中文</span> <span class="text-xs text-gray-500 ml-2">Chinese (Traditional)</span> </div> </a><a href="/zh-CN/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">简体中文</span> <span class="text-xs text-gray-500 ml-2">Chinese (Simplified)</span> </div> </a><a href="/ja/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">日本語</span> <span class="text-xs text-gray-500 ml-2">Japanese</span> </div> </a><a href="/ko/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 font-semibold text-blue-600 bg-blue-50"> <div class="flex justify-between items-center"> <span class="font-medium">한국어</span> <span class="text-xs text-gray-500 ml-2">Korean</span> </div> </a><a href="/fr/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Français</span> <span class="text-xs text-gray-500 ml-2">French</span> </div> </a><a href="/de/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Deutsch</span> <span class="text-xs text-gray-500 ml-2">German</span> </div> </a><a href="/ar/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">العربية</span> <span class="text-xs text-gray-500 ml-2">Arabic</span> </div> </a><a href="/fa/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">فارسی</span> <span class="text-xs text-gray-500 ml-2">Persian</span> </div> </a><a href="/fil/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Filipino</span> <span class="text-xs text-gray-500 ml-2">Filipino</span> </div> </a><a href="/hi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">हिन्दी</span> <span class="text-xs text-gray-500 ml-2">Hindi</span> </div> </a><a href="/id/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Bahasa Indonesia</span> <span class="text-xs text-gray-500 ml-2">Indonesian</span> </div> </a><a href="/ms/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Bahasa Melayu</span> <span class="text-xs text-gray-500 ml-2">Malay</span> </div> </a><a href="/pl/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Polski</span> <span class="text-xs text-gray-500 ml-2">Polish</span> </div> </a><a href="/pt/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Português</span> <span class="text-xs text-gray-500 ml-2">Portuguese</span> </div> </a><a href="/ro/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Română</span> <span class="text-xs text-gray-500 ml-2">Romanian</span> </div> </a><a href="/ru/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Русский</span> <span class="text-xs text-gray-500 ml-2">Russian</span> </div> </a><a href="/ta/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">தமிழ்</span> <span class="text-xs text-gray-500 ml-2">Tamil</span> </div> </a><a href="/th/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">ไทย</span> <span class="text-xs text-gray-500 ml-2">Thai</span> </div> </a><a href="/vi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700"> <div class="flex justify-between items-center"> <span class="font-medium">Tiếng Việt</span> <span class="text-xs text-gray-500 ml-2">Vietnamese</span> </div> </a> </div> </div> </div> <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language switchers after DOM is loaded
+    function initLanguageSwitchers() {
+      const buttons = document.querySelectorAll('.language-switcher-btn');
+      
+      buttons.forEach(button => {
+        // Skip if already initialized
+        if (button.hasAttribute('data-initialized')) {
+          return;
+        }
+        
+        button.setAttribute('data-initialized', 'true');
+        const container = button.closest('.relative');
+        const menu = container ? container.querySelector('.language-menu') : null;
+        
+        if (button && menu) {
+          // Add data attribute to track state
+          button.setAttribute('data-open', 'false');
+          
+          // Remove existing event listeners if any
+          button.replaceWith(button.cloneNode(true));
+          const newButton = container.querySelector('.language-switcher-btn');
+          newButton.setAttribute('data-initialized', 'true');
+          
+          newButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Language switcher clicked'); // Debug log
+            
+            const isOpen = this.getAttribute('data-open') === 'true';
+            
+            // Close all other language menus first
+            document.querySelectorAll('.language-switcher-btn').forEach(otherButton => {
+              if (otherButton !== this) {
+                otherButton.setAttribute('data-open', 'false');
+                const otherContainer = otherButton.closest('.relative');
+                const otherMenu = otherContainer ? otherContainer.querySelector('.language-menu') : null;
+                if (otherMenu) {
+                  otherMenu.classList.add('hidden');
+                  otherMenu.style.display = 'none';
+                }
+                const otherChevron = otherButton.querySelector('svg');
+                if (otherChevron) {
+                  otherChevron.style.transform = 'rotate(0deg)';
+                }
+              }
+            });
+            
+            // Toggle current menu
+            if (isOpen) {
+              // Close current menu
+              menu.classList.add('hidden');
+              menu.style.display = 'none';
+              this.setAttribute('data-open', 'false');
+              console.log('Menu closed'); // Debug log
+            } else {
+              // Open current menu
+              menu.classList.remove('hidden');
+              menu.style.display = 'block';
+              this.setAttribute('data-open', 'true');
+              console.log('Menu opened'); // Debug log
+            }
+            
+            // Rotate chevron
+            const chevron = this.querySelector('svg');
+            if (chevron) {
+              chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+              chevron.style.transition = 'transform 0.2s ease';
+            }
+          });
+          
+          // Initialize as hidden
+          menu.classList.add('hidden');
+          menu.style.display = 'none';
+        }
+      });
+    }
+    
+    // Initialize immediately and also after a short delay
+    initLanguageSwitchers();
+    setTimeout(initLanguageSwitchers, 200);
+      
+    // Close menus when clicking outside (with higher priority)
+    document.addEventListener('click', function(e) {
+      const clickedButton = e.target.closest('.language-switcher-btn');
+      const clickedMenu = e.target.closest('.language-menu');
+      
+      if (!clickedButton && !clickedMenu) {
+        document.querySelectorAll('.language-switcher-btn').forEach(button => {
+          button.setAttribute('data-open', 'false');
+          const container = button.closest('.relative');
+          const menu = container ? container.querySelector('.language-menu') : null;
+          if (menu) {
+            menu.classList.add('hidden');
+            menu.style.display = 'none';
+          }
+          const chevron = button.querySelector('svg');
+          if (chevron) {
+            chevron.style.transform = 'rotate(0deg)';
+            chevron.style.transition = 'transform 0.2s ease';
+          }
+        });
+      }
+    }, true); // Use capture phase for higher priority
+  });
+</script> </div> <a href="https://seax.seasalt.ai/signin" class="block w-full text-center text-gray-700 hover:text-blue-600 font-medium py-2 border border-gray-300 rounded-lg transition-colors mb-3"> 로그인 </a> <a href="https://seax.seasalt.ai/signup" class="block px-4 py-3 bg-blue-600 text-white rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"> 가입하십시오 </a> </div> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const r=document.querySelectorAll(".dropdown-trigger"),o=document.querySelectorAll(".dropdown-menu");r.forEach(e=>{e.addEventListener("mouseenter",function(){const t=this.getAttribute("data-dropdown"),n=document.querySelector(`[data-dropdown-menu="${t}"]`);n&&(o.forEach(d=>{d!==n&&d.classList.add("hidden")}),n.classList.remove("hidden"))}),e.addEventListener("focus",function(){const t=this.getAttribute("data-dropdown"),n=document.querySelector(`[data-dropdown-menu="${t}"]`);n&&(o.forEach(d=>d.classList.add("hidden")),n.classList.remove("hidden"))})});const c=document.querySelector("header");c&&c.addEventListener("mouseleave",function(){o.forEach(e=>e.classList.add("hidden"))}),document.addEventListener("click",function(e){e.target.closest(".relative")||o.forEach(t=>t.classList.add("hidden"))});const i=document.querySelector(".mobile-menu-toggle"),s=document.querySelector(".mobile-menu");i&&s&&i.addEventListener("click",function(){const e=s.classList.toggle("hidden");this.setAttribute("aria-expanded",!e)}),document.querySelectorAll(".mobile-accordion-trigger").forEach(e=>{e.addEventListener("click",function(){const t=this.nextElementSibling,n=this.querySelector("svg");t&&t.classList.contains("mobile-accordion-content")&&(t.classList.toggle("hidden"),n&&n.classList.toggle("rotate-180"))})})});</script> <!-- Lazy-load integrations menu from external JSON --> <script>(function(){const currentLang = "ko";
+const actionsData = [{"id":"sms","name":"SMS","slug":"sms","description":"Send automated SMS messages with AI-powered content generation","icon":"💬","logo":"/logos/sms.png","benefits":["Instant delivery to mobile phones worldwide","High open rates (98% within 3 minutes)","No app installation required","Perfect for time-sensitive notifications"]},{"id":"whatsapp","name":"WhatsApp","slug":"whatsapp","description":"Send WhatsApp messages using Meta-approved templates with AI automation","icon":"📱","logo":"/logos/whatsapp.png","benefits":["Rich media support (images, documents, buttons)","Global reach with 2+ billion users","Higher engagement than traditional SMS","Business-verified messaging"]},{"id":"phone-call","name":"Phone Call","slug":"phone-call","description":"Initiate automated phone calls with voice AI","icon":"📞","logo":"/logos/phone.png","benefits":["Direct voice communication","Highest urgency and attention","Perfect for critical alerts","AI-powered natural voice synthesis"]}];
+
+  (function() {
+    const trigger = document.getElementById('integrations-trigger');
+    const menu = document.getElementById('integrations-mega-menu');
+    const grid = document.getElementById('integrations-grid');
+    let isLoaded = false;
+    let isRendered = false;
+    let appsData = null;
+
+    async function loadIntegrationsData() {
+      if (isLoaded) return;
+      
+      try {
+        const response = await fetch('/curated-apps.json');
+        const data = await response.json();
+        appsData = data.apps;
+        isLoaded = true;
+      } catch (error) {
+        console.error('Failed to load integrations:', error);
+        grid.innerHTML = '<div class="col-span-full text-center text-gray-500 py-8">Failed to load integrations</div>';
+      }
+    }
+
+    function renderIntegrationsMenu() {
+      if (isRendered || !appsData) return;
+
+      // Group apps by category
+      const appsByCategory = {};
+      appsData.forEach(app => {
+        const category = app.category || 'Other';
+        if (!appsByCategory[category]) {
+          appsByCategory[category] = [];
+        }
+        appsByCategory[category].push(app);
+      });
+
+      const priorityCategories = [
+        'Ads Conversion', 'Calendar', 'Forms', 'Spreadsheets', 'Crm', 
+        'Contacts', 'Ecommerce', 'Project Management', 'Scheduling'
+      ];
+      const allCategories = Object.keys(appsByCategory);
+      const prioritized = priorityCategories.filter(cat => allCategories.includes(cat));
+      const remaining = allCategories.filter(cat => !priorityCategories.includes(cat)).sort();
+      const categories = [...prioritized, ...remaining];
+      const html = categories.map(category => {
+        const apps = appsByCategory[category];
+        return `
+          <div class="space-y-2">
+            <div class="font-semibold text-sm text-gray-900 uppercase tracking-wide border-b-2 border-blue-500 pb-2 mb-3">
+              ${category}
+              <span class="text-xs text-gray-500 ml-1">(${apps.length})</span>
+            </div>
+            <div class="space-y-1">
+              ${apps.map((app, appIndex) => {
+                const isNearBottom = appIndex >= apps.length - 2;
+                const imgSrc = app.image ? app.image.replace('./app_images/', '/app_images/') : '/seasalt-ai-icon.png';
+                return `
+                  <div class="group/app relative">
+                    <div class="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-blue-50 cursor-pointer text-sm">
+                      <img src="${imgSrc}" alt="${app.name}" class="w-4 h-4 rounded flex-shrink-0" loading="lazy">
+                      <span class="text-gray-700 group-hover/app:text-blue-600 truncate">${app.name}</span>
+                    </div>
+                    <div class="absolute left-0 ${isNearBottom ? 'bottom-full mb-1' : 'top-full mt-1'} w-72 bg-white rounded-lg shadow-xl border-2 border-blue-500 hidden group-hover/app:block z-50">
+                      <div class="py-1">
+                        <a href="/${currentLang}/integrations/${app.slug}/" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 font-medium border-b border-gray-200">
+                          <span class="text-lg">🏠</span>
+                          <span>All ${app.name} Integrations</span>
+                        </a>
+                        ${actionsData.map(action => `
+                          <a href="/${currentLang}/integrations/${app.slug}/${action.slug}/" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">
+                            <span class="text-lg">${action.icon}</span>
+                            <span>${app.name} + ${action.name}</span>
+                          </a>
+                        `).join('')}
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      grid.innerHTML = html;
+      isRendered = true;
+    }
+
+    const handleTrigger = async () => {
+      if (!isLoaded) {
+        grid.innerHTML = '<div class="col-span-full text-center text-gray-500 py-8">Loading integrations...</div>';
+        await loadIntegrationsData();
+      }
+      renderIntegrationsMenu();
+      menu?.classList.remove('hidden');
+    };
+
+    trigger?.addEventListener('mouseenter', handleTrigger);
+    trigger?.addEventListener('focus', handleTrigger);
+
+
+  })();
+})();</script><!-- Development version indicator (only in dev mode) --> <main>   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래","description":"WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다.","image":"/images/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging.jpg","datePublished":"2026-01-29T00:00:00.000Z","dateModified":"2026-01-29T00:00:00.000Z","author":{"@type":"Person","name":"SeaMeet Copilot"},"publisher":{"@type":"Organization","name":"Seasalt.ai","logo":{"@type":"ImageObject","url":"/seasalt-ai-logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"/ko/blog/ko/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging"}}</script> <div class="min-h-screen bg-white"> <main> <!-- Hero Section --> <section class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"> <a href="/ko/blog" class="inline-flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-200 mb-6 sm:mb-8"> <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path> </svg> 블로그로 돌아가기 </a> <!-- 文章圖片 --> <div class="mb-6 sm:mb-8"> <img src="/images/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging.jpg" alt="WhatsApp Coexistence: Technical Architecture, Enterprise Use, and the Future of Hybrid Messaging" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-2xl shadow-lg" onerror="this.src='/seasalt-ai-icon.png'"> </div> <!-- 文章訊息 --> <div class="flex flex-wrap items-center text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6 gap-2 sm:gap-4"> <div class="flex items-center flex-shrink-0"> <svg class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path> </svg> <span> 2026년 1월 29일 <span class="block text-xs text-gray-400 mt-0.5">
+(업데이트됨: 2026. 1. 29.)
+</span> </span> </div> <div class="flex items-center flex-shrink-0"> <svg class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path> </svg> <span>SeaMeet Copilot</span> </div> <div class="flex items-center flex-shrink-0"> <svg class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path> </svg> <span>18 분 읽기</span> </div> <!-- 語言切換 --> <div class="flex items-center flex-wrap gap-1 mt-2 sm:mt-0"> <span class="text-xs sm:text-sm text-gray-500 mr-1 sm:mr-2">Available in:</span> <div class="flex flex-wrap gap-1 sm:gap-2"> <!-- 當前語言按鈕 --> <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-blue-600 text-white"> 한국어 </span> <!-- 其他可用語言 --> <a href="/ar/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> العربية </a><a href="/de/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Deutsch </a><a href="/en/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> English </a><a href="/es/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Español </a><a href="/fa/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> فارسی </a><a href="/fil/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Filipino </a><a href="/fr/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Français </a><a href="/hi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> हिन्दी </a><a href="/id/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Bahasa Indonesia </a><a href="/ja/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> 日本語 </a><a href="/ms/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Bahasa Melayu </a><a href="/pl/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Polski </a><a href="/ro/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Română </a><a href="/ru/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Русский </a><a href="/ta/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> தமிழ் </a><a href="/th/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> ไทย </a><a href="/vi/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Tiếng Việt </a><a href="/zh-CN/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> 简体中文 </a><a href="/zh-TW/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> 繁體中文 </a><a href="/pt/blog/whatsapp-coexistence-technical-architecture-enterprise-use-and-the-future-of-hybrid-messaging" class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200"> Português </a> </div> </div> <!-- 分享按鈕 --> <button id="share-button" class="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200 mt-2 sm:mt-0" data-title="WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래" data-description="WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다."> <svg class="h-3 w-3 sm:h-4 sm:w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path> </svg> Share </button> </div> <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight"> WhatsApp Coexistence: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래 </h1> <p class="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed"> WhatsApp Coexistence는 기업이 동일한 번호로 Business App과 Cloud API를 모두 사용할 수 있게 하며, 메시지와 연락처를 동기화하여 하이브리드 참여를 가능하게 합니다—개인 및 자동화 워크플로를 통합합니다. </p> <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8"> <span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> WhatsApp Coexistence </span><span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> 하이브리드 메시징 </span><span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> 기업 통신 </span><span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> Cloud API </span><span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> Business App </span><span class="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 text-blue-800 text-xs sm:text-sm font-medium rounded-full"> <svg class="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> </svg> 고객 참여 </span> </div> </div> </section> <!-- 文章內容 --> <section class="py-8 sm:py-12 bg-white relative"> <div class="max-w-none mx-auto"> <!-- TOC Container with proper spacing --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"> <!-- 目錄 --> <div id="table-of-contents" class="fixed top-1/2 transform -translate-y-1/2 z-10 bg-white p-4 rounded-lg shadow-lg border border-gray-200 max-w-xs hidden xl:block" style="left: calc(50% + 420px); max-height: 70vh; overflow-y: auto;"> <h3 class="font-semibold text-sm text-gray-900 mb-3">Table of Contents</h3> <nav id="toc-nav" class="text-sm"></nav> </div> <!-- Content with proper margin for TOC --> <div class="max-w-4xl mx-auto xl:mr-80"> <article class="prose prose-lg prose-blue max-w-none
+              prose-headings:text-gray-900 prose-headings:font-bold prose-headings:tracking-tight
+              prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12 prose-h1:font-extrabold prose-h1:leading-tight
+              prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:font-bold prose-h2:leading-tight
+              prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-10 prose-h3:font-semibold prose-h3:leading-tight
+              prose-h4:text-xl prose-h4:mb-3 prose-h4:mt-8 prose-h4:font-semibold
+              prose-p:text-gray-800 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg prose-p:font-normal
+              prose-a:text-blue-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline hover:prose-a:text-blue-700
+              prose-strong:text-gray-900 prose-strong:font-semibold
+              prose-em:text-gray-700 prose-em:font-medium
+              prose-ul:mb-8 prose-ol:mb-8 prose-ul:text-lg prose-ol:text-lg
+              prose-li:text-gray-800 prose-li:mb-3 prose-li:leading-relaxed
+              prose-blockquote:border-l-4 prose-blockquote:border-green-500 prose-blockquote:bg-green-50 
+              prose-blockquote:py-6 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8
+              prose-blockquote:text-lg prose-blockquote:font-medium prose-blockquote:italic
+              prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-base prose-code:font-mono
+              prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6 prose-pre:my-8 prose-pre:text-sm
+              prose-img:rounded-xl prose-img:shadow-xl prose-img:mx-auto prose-img:my-8
+              prose-table:my-8 prose-table:text-base
+              prose-th:bg-gray-50 prose-th:font-semibold prose-th:text-gray-900
+              prose-td:text-gray-800
+              prose-hr:my-12 prose-hr:border-gray-200
+              first:prose-p:text-xl first:prose-p:font-medium first:prose-p:text-gray-700 first:prose-p:leading-8"> <h1 id="whatsapp-공존-기술-아키텍처-기업-사용-및-하이브리드-메시징의-미래">WhatsApp 공존: 기술 아키텍처, 기업 사용 및 하이브리드 메시징의 미래</h1>
+<h2 id="서론">서론</h2>
+<p>WhatsApp은 월간 활성 사용자가 30억 명이 넘고 인도, 브라질에서 유럽, 동남아시아에 이르기까지 시장에서 지배적인 위치를 차지하며 전 세계에서 가장 보편적인 메시징 플랫폼이 되었습니다. 기업에게 WhatsApp은 고객 참여 채널일 뿐만 아니라 판매, 지원, 마케팅을 위한 중요한 접점입니다. 그러나 최근까지 조직은 명확한 선택을面临했습니다: 수동적이고 개인적인 대화를 위해 WhatsApp 비즈니스 앱을 계속 사용하거나 자동화 및 규모 확장을 위해 WhatsApp 클라우드 API로 마이그레이션하는 것입니다. 이때 종종 채팅 기록, 연락처 및 친숙한 앱 인터페이스를 잃는 대가를 치르게 됩니다.</p>
+<p><strong>WhatsApp 공존</strong>이 등장했습니다: 기업이 동일한 전화번호로 WhatsApp 비즈니스 앱과 WhatsApp 클라우드 API를 동시에 사용할 수 있게 하며 메시지와 연락처를 실시간으로 동기화하는 변혁적인 기능입니다. 이 하이브리드 모델은 개인적인 참여와 기업 자동화 사이의 격차를 해소하여 고객 경험, 운영 효율성 및 규정 준수에 대한 새로운 가능성을 열어줍니다.</p>
+<p>이 종합 보고서에서는 WhatsApp 공존의 기술적 기반, 배포 모델, 사용 사례 및 비즈니스 영향을 탐구할 것입니다. 다중 기기 지원, 듀얼 SIM 처리, 타사 통합과 같은 대안적 접근 방식과 비교할 것입니다. 컨택 센터 및 BYOD(자체 기기 사용) 시나리오를 포함한 기업 배포, 보안, 규정 준수 및 사용자 경험 고려 사항에 특별히 주의를 기울일 것입니다. 전반적으로 Seasalt.ai의 통찰력 있고 비즈니스에 민감한 분석 정신에 따라 기술적 깊이와 비즈니스 관련성을 균형 있게 유지할 것입니다.</p>
+<h2 id="1-whatsapp-공존-개요">1. WhatsApp 공존 개요</h2>
+<h3 id="11-whatsapp-공존이란">1.1 WhatsApp 공존이란?</h3>
+<p><strong>WhatsApp 공존</strong>은 메타가 2025년에 도입한 기능으로, 기업이 동일한 전화번호로 WhatsApp 비즈니스 앱과 WhatsApp 클라우드 API를 동시에 운영할 수 있게 합니다. 이는 수동적인 앱 기반 대화와 자동화된 API 기반 워크플로가 병렬로 실행되며 메시지와 연락처가 두 플랫폼 간에 실시간으로 동기화됨을 의미합니다.</p>
+<p>이 업데이트 이전에는 기업이 선택을 해야 했습니다: 비즈니스 앱을 계속 사용하거나(자동화 및 다중 에이전트 지원의 제한 사항이 있음) API로 마이그레이션하거나(앱 액세스, 채팅 기록 및 때로는 비즈니스 전화번호를 잃음). 공존은 이러한 절충안을 제거하여 기업이 기존 고객 관계나 워크플로를 방해하지 않고 메시징 운영을 확장할 수 있게 합니다.</p>
+<h3 id="12-공존이-도입된-이유">1.2 공존이 도입된 이유</h3>
+<p>메타가 공존을 출시한 동기는 앱 기반 메시징에서 API 기반 자동화로 확장할 때 기업이面临하는 마찰을 제거하기 위함이었습니다. 이전의 “전부 또는 전무” 마이그레이션 모델은 운영상의 병목 현상을 발생시키고 번호 변경을 강요하며 가치 있는 고객 컨텍스트를 잃게 했습니다. 공존은 다음을 목표로 설계되었습니다:</p>
+<ul>
+<li>채팅 기록이나 연락처를 잃지 않고 자동화로 원활하게 전환할 수 있게 함</li>
+<li>기업이 기존 WhatsApp 번호와 앱 인터페이스를 유지할 수 있게 함</li>
+<li>수동적이고 자동화된 참여를 혼합한 하이브리드 워크플로를 지원함</li>
+<li>중소기업 및 성장하는 팀의 API 채택 장벽을 낮춤</li>
+</ul>
+<h3 id="13-주요-혜택">1.3 주요 혜택</h3>
+<ul>
+<li><strong>통합 커뮤니케이션:</strong> 동일한 번호를 수동 및 자동화 메시징에 모두 사용</li>
+<li><strong>데이터 연속성:</strong> 채팅 기록, 연락처 및 비즈니스 컨텍스트를 보존</li>
+<li><strong>운영 유연성:</strong> 필요에 따라 인간의 접점과 자동화를 혼합</li>
+<li><strong>비용 최적화:</strong> 1:1 채팅에는 무료 앱 메시징을, 규모 있는 자동화에는 API를 사용</li>
+<li><strong>원활한 온보딩:</strong> 파괴적인 마이그레이션이나 재교육이 필요 없음</li>
+</ul>
+<h2 id="2-whatsapp-공존의-기술-아키텍처">2. WhatsApp 공존의 기술 아키텍처</h2>
+<h3 id="21-핵심-시스템-설계">2.1 핵심 시스템 설계</h3>
+<p>핵심적으로 WhatsApp 공존은 이중 플랫폼 통합 모델을 기반으로 구축되었습니다. WhatsApp 비즈니스 앱(모바일)과 WhatsApp 클라우드 API(서버 측)는 공유 메타 비즈니스 계정을 통해 연결되며 메시지, 연락처 및 (선택적으로) 최대 6개월의 채팅 기록이 실시간으로 동기화됩니다.</p>
+<h4 id="211-메시징-에코">2.1.1 메시징 에코</h4>
+<p>주요 혁신은 <strong>메시징 에코</strong> 시스템입니다: 앱을 통해 보낸 메시지는 API 인박스에 미러링되고 그 반대의 경우도 마찬가지입니다. 이는 메시지가 어디에서 시작되었는지에 관계없이 두 플랫폼에서 대화가 일관되게 유지되도록 보장합니다.</p>
+<h4 id="212-동기화-흐름">2.1.2 동기화 흐름</h4>
+<ul>
+<li><strong>초기 설정:</strong> 비즈니스는 WhatsApp 비즈니스 앱을 사용하여 API 공급자의 QR 코드를 스캔하여 연결을 승인하고 (선택적으로) 최근 채팅 기록을 동기화합니다.</li>
+<li><strong>지속적인 동기화:</strong> 새 메시지, 연락처 및 대화 스레드는 앱과 API/CRM 플랫폼 간에 실시간으로 미러링됩니다.</li>
+<li><strong>데이터 저장:</strong> 온보딩 중에 최대 6개월의 채팅 기록을 가져올 수 있습니다. 앱이 활성 상태인 한 계속되는 메시지는 동기화됩니다.</li>
+</ul>
+<h4 id="213-플랫폼-구성-요소">2.1.3 플랫폼 구성 요소</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Component</th><th>Role/Function</th></tr></thead><tbody><tr><td>WhatsApp Business App</td><td>기본 모바일 UI를 유지하고, 수동 채팅을 지원하며, 채팅 기록을 보존합니다.</td></tr><tr><td>WhatsApp Cloud API</td><td>자동화, 다중 에이전트 액세스, CRM 통합 및 고급 분석을 가능하게 합니다.</td></tr><tr><td>Middleware/CRM Platform</td><td>메시지를 동기화하고, 라우팅을 관리하며, 대시보드를 제공하고, 자동화를 지원합니다.</td></tr><tr><td>Meta Business Account</td><td>비즈니스 신원, 권한 및 번호 관리를 중앙 집중화합니다.</td></tr></tbody></table>
+<h3 id="22-데이터-모델-및-api-설계">2.2 데이터 모델 및 API 설계</h3>
+<p>기본 데이터 모델은 앱 기반 및 API 기반 워크플로를 모두 지원하도록 설계되었습니다:</p>
+<ul>
+<li><strong>사용자 테이블:</strong> 사용자 정보(이름, 전화번호 등)를 저장합니다.</li>
+<li><strong>메시지 테이블:</strong> 메시지 내용, 유형, 타임스탬프 및 전달 상태를 저장합니다.</li>
+<li><strong>채팅 테이블:</strong> 사용자를 대화(1:1 또는 그룹)와 매핑합니다.</li>
+<li><strong>연락처 테이블:</strong> 앱과 API 간에 동기화됩니다.</li>
+<li><strong>그룹 테이블:</strong> 앱에서 관리되며, 공존 시 API에 미러링되지 않습니다.</li>
+</ul>
+<p>API 엔드포인트는 메시지 전송, 수신 및 동기화, 연락처 및 채팅 기록 관리 기능을 지원합니다. 클라우드 API는 템플릿 메시징, 챗봇 및 워크플로 자동화와 같은 고급 기능을 지원하는 반면, 앱은 수동 참여를 위해 친숙한 인터페이스를 유지합니다.</p>
+<h3 id="23-동기화-및-제한-사항">2.3 동기화 및 제한 사항</h3>
+<ul>
+<li><strong>채팅 기록:</strong> 온보딩 중에 최대 6개월까지 가져올 수 있으며, 지속적인 동기는 실시간으로 이루어집니다.</li>
+<li><strong>연락처:</strong> 완전히 동기화됩니다.</li>
+<li><strong>그룹:</strong> 앱에 남아 있으며, API에 미러링되지 않습니다.</li>
+<li><strong>브로드캐스트 목록:</strong> 공존 모드에서 비활성화되며, 대량 메시징을 위해 API 템플릿으로 대체됩니다.</li>
+<li><strong>기능 제한:</strong> 일부 앱 기능(예: 사라지는 메시지, 실시간 위치, 메시지 편집/철회)은 공존 모드에서 비활성화되거나 지원되지 않습니다.</li>
+</ul>
+<h3 id="24-보안-및-암호화">2.4 보안 및 암호화</h3>
+<p>WhatsApp의 종단 간 암호화는 모든 1:1 및 그룹 채팅에 그대로 적용됩니다. 메시지는 장치에서 암호화되며 수신자만 해독할 수 있습니다. 메시지가 API 또는 CRM으로 미러링될 때는 WhatsApp의 보안 프로토콜과 비즈니스가 선택한 플랫폼의 준수 요구 사항에 따라 처리됩니다.</p>
+<h2 id="3-설정-전제-조건-및-자격">3. 설정 전제 조건 및 자격</h2>
+<h3 id="31-전제-조건">3.1 전제 조건</h3>
+<p>WhatsApp 공존을 활성화하려면 비즈니스는 다음 기준을 충족해야 합니다:</p>
+<ul>
+<li><strong>활성 WhatsApp 비즈니스 앱:</strong> 번호는 최소 7일 이상 사용되었으며, 최근 메시징 활동이 있어야 합니다.</li>
+<li><strong>앱 버전:</strong> WhatsApp 비즈니스 앱 버전 2.24.17 이상</li>
+<li><strong>Meta 비즈니스 계정:</strong> 번호는 검증되었으며 Meta 비즈니스 계정에 연결되어야 합니다.</li>
+<li><strong>지원되는 국가 코드:</strong> 일부 국가(예: 인도, 브라질, 멕시코, 인도네시아, 미국, 홍콩, 싱가포르)에서만 사용 가능하며, EU, 영국, 호주, 일본, 남아프리카, 러시아, 터키 등에서는 지원되지 않습니다.</li>
+<li><strong>페이스북 페이지 연결:</strong> WhatsApp 비즈니스 앱은 API 온보딩을 위해 페이스북 페이지에 연결되어야 합니다.</li>
+<li><strong>BSP/CRM 지원:</strong> 선택한 비즈니스 솔루션 공급자(BSP) 또는 CRM 플랫폼은 공존 온보딩을 지원해야 합니다.</li>
+</ul>
+<h3 id="32-온보딩-프로세스">3.2 온보딩 프로세스</h3>
+<ol>
+<li><strong>임베디드 가입 시작:</strong> BSP 또는 CRM 플랫폼에서 기존 WhatsApp 비즈니스 앱 번호를 연결하는 옵션을 선택하여 시작합니다.</li>
+<li><strong>QR 코드 스캔:</strong> WhatsApp 비즈니스 앱을 사용하여 플랫폼에서 제공하는 QR 코드를 스캔합니다.</li>
+<li><strong>채팅 동기화 권한 부여:</strong> 선택적으로 최대 6개월의 채팅 기록과 연락처를 가져옵니다.</li>
+<li><strong>설정 완료:</strong> 번호는 이제 앱과 API 모두에서 활성화되며, 실시간 메시지 미러링이 활성화됩니다.</li>
+</ol>
+<h3 id="33-자격-고려-사항">3.3 자격 고려 사항</h3>
+<ul>
+<li><strong>번호 사용 기간:</strong> 최근 활동이 있고 확립된 기록이 있는 번호가 선호됩니다.</li>
+<li><strong>국가 제한:</strong> 일부 지역은 규제 또는 준수 이유로 제외됩니다.</li>
+<li><strong>앱 활동:</strong> 동기를 유지하기 위해 앱은 13–14일마다 최소 한 번 열려야 하며, 비활성화되면 연결이 끊깁니다.</li>
+</ul>
+<h2 id="4-배포-모델-및-통합-패턴">4. 배포 모델 및 통합 패턴</h2>
+<h3 id="41-배포-모델">4.1 배포 모델</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Description</th><th>Best For</th></tr></thead><tbody><tr><td>앱 전용</td><td>단일 장치에서 WhatsApp 비즈니스 앱을 사용하며, 수동 채팅만 가능합니다.</td><td>개인 기업가, 소규모 기업</td></tr><tr><td>API 전용</td><td>앱 액세스 없이 WhatsApp 클라우드 API를 사용하며, 완전한 자동화, 다중 에이전트, CRM 통합이 가능합니다.</td><td>대기업, 고용량 운영</td></tr><tr><td><strong>공존(하이브리드)</strong></td><td>동일한 번호에서 앱과 API가 모두 활성화되며, 수동 및 자동화 워크플로가 병렬로 실행됩니다.</td><td>중소기업, 확장 중인 팀, 하이브리드 운영</td></tr></tbody></table>
+<h3 id="42-통합-패턴">4.2 통합 패턴</h3>
+<ul>
+<li><strong>직접 API 통합:</strong> 기업은 클라우드 API를 CRM, 헬프데스크 또는 마케팅 자동화 플랫폼에 직접 연결합니다</li>
+<li><strong>BSP/CRM 미들웨어:</strong> 솔루션 공급자(예: Pepper Cloud, YCloud, Eazybe, Clientify)는 동기화, 라우팅 및 자동화를 관리하는 미들웨어를 제공합니다</li>
+<li><strong>공유 인박스:</strong> 다중 에이전트 대시보드는 팀이 WhatsApp 대화를 할당, 추적 및 협업할 수 있게 합니다</li>
+<li><strong>AI/챗봇 통합:</strong> 자동화된 흐름, 리드 자격 검증 및 고객 지원 봇이 인간 에이전트와 함께 작동합니다</li>
+</ul>
+<h3 id="43-실제-구현-예시">4.3 실제 구현 예시</h3>
+<p>소매업체는 WhatsApp 공존을 사용하여 다음을 수행합니다:</p>
+<ul>
+<li>앱을 통해 VIP 고객 문의를 수동으로 처리합니다</li>
+<li>API를 통해 자동화된 주문 확인 및 배송 업데이트를 실행합니다</li>
+<li>모든 대화를 CRM에 동기화하여 분석 및 후속 조치를 수행합니다</li>
+<li>가용성 및 전문성에 따라 들어오는 리드를 영업 담당자에게 할당합니다</li>
+</ul>
+<h2 id="5-사용-사례-및-비즈니스-시나리오">5. 사용 사례 및 비즈니스 시나리오</h2>
+<h3 id="51-고객-서비스-및-컨택-센터">5.1 고객 서비스 및 컨택 센터</h3>
+<p><strong>WhatsApp 공존</strong>은 고객 서비스 팀 및 컨택 센터에 혁명을 일으키는 요소입니다:</p>
+<ul>
+<li><strong>통합된 고객 경험:</strong> 고객은 인간 에이전트와 봇 중 어느 것으로 채팅하든 단일 WhatsApp 번호로 상호 작용합니다</li>
+<li><strong>다중 에이전트 협업:</strong> 여러 팀원이 CRM을 통해 대화를 관리할 수 있으며, 감독자 또는 전문가는 필요에 따라 앱을 통해 참여할 수 있습니다</li>
+<li><strong>자동 라우팅:</strong> 문의는 챗봇에 의해 분류되어 적절한 에이전트 또는 부서로 라우팅됩니다</li>
+<li><strong>원활한 인계:</strong> 에이전트는 자동화로 시작된 대화를 계속할 수 있으며, 전체 컨텍스트와 채팅 기록이 보존됩니다</li>
+</ul>
+<h4 id="사례-연구-bankia-sa">사례 연구: Bankia S.A.</h4>
+<p>스페인의 주요 은행인 Bankia S.A.는 WhatsApp 공존을 구현하여 다음을 수행했습니다:</p>
+<ul>
+<li>챗봇을 통해 모기지 및 대출 문의를 자동화합니다</li>
+<li>복잡한 사례를 앱의 인간 에이전트에게 전달합니다</li>
+<li>24시간 고객 지원, 에이전트 유휴 시간 감소 및 9.1/10의 고객 만족도를 달성했습니다</li>
+</ul>
+<h3 id="52-영업-및-리드-관리">5.2 영업 및 리드 관리</h3>
+<ul>
+<li><strong>즉시 리드 캡처:</strong> 클릭-to-WhatsApp 광고는 리드를 CRM으로 직접 유입시키며, 자동화된 자격 검증 및 후속 조치가 이루어집니다</li>
+<li><strong>하이브리드 참여:</strong> 영업 담당자는 앱을 통해 고가치 잠재 고객에게 개인적으로 응답할 수 있으며, 일상적인 후속 조치는 자동화됩니다</li>
+<li><strong>통합된 파이프라인:</strong> 모든 상호 작용이 CRM에 기록되어 분석 및 성과 추적을 가능하게 합니다</li>
+</ul>
+<h3 id="53-마케팅-및-캠페인">5.3 마케팅 및 캠페인</h3>
+<ul>
+<li><strong>대량 메시징:</strong> API 기반 브로드캐스트는 앱 기반 브로드캐스트 목록을 대체하며, 세그먼테이션 및 템플릿 기반 준수를 지원합니다</li>
+<li><strong>개인화된 연락:</strong> 자동화된 캠페인과 수동 후속 조치를 결합하여 전환율을 높입니다</li>
+<li><strong>비용 최적화:</strong> 1:1 참여를 위해 무료 앱 메시징을 사용하고, 확장 가능한 캠페인을 위해 API를 활용합니다</li>
+</ul>
+<h3 id="54-byod-및-장치-거버넌스">5.4 BYOD 및 장치 거버넌스</h3>
+<ul>
+<li><strong>유연한 장치 사용:</strong> 직원은 개인 장치를 WhatsApp 기반 업무에 사용할 수 있으며, 개인 및 비즈니스 데이터가 명확하게 분리됩니다</li>
+<li><strong>MDM/UEM 통합:</strong> 모바일 장치 관리(MDM) 또는 통합 엔드포인트 관리(UEM) 솔루션은 보안, 개인 정보 보호 및 준수 정책을 시행합니다</li>
+<li><strong>감사 가능성:</strong> 모든 비즈니스 대화가 CRM에 미러링되어 직원이 퇴사하더라도 감독 및 연속성이 보장됩니다</li>
+</ul>
+<h3 id="55-산업별-응용">5.5 산업별 응용</h3>
+<ul>
+<li><strong>헬스케어:</strong> WhatsApp을 통해 약속 알림, 검사 결과 및 환자 후속 조치를 수행하며, 준수 아카이빙을 진행합니다</li>
+<li><strong>금융:</strong> KYC 프로세스, 거래 알림 및 안전한 고객 지원을 제공하며, 전체 감사 추적을 유지합니다</li>
+<li><strong>전자 상거래:</strong> 주문 확인, 배송 업데이트 및 장바구니 버림 알림을 제공하며, 자동화와 인간 지원을 결합합니다</li>
+</ul>
+<h2 id="6-대체-접근-방식과의-비교">6. 대체 접근 방식과의 비교</h2>
+<h3 id="61-다중-장치-지원">6.1 다중 장치 지원</h3>
+<p>WhatsApp의 다중 장치 기능은 단일 계정을 최대 4개의 보조 장치(전화, 태블릿, 데스크톱)에서 사용할 수 있게 하며, 모든 장치에 메시지가 동기화됩니다.</p>
+<h4 id="장점">장점</h4>
+<ul>
+<li>주 전화가 온라인일 필요 없이 여러 장치에서 액세스할 수 있습니다</li>
+<li>모든 장치에서 종단 간 암호화를 유지합니다</li>
+<li>유연성이 필요한 소규모 팀 또는 개인에게 유용합니다</li>
+</ul>
+<h4 id="단점">단점</h4>
+<ul>
+<li>최대 4개의 보조 장치로 제한됩니다</li>
+<li>역할 기반 액세스 또는 채팅 할당이 없습니다</li>
+<li>고급 자동화, 분석 및 CRM 통합이 부족합니다</li>
+<li>다중 에이전트 또는 기업 워크플로우를 위해 설계되지 않았습니다</li>
+</ul>
+<h3 id="62-듀얼-sim-및-번호-관리">6.2 듀얼 SIM 및 번호 관리</h3>
+<p>일부 기업은 개인 및 비즈니스 통신을 분리하기 위해 듀얼 SIM 전화 또는 여러 WhatsApp 계정을 사용합니다.</p>
+<h4 id="장점-1">장점</h4>
+<ul>
+<li>개인에게 설정이 간단합니다</li>
+<li>개인 및 비즈니스 채팅을 분리합니다</li>
+</ul>
+<h4 id="단점-1">단점</h4>
+<ul>
+<li>분산된 고객 경험(여러 번호)</li>
+<li>통합된 채팅 기록 또는 분석이 없습니다</li>
+<li>팀 또는 자동화에 확장 가능하지 않습니다</li>
+</ul>
+<h3 id="63-타사-통합-및-비공식-api">6.3 타사 통합 및 비공식 API</h3>
+<p>다양한 타사 도구는 Meta의 공식 API를 우회하는 비공식 WhatsApp 통합을 제공합니다.</p>
+<h4 id="장점-2">장점</h4>
+<ul>
+<li>공식 앱에 없는 기능을 제공할 수 있습니다</li>
+<li>단기적으로 더 저렴하거나 더 유연할 수 있습니다</li>
+</ul>
+<h4 id="단점-2">단점</h4>
+<ul>
+<li>계정 밴 또는 정책 위반의 높은 위험성</li>
+<li>보안, 준수, 또는 데이터 개인정보 보호에 대한 보장 없음</li>
+<li>지원 및 신뢰성 부족</li>
+</ul>
+<h3 id="64-기능-비교-표">6.4 기능 비교 표</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>기능/접근 방식</th><th>WhatsApp 공존</th><th>멀티 디바이스 지원</th><th>이중 SIM/다중 번호</th><th>비공식 통합</th></tr></thead><tbody><tr><td>동일 번호, 앱 + API</td><td>예</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>채팅 기록 동기화</td><td>예 (6개월 이상)</td><td>예</td><td>아니오</td><td>다름</td></tr><tr><td>멀티 에이전트 지원</td><td>예 (CRM/API를 통해)</td><td>아니오</td><td>아니오</td><td>다름</td></tr><tr><td>자동화/챗봇</td><td>예 (API)</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>CRM 통합</td><td>예</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>준수/감사 가능성</td><td>예</td><td>아니오</td><td>아니오</td><td>아니오</td></tr><tr><td>공식 지원</td><td>예</td><td>예</td><td>예</td><td>아니오</td></tr><tr><td>밴 위험성</td><td>없음</td><td>없음</td><td>없음</td><td>높음</td></tr></tbody></table>
+<h2 id="7-기업-배포-컨택-센터-및-byod">7. 기업 배포: 컨택 센터 및 BYOD</h2>
+<h3 id="71-컨택-센터">7.1 컨택 센터</h3>
+<p>컨택 센터에 WhatsApp 공존을 배포하면 다음과 같은 이점이 있습니다:</p>
+<ul>
+<li><strong>옴니채널 지원:</strong> WhatsApp은 음성, 이메일, 웹 채팅과 함께 핵심 채널이 됩니다.</li>
+<li><strong>자동 분류:</strong> 봇이 FAQ 및 일상적인 문의를 처리하고 필요에 따라 에이전트에게 이관합니다.</li>
+<li><strong>중앙 집중식 감독:</strong> 관리자가 모든 대화를 모니터링하여 준수 및 품질을 보장합니다.</li>
+<li><strong>감사 추적:</strong> 모든 메시지는 규제 및 분쟁 해결 목적으로 보관됩니다.</li>
+</ul>
+<h4 id="준수-고려-사항">준수 고려 사항</h4>
+<ul>
+<li><strong>동의 관리:</strong> WhatsApp 통신에 대한 고객 동의를 캡처하고 로그로 기록합니다.</li>
+<li><strong>템플릿 관리:</strong> 아웃바운드 통신에 사전 승인된 메시지 템플릿만 사용합니다.</li>
+<li><strong>데이터 보존:</strong> 모든 비즈니스 관련 채팅을 변조 방지 스토리지에 보관합니다.</li>
+<li><strong>디바이스 관리:</strong> MDM/UEM 정책을 시행하여 개인 데이터와 비즈니스 데이터를 분리합니다.</li>
+</ul>
+<h3 id="72-byod-자신의-기기를-가져오기-시나리오">7.2 BYOD (자신의 기기를 가져오기) 시나리오</h3>
+<ul>
+<li><strong>개인정보 제어:</strong> 직원의 개인 데이터는 비공개로 유지되며, 비즈니스 채팅만 CRM에 미러링됩니다.</li>
+<li><strong>원격 삭제:</strong> IT 팀은 분실되거나 손상된 기기에서 개인 콘텐츠에 영향을 주지 않고 비즈니스 데이터를 원격으로 삭제할 수 있습니다.</li>
+<li><strong>정책 시행:</strong> MDM/UEM 솔루션을 통해 역할 기반 액세스, 암호화, 준수 정책이 시행됩니다.</li>
+</ul>
+<h2 id="8-보안-준수-및-감사-가능성">8. 보안, 준수, 및 감사 가능성</h2>
+<h3 id="81-종단-간-암호화">8.1 종단 간 암호화</h3>
+<p>WhatsApp의 종단 간 암호화는 발신자와 수신자만 메시지 내용을 읽을 수 있도록 보장합니다. Meta도 전송 중인 메시지를 해독할 수 없습니다. 이는 앱 기반 및 API 기반 대화 모두에 적용됩니다.</p>
+<h3 id="82-준수-요구-사항">8.2 준수 요구 사항</h3>
+<ul>
+<li><strong>GDPR, HIPAA, PCI, FINRA, MiFID II:</strong> 규제 산업은 모든 비즈니스 통신을 보관하고, 동의를 캡처하며, 데이터 개인정보 보호를 보장해야 합니다.</li>
+<li><strong>감사 추적:</strong> 법적 및 규제 감사를 위해 불변 로그와 WORM(일회성 쓰기, 다회성 읽기) 스토리지가 필요합니다.</li>
+<li><strong>동의 관리:</strong> 기업은 고객이 WhatsApp 통신에 동의했으며 언제든지 동의를 철회할 수 있음을 증명해야 합니다.</li>
+<li><strong>템플릿 승인:</strong> 아웃바운드 메시지는 Meta 승인 템플릿을 사용해야 하며, 준수 여부를 정기적으로 검토해야 합니다.</li>
+</ul>
+<h3 id="83-데이터-흐름-및-보존">8.3 데이터 흐름 및 보존</h3>
+<ul>
+<li><strong>메시지 라우팅:</strong> 메시지는 고객에서 WhatsApp API로, 그 후 CRM 또는 컨택 센터 플랫폼으로 전달됩니다.</li>
+<li><strong>아카이빙:</strong> 타사 솔루션(예: DeepView, LeapXpert)이 업계 규제에 준수하여 모든 WhatsApp 메시지, 첨부 파일, 메타데이터를 캡처하고 저장합니다.</li>
+<li><strong>디바이스 관리:</strong> MDM/UEM 솔루션을 통해 개인 데이터와 비즈니스 데이터를 분리하고, 원격 삭제 및 액세스 제어를 시행합니다.</li>
+</ul>
+<h3 id="84-보안-모범-사례">8.4 보안 모범 사례</h3>
+<ul>
+<li><strong>HTTPS everywhere:</strong> 모든 엔드포인트는 보안 연결을 사용해야 합니다.</li>
+<li><strong>멀티팩터 인증:</strong> 관리자 및 에이전트 계정에는 MFA가 필요합니다.</li>
+<li><strong>역할 기반 액세스 제어:</strong> 직무 기능에 따라 민감한 데이터에 대한 액세스를 제한합니다.</li>
+<li><strong>정기 감사:</strong> 템플릿, 동의 로그, 데이터 보존 정책에 대한 정기 검토를 수행합니다.</li>
+</ul>
+<h2 id="9-사용자-경험-및-에이전트-워크플로우">9. 사용자 경험 및 에이전트 워크플로우</h2>
+<h3 id="91-통합-인박스">9.1 통합 인박스</h3>
+<p>에이전트와 영업 담당자는 앱과 CRM 간의 실시간 동기화를 통해 단일 대시보드에서 모든 WhatsApp 대화를 관리할 수 있습니다. 이를 통해:</p>
+<ul>
+<li><strong>보다 빠른 응답 시간:</strong> 여러 에이전트가 고우선순위 대화에 협력할 수 있습니다.</li>
+<li><strong>원활한 인계:</strong> 대화는 컨텍스트를 잃지 않고 자동화와 인간 에이전트 사이에서 이동할 수 있습니다.</li>
+<li><strong>분석 및 보고:</strong> 관리자는 응답 시간, 해결율, 고객 만족도를 추적합니다.</li>
+</ul>
+<h3 id="92-하이브리드-참여">9.2 하이브리드 참여</h3>
+<ul>
+<li><strong>수동 + 자동화:</strong> 에이전트는 앱을 통해 복잡하거나 고가치의 대화를 처리하고, 일상적인 작업은 API를 통해 자동화됩니다</li>
+<li><strong>개인화:</strong> 인간 에이전트는 필요한 곳에 개인적인 접근을 추가할 수 있고, 봇은 반복적인 질문을 처리합니다</li>
+<li><strong>연속성:</strong> 고객은 채널이나 에이전트에 관계없이 통일된 브랜드 음성을 경험합니다</li>
+</ul>
+<h3 id="93-제한-사항-및-알려진-문제">9.3 제한 사항 및 알려진 문제</h3>
+<ul>
+<li><strong>기능 제한:</strong> 일부 앱 기능(예: 브로드캐스트 목록, 사라지는 메시지, 실시간 위치)은 공존 모드에서 비활성화됩니다</li>
+<li><strong>그룹 채팅:</strong> API에 미러링되지 않으며 앱에서만 관리됩니다</li>
+<li><strong>메시지 처리량:</strong> 동기화 안정성을 보장하기 위해 API 메시지 전송 속도가 제한될 수 있습니다(예: 초당 5건)</li>
+<li><strong>기기 연결:</strong> 온보딩 중에 모든 연결된 기기가 연결 해제되며, 설정 후에는 지원되는 기기만 다시 연결할 수 있습니다</li>
+</ul>
+<h2 id="10-비용-가격-및-메시지-과금-모델">10. 비용, 가격 및 메시지 과금 모델</h2>
+<h3 id="101-가격-개요">10.1 가격 개요</h3>
+<ul>
+<li><strong>앱 메시징:</strong> WhatsApp Business 앱을 통해 전송되는 모든 1:1 메시지는 무료입니다</li>
+<li><strong>API 메시징:</strong> 클라우드 API를 통해 전송되는 메시지는 Meta의 대화 기반 가격 모델에 따라 과금되며, 마케팅, 유틸리티, 인증, 서비스 대화별로 다른 요율이 적용됩니다</li>
+<li><strong>하이브리드 모델:</strong> 기업은 API로 시작된 채팅에만 비용을 지불하며, 앱 기반 회신은 계속 무료입니다</li>
+</ul>
+<h3 id="102-대화-창">10.2 대화 창</h3>
+<ul>
+<li><strong>API 시작:</strong> API를 통해 대화를 시작하면(예: 템플릿 메시지 전송) 24시간 창이 열리며, 이 기간 동안 추가 요금 없이 여러 메시지를 교환할 수 있습니다</li>
+<li><strong>고객 시작:</strong> 고객이 먼저 메시지를 보내면 기업은 무료 24시간 창 내에 API를 통해 회신할 수 있습니다</li>
+<li><strong>앱 메시징:</strong> API 대화 창에 영향을 주지 않으며 요금이 발생하지 않습니다</li>
+</ul>
+<h3 id="103-비용-최적화-전략">10.3 비용 최적화 전략</h3>
+<ul>
+<li><strong>무료 채팅을 위해 앱 사용:</strong> 앱을 통해 대화를 시작하고 1:1 참여를 처리하여 비용을 최소화합니다</li>
+<li><strong>규모 확장을 위해 API 활용:</strong> 효율성 향상이 비용을 정당화하는 경우 자동화, 대량 메시징 및 캠페인에 API를 사용합니다</li>
+<li><strong>사용량 모니터링:</strong> API 메시지 볼륨을 추적하고 워크플로를 최적화하여 비용과 고객 경험을 균형있게 유지합니다</li>
+</ul>
+<h2 id="11-실제-구현-및-사례-연구">11. 실제 구현 및 사례 연구</h2>
+<h3 id="111-뱅킹-bankia-sa">11.1 뱅킹: Bankia S.A.</h3>
+<ul>
+<li><strong>과제:</strong> 모기지 및 대출 문의에 대한 콘택 센터 볼륨을 줄이고 응답 시간을 개선하기</li>
+<li><strong>해결책:</strong> 챗봇 자동화 및 인간 에이전트 백업과 함께 WhatsApp 공존</li>
+<li><strong>결과:</strong> 24시간 지원, 에이전트 유휴 시간 감소, 9.1/10 고객 만족도, 0% 이탈률</li>
+</ul>
+<h3 id="112-소매-d2c-뷰티-브랜드">11.2 소매: D2C 뷰티 브랜드</h3>
+<ul>
+<li><strong>과제:</strong> 단일 에이전트 WhatsApp 설정으로 인한 느린 응답 시간 및 판매 기회 손실</li>
+<li><strong>해결책:</strong> CRM 통합 및 자동화된 리드 할당과 함께 공존을 통한 다중 에이전트 협업</li>
+<li><strong>결과:</strong> 평균 첫 응답 시간이 2시간에서 4분 미만으로 감소; 2개월 내 전환율 32% 증가</li>
+</ul>
+<h3 id="113-헬스케어-aws-connect--whatsapp-클라우드-api">11.3 헬스케어: AWS Connect + WhatsApp 클라우드 API</h3>
+<ul>
+<li><strong>과제:</strong> HIPAA 준수를 유지하면서 예약 알림 및 검사 결과 업데이트를 안전하게 전달하기</li>
+<li><strong>해결책:</strong> AWS Connect와의 통합, 안전한 메시지 라우팅, 감사 가능성을 위한 타사 아카이빙</li>
+<li><strong>결과:</strong> 개인 정보를 침해하지 않는 확장 가능하고 준수한 환자 의사 소통</li>
+</ul>
+<h3 id="114-전자상거래-주문-관리">11.4 전자상거래: 주문 관리</h3>
+<ul>
+<li><strong>과제:</strong> 대량의 주문 확인, 배송 업데이트 및 고객 문의를 관리하기</li>
+<li><strong>해결책:</strong> API를 통한 자동화된 워크플로, 앱을 통한 VIP 고객에 대한 수동 개입</li>
+<li><strong>결과:</strong> 응답 시간 개선, 고객 만족도 상승, 운영 절차 간소화</li>
+</ul>
+<h2 id="12-기능-비교-테이블">12. 기능 비교 테이블</h2>
+<h3 id="121-whatsapp-공존-vs-대안">12.1 WhatsApp 공존 vs. 대안</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>기능/접근 방식</th><th>WhatsApp 공존</th><th>다중 기기 지원</th><th>이중 SIM/다중 번호</th><th>비공식 통합</th></tr></thead><tbody><tr><td>동일한 번호, 앱 + API</td><td>예</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>채팅 기록 동기화</td><td>예(6개월 이상)</td><td>예</td><td>아니오</td><td>다양함</td></tr><tr><td>다중 에이전트 지원</td><td>예(CRM/API를 통해)</td><td>아니오</td><td>아니오</td><td>다양함</td></tr><tr><td>자동화/챗봇</td><td>예(API)</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>CRM 통합</td><td>예</td><td>아니오</td><td>아니오</td><td>때때로</td></tr><tr><td>준수/감사 가능성</td><td>예</td><td>아니오</td><td>아니오</td><td>아니오</td></tr><tr><td>공식 지원</td><td>예</td><td>예</td><td>예</td><td>아니오</td></tr><tr><td>밴 위험</td><td>아니오</td><td>아니오</td><td>아니오</td><td>높음</td></tr></tbody></table>
+<h3 id="122-공존-온보딩-후-기능-가용성">12.2 공존 온보딩 후 기능 가용성</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>WhatsApp 비즈니스 앱 기능</th><th>공존 온보딩 후</th><th>클라우드 API에서 지원됨?</th></tr></thead><tbody><tr><td>1:1 채팅</td><td>지원됨 (편집/철회 불가)</td><td>예 (미러링됨)</td></tr><tr><td>연락처</td><td>지원됨</td><td>예 (미러링됨)</td></tr><tr><td>그룹 채팅</td><td>지원됨 (앱 전용)</td><td>아니오</td></tr><tr><td>사라지는 메시지</td><td>비활성화</td><td>아니오</td></tr><tr><td>일회성 보기 메시지</td><td>비활성화</td><td>아니오</td></tr><tr><td>실시간 위치</td><td>비활성화</td><td>아니오</td></tr><tr><td>브로드캐스트 목록</td><td>비활성화 (읽기 전용)</td><td>아니오</td></tr><tr><td>음성/화상 통화</td><td>지원됨 (앱 전용)</td><td>아니오</td></tr><tr><td>비즈니스 도구 (카탈로그 등)</td><td>지원됨 (앱 전용)</td><td>아니오</td></tr><tr><td>메시징 도구 (템플릿)</td><td>지원됨 (API 전용)</td><td>예</td></tr></tbody></table>
+<h2 id="13-운영-모범-사례-및-런북">13. 운영 모범 사례 및 런북</h2>
+<h3 id="131-온보딩-및-유지-관리">13.1 온보딩 및 유지 관리</h3>
+<ul>
+<li><strong>번호 준비:</strong> 최근 메시징 기록이 있는 활성화된 WhatsApp 비즈니스 앱 번호 사용</li>
+<li><strong>Meta 비즈니스 계정 확인:</strong> 번호가 연결되고 확인되었는지 확인</li>
+<li><strong>지원되는 BSP/CRM 선택:</strong> 공존 지원을 확인하고 임베디드 가입 프로세스를 따름</li>
+<li><strong>채팅 기록 동기화:</strong> 온보딩 중에 최대 6개월 간의 기록을 선택적으로 가져올 수 있음</li>
+<li><strong>앱 활동 유지:</strong> 동기화를 활성 상태로 유지하기 위해 13–14일마다 최소한 한 번은 앱을 엽니다</li>
+</ul>
+<h3 id="132-팀-교육-및-문서화">13.2 팀 교육 및 문서화</h3>
+<ul>
+<li><strong>에이전트 교육:</strong> 직원에게 새로운 워크플로우, 기능 제한 및 규정 준수 요구 사항에 대해 교육</li>
+<li><strong>프로세스 문서화:</strong> 채팅 할당, 에스컬레이션 및 템플릿 사용에 대한 명확한 SOP 유지</li>
+<li><strong>메트릭 모니터링:</strong> 응답 시간, 해결율 및 고객 만족도 추적</li>
+</ul>
+<h3 id="133-규정-준수-및-보안">13.3 규정 준수 및 보안</h3>
+<ul>
+<li><strong>동의 캡처:</strong> 고객의 옵트인을 기록하고 철회를 관리</li>
+<li><strong>템플릿 검토:</strong> 규정 준수를 위해 메시지 템플릿을 정기적으로 감사</li>
+<li><strong>장치 정책 시행:</strong> MDM/UEM을 사용하여 개인 및 비즈니스 데이터를 분리하고 원격 와이프를 활성화하며 암호화를 시행</li>
+</ul>
+<h3 id="134-문제-해결">13.4 문제 해결</h3>
+<ul>
+<li><strong>동기화 문제:</strong> 앱이 업데이트되고 정기적으로 열리는지 확인; 네트워크 연결 확인</li>
+<li><strong>기능 제한:</strong> 비활성화된 기능을 에이전트 및 고객에게 통신</li>
+<li><strong>API 오류:</strong> 로그를 모니터링하고 필요에 따라 BSP/CRM 지원팀에 에스컬레이션</li>
+</ul>
+<h2 id="14-미래-로드맵-및-트렌드">14. 미래 로드맵 및 트렌드</h2>
+<h3 id="141-다가오는-기능">14.1 다가오는 기능</h3>
+<ul>
+<li><strong>사용자 이름 기반 메시징:</strong> WhatsApp는 개인 정보 보호와 유연성을 향상시키기 위해 전화번호의 대안으로 사용자 이름을 테스트하고 있습니다</li>
+<li><strong>AI 기반 도구:</strong> 더 스마트한 챗봇, 음성 상호 작용 및 자동화된 워크플로우를 위한 Meta AI 통합</li>
+<li><strong>크로스 플랫폼 메시징:</strong> 다른 메시징 앱(예: Telegram, Signal)과의 상호 운용성 지원이 베타 테스트 중입니다</li>
+<li><strong>고급 규정 준수:</strong> 실시간 규정 준수 모니터링, 적응형 보존 정책 및 향상된 메타데이터 캡처</li>
+<li><strong>AR 및 멀티미디어:</strong> 더 풍부한 고객 참여를 위한 증강 현실 필터 및 고급 미디어 공유</li>
+</ul>
+<h3 id="142-전략적-함의">14.2 전략적 함의</h3>
+<ul>
+<li><strong>슈퍼 앱 진화:</strong> WhatsApp는 결제, AI 및 크로스 플랫폼 통신을 통합한 “슈퍼 앱” 생태계로 발전하고 있습니다</li>
+<li><strong>개인 정보 보호 및 보안:</strong> 더 강력한 개인 정보 보호 제어, 엄격한 보안 모드 및 세분화된 데이터 관리가 표준이 될 것입니다</li>
+<li><strong>기업 도입:</strong> 규정 준수 및 감사 가능성이 개선됨에 따라 금융, 의료와 같은 더 많은 규제 산업에서 WhatsApp를 핵심 채널로 채택할 것입니다</li>
+<li><strong>하이브리드 워크플로우:</strong> 공존 모델은 최적의 고객 경험을 위해 인적 참여와 자동화된 참여를 결합하는 표준이 될 것입니다</li>
+</ul>
+<h2 id="결론">결론</h2>
+<p>WhatsApp 공존은 비즈니스 메시징의 패러다임 전환을 나타냅니다. 동일한 번호에서 WhatsApp 비즈니스 앱과 클라우드 API를 동시에 사용할 수 있게 함으로써 개인적인 참여와 기업 자동화 사이의 격차를 메웁니다. 기업은 이제 데이터 연속성이나 규정 준수를 희생하지 않고도 운영을 확장하고 비용을 최적화하며 원활한 고객 경험을 제공할 수 있습니다.</p>
+<p>실시간 동기화, 견고한 보안 및 유연한 통합을 기반으로 하는 기술 아키텍처는 컨택 센터, 영업 팀, BYOD 환경 및 규제 산업에 이르기까지 다양한 배포 모델과 사용 사례를 지원합니다. 대체 접근 방식과 비교할 때 공존은 뛰어난 유연성, 규정 준수 및 운영 효율성을 제공합니다.</p>
+<p>WhatsApp가 새로운 기능을 출시하고 AI 및 크로스 플랫폼 메시징과의 통합을 심화함에 따라 공존을 수용하는 기업은 고객 참여, 운영 민첩성 및 디지털 변환 분야에서 선도적인 위치를 차지할 것입니다.</p>
+<p><strong>스마트하게 확장하세요. 개인적인 연결을 유지하세요. 비즈니스 메시징의 미래는 하이브리드이며, WhatsApp 공존이 그 다리입니다.</strong></p>
+<p><strong>전략을 현대화할 준비가 되었나요?</strong></p>
+<ul>
+<li><a href="https://wiki.seasalt.ai/en/seax/seax-omni/whatsapp-business-platform/">Seasalt.ai WhatsApp Business Platform 통합</a></li>
+<li><a href="https://wiki.seasalt.ai/en/seax/seax-omni/whatsapp-coexistence/">WhatsApp 공존 가이드</a></li>
+</ul> </article> </div> </div> </div> </section> <!-- 相關文章 --> <section class="py-16 sm:py-20 bg-gray-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center"> Related Articles </h2> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"> <article class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"> <div class="bg-gray-200"> <img src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" alt="Seasalt.ai Platform Demo" class="w-full h-32 sm:h-40 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='/seasalt-ai-icon.png'"> </div> <div class="p-4"> <div class="flex items-center text-xs text-gray-500 mb-2"> <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path> </svg> <span>2024. 12. 6.</span> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2"> <a href="/ko/blog/ai-powered-multimedia-content" class="hover:text-blue-600 transition-colors"> 고객 참여를 위한 AI 기반 멀티미디어 콘텐츠 제작 </a> </h3> <p class="text-sm text-gray-600 line-clamp-3">  </p> </div> </article><article class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"> <div class="bg-gray-200"> <img src="/images/blog/the-grand-unified-theory-of-whatsapp-coexistence-a-seasalt-ai-manifesto-for-the-hybrid-era.jpg" alt="The Grand Unified Theory of WhatsApp Coexistence: A Seasalt.ai Manifesto for the Hybrid Era" class="w-full h-32 sm:h-40 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='/seasalt-ai-icon.png'"> </div> <div class="p-4"> <div class="flex items-center text-xs text-gray-500 mb-2"> <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path> </svg> <span>2026. 1. 29.</span> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2"> <a href="/ko/blog/the-grand-unified-theory-of-whatsapp-coexistence-a-seasalt-ai-manifesto-for-the-hybrid-era" class="hover:text-blue-600 transition-colors"> WhatsApp 공존의 위대한 통합 이론: 하이브리드 시대를 위한 Seasalt.ai 선언문 </a> </h3> <p class="text-sm text-gray-600 line-clamp-3"> Seasalt.ai의 WhatsApp 공존이 비즈니스 앱과 API 사이의 격차를 해소하고, 하이브리드 시대에 원활한 고객 경험을 위한 인간-AI 협업을 가능하게 하는 방법을 알아보세요. </p> </div> </article> </div> </div> </section> <!-- CTA Section --> <section class="py-16 sm:py-20 bg-gradient-to-r from-blue-600 to-blue-700"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden"> <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6"> Ready to Transform Your Customer Communications? </h2> <p class="text-lg sm:text-xl text-white opacity-90 mb-6 sm:mb-8 max-w-2xl mx-auto"> See how Seasalt.ai can help your business automate support, capture leads, and deliver exceptional customer experiences. </p> <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"> <a href="https://seax.seasalt.ai/signup" class="bg-white text-blue-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200"> Sign Up </a> <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200"> Schedule Demo </a> </div> </div> </section> </main> </div>  </main> <footer class="bg-gray-900 text-white"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16"> <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 lg:gap-4"> <!-- Company Info --> <div class="lg:col-span-1"> <div class="flex items-center mb-6"> <img src="/seasalt-ai-logo.png" alt="Seasalt.ai" class="h-8 w-auto brightness-0 invert"> </div> <p class="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"> 소기업을위한 올인원 컨택 센터.지원을 자동화하고 모든 리드를 포착하며 모든 고객 대화를 통합하십시오. </p> <div class="space-y-2 sm:space-y-3"> <div class="flex items-center text-gray-300"> <span class="mr-2" aria-hidden="true">📞</span> <span class="text-sm">+1 (SMB)-AI-AGENT</span> </div> <div class="flex items-center text-gray-300"> <span class="mr-2" aria-hidden="true">📧</span> <span class="text-sm">info@seasalt.ai</span> </div> <div class="flex items-center text-gray-300"> <span class="mr-2" aria-hidden="true">📍</span> <span class="text-sm">Seattle, WA</span> </div> </div> <!-- Social Media Links --> <div class="flex space-x-4 mt-6"> <a href="https://www.linkedin.com/company/seasalt-ai/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="w-5 h-5"> </a> <a href="https://www.youtube.com/@seasaltai" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200"> <img src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube" class="w-5 h-5"> </a> <a href="https://twitter.com/SeasaltAI" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200"> <img src="https://cdn.simpleicons.org/x/ffffff" alt="Twitter" class="w-5 h-5"> </a> <a href="https://discord.gg/VgAWg3c7rU" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200"> <img src="https://cdn.simpleicons.org/discord/ffffff" alt="Discord" class="w-5 h-5"> </a> </div> </div> <!-- Products --> <div> <h3 class="text-base sm:text-lg font-semibold mb-4 sm:mb-6">제품</h3> <ul class="space-y-2 sm:space-y-3"> <li key="0"> <a href="/ko/seachat" target="_self" rel class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">💬</span>    SeaChat </a>  </li><li key="1"> <a href="/ko/seax" target="_self" rel class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">  <span class="mr-2" aria-hidden="true">👥</span>   SeaX </a>  </li><li key="2"> <a href="https://seameet.ai/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">   <span class="mr-2" aria-hidden="true">📹</span>  SeaMeet </a>  </li><li key="3"> <a href="/ko/seavoice" target="_self" rel class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">    <span class="mr-2" aria-hidden="true">🎤</span> SeaVoice </a> <ul class="ml-4 mt-1 sm:mt-2 space-y-1 sm:space-y-2"> <li key="0"> <a href="https://suite.seasalt.ai/tts/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 transition-colors duration-200 text-sm"> Text To Speech </a> </li><li key="1"> <a href="https://suite.seasalt.ai/stt/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 transition-colors duration-200 text-sm"> Speech To Text </a> </li><li key="2"> <a href="https://voice.seasalt.ai/discord/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-300 transition-colors duration-200 text-sm"> Discord STT Bot </a> </li> </ul> </li> </ul> </div> <!-- Solutions --> <div> <h3 class="text-base sm:text-lg font-semibold mb-4 sm:mb-6">솔루션</h3> <ul class="space-y-2 sm:space-y-3"> <li key="0"> <a href="/ko/solutions/sales-marketing" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">📈</span>    For Sales &amp; Marketing </a> </li><li key="1"> <a href="/ko/solutions/customer-support" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">  <span class="mr-2" aria-hidden="true">🎧</span>   For Customer Support </a> </li><li key="2"> <a href="/ko/solutions/ai-automation" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">   <span class="mr-2" aria-hidden="true">🤖</span>  AI &amp; Automation </a> </li><li key="3"> <a href="/ko/solutions/sme-owners" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">    <span class="mr-2" aria-hidden="true">🏢</span> For SME Owners </a> </li> <li> <a href="/ko/seahealth" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">❤️</span> SeaHealth- 최적화 된 건강 관리 </a> </li> <li> <a href="/ko/channels-overview" class="text-gray-300 hover:text-white transition-colors duration-200"> 모든 채널 개요 </a> <!-- Channel Icons --> <div class="grid grid-cols-4 sm:grid-cols-5 gap-2 mt-3"> <a href="/ko/channels/whatsapp-coexistence" class="text-green-600 hover:text-green-500 transition-colors duration-200 flex justify-center"> <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="h-5 w-5"> </a> <a href="/ko/channels/phone-calls" class="text-blue-600 hover:text-blue-500 transition-colors duration-200 flex justify-center"> <span aria-hidden="true">📞</span> </a> <a href="/ko/channels/sms" class="text-purple-600 hover:text-purple-500 transition-colors duration-200 flex justify-center"> <span aria-hidden="true">📱</span> </a> <a href="/ko/channels/website-chat" class="text-indigo-600 hover:text-indigo-500 transition-colors duration-200 flex justify-center"> <span aria-hidden="true">💬</span> </a> <a href="/ko/channels/instagram" class="text-pink-600 hover:text-pink-500 transition-colors duration-200 flex justify-center"> <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" class="h-5 w-5"> </a> <a href="/ko/channels/facebook-messenger" class="text-blue-700 hover:text-blue-600 transition-colors duration-200 flex justify-center"> <img src="https://cdn.simpleicons.org/messenger/ffffff" alt="Messenger" class="h-5 w-5"> </a> <a href="/ko/channels/contact-forms" class="text-gray-400 hover:text-gray-300 transition-colors duration-200 flex justify-center"> <span aria-hidden="true">📝</span> </a> <a href="/ko/channels/line" class="text-green-500 hover:text-green-400 transition-colors duration-200 flex justify-center"> <img src="https://cdn.simpleicons.org/line/ffffff" alt="LINE" class="h-5 w-5"> </a> <a href="/ko/seavoice/platform/line-call-plus" class="text-green-500 hover:text-green-400 transition-colors duration-200 flex justify-center relative"> <img src="https://cdn.simpleicons.org/line/ffffff" alt="Line Call Plus" class="h-5 w-5"> <span class="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-bold rounded-full h-3 w-3 flex items-center justify-center" style="font-size: 8px;">+</span> </a> <a href="/ko/channels/website-widget" class="text-orange-600 hover:text-orange-500 transition-colors duration-200 flex justify-center"> <span aria-hidden="true">🧩</span> </a> </div> </li> </ul> </div> <!-- Industries --> <div> <h3 class="text-base sm:text-lg font-semibold mb-4 sm:mb-6">산업</h3> <ul class="space-y-2 sm:space-y-3"> <li key="0"> <a href="/ko/industries/e-commerce" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">🛒</span>        E-commerce </a> </li><li key="1"> <a href="/ko/industries/healthcare" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">  <span class="mr-2" aria-hidden="true">❤️</span>       Healthcare </a> </li><li key="2"> <a href="/ko/industries/real-estate" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">   <span class="mr-2" aria-hidden="true">🏠</span>      Real Estate </a> </li><li key="3"> <a href="/ko/industries/restaurants-hospitality" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">    <span class="mr-2" aria-hidden="true">🍽️</span>     Restaurants &amp; Hospitality </a> </li><li key="4"> <a href="/ko/industries/education-training" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">     <span class="mr-2" aria-hidden="true">🎓</span>    Education &amp; Training </a> </li><li key="5"> <a href="/ko/industries/automotive-services" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">      <span class="mr-2" aria-hidden="true">🚗</span>   Automotive &amp; Services </a> </li><li key="6"> <a href="/ko/industries/professional-services" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">       <span class="mr-2" aria-hidden="true">💼</span>  Professional Services </a> </li><li key="7"> <a href="/ko/industries/financial-services" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">        <span class="mr-2" aria-hidden="true">🏦</span> Financial Services </a> </li> </ul> </div> <!-- Company --> <div> <h3 class="text-base sm:text-lg font-semibold mb-4 sm:mb-6">회사</h3> <ul class="space-y-2 sm:space-y-3"> <li> <a href="/ko/company" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">🏢</span> 우리에 대해 </a> </li> <li> <a href="/ko/blog" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">📰</span> 블로그 </a> </li> <li> <a href="/ko/pricing" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">💲</span> 가격 </a> </li> <li> <a href="/ko/compare-us-overview" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">📊</span> 우리를 비교하십시오 </a> </li> <li> <a href="https://wiki.seasalt.ai/en" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">📚</span> 제품 위키 </a> </li> <li> <a href="https://api.seasalt.ai" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">🔌</span> API 참조 </a> </li> <li> <a href="/ko/careers" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">💼</span> 경력 </a> </li> <li> <a href="/ko/integrations" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"> <span class="mr-2" aria-hidden="true">🔗</span> 통합 </a> </li> </ul> </div> </div> <!-- Bottom Section --> <div class="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8"> <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0"> <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-6 mb-2 lg:mb-0"> <p class="text-gray-300 text-sm"> © 2020-2026Seasalt.ai.모든 권리 보유. </p> <div class="flex space-x-3 sm:space-x-4 text-xs sm:text-sm"> <a href="/privacy" class="text-gray-300 hover:text-white transition-colors duration-200"> 개인 정보 보호 정책 </a> <a href="/terms" class="text-gray-300 hover:text-white transition-colors duration-200"> 서비스 약관 </a> </div> </div> <!-- Social Proof --> <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-300"> <a href="/seahealth" class="flex items-center hover:text-white transition-colors duration-200"> <img src="/hipaa-icon.svg" alt="HIPAA" class="h-5 w-5 mr-1 inline-block align-text-bottom"> HIPAA 사용 가능 </a> <span>🌍 99.9% 가동 시간</span> </div> </div> <div class="text-center mt-4"> <p class="text-gray-300 text-sm">
+Made with
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart inline w-4 h-4 text-red-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+in the city of  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee inline w-4 h-4 text-amber-700"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" x2="6" y1="2" y2="4"></line><line x1="10" x2="10" y1="2" y2="4"></line><line x1="14" x2="14" y1="2" y2="4"></line></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-umbrella inline w-4 h-4 text-blue-400"><path d="M22 12a10.06 10.06 1 0 0-20 0Z"></path><path d="M12 12v8a2 2 0 0 0 4 0"></path><path d="M12 2v1"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane inline w-4 h-4 text-gray-500"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem inline w-4 h-4 text-fuchsia-500"><path d="M6 3h12l4 6-10 13L2 9Z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg> </p> </div> </div> </div> <!-- CTA Banner --> <div class="bg-gradient-to-r from-blue-600 to-indigo-600 py-6 sm:py-8"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden"> <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4"> 봉사 활동을 수백만으로 확장 할 준비가 되셨습니까? </h3> <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"> <a href="https://seax.seasalt.ai/signup" class="bg-white text-blue-600 hover:bg-gray-50 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"> 무료로 가입하십시오 </a> <a href="https://cal.com/seasalt-ai/demo" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"> 데모 일정 </a> </div> </div> </div> </footer><!-- Development version indicator (only in dev mode) --> <!-- SeaChat Webchat Widget --> <!-- SeaChat Webchat Widget --><button id="sui-widget-btn" class="widget-button" data-astro-cid-l4tyx4ox></button> <button id="sui-webchat-btn" data-astro-cid-l4tyx4ox></button> <iframe id="sui-webchat" src="https://chat.seasalt.ai/chat/9e4cef8823b94d019b954db6f4328a93" data-astro-cid-l4tyx4ox></iframe> <button id="sui-Line-btn" class="chat-button" data-astro-cid-l4tyx4ox></button> <button id="sui-Instagram-btn" class="chat-button" data-astro-cid-l4tyx4ox></button> <button id="sui-Messenger-btn" class="chat-button" data-astro-cid-l4tyx4ox></button> <button id="sui-WhatsApp-btn" class="chat-button" data-astro-cid-l4tyx4ox></button> <button id="sui-Voice-btn" class="chat-button" data-astro-cid-l4tyx4ox></button> <div id="sui-widget-tooltip" data-astro-cid-l4tyx4ox> <div id="sui-widget-tooltip-msg" data-astro-cid-l4tyx4ox>Any questions? We follow up with every message.</div> <div id="sui-widget-tooltip-close" data-astro-cid-l4tyx4ox></div> </div> <noscript>
+Powered by
+<a href="https://seasalt.ai/seachat" data-astro-cid-l4tyx4ox>SeaChat</a> from
+<a href="https://seasalt.ai" target="_blank" data-astro-cid-l4tyx4ox>Seasalt.ai</a>.
+</noscript>  <script type="module" src="/_astro/SeaChatWidget.astro_astro_type_script_index_0_lang.DrXC79y2.js"></script> </body></html> <script type="module">document.addEventListener("DOMContentLoaded",function(){const s=document.getElementById("share-button"),l=document.getElementById("table-of-contents"),c=document.getElementById("toc-nav");if(s&&s.addEventListener("click",function(i){i.preventDefault();const t=this.dataset.title,n=this.dataset.description,o=window.location.href;navigator.share?navigator.share({title:t,text:n,url:o}):navigator.clipboard.writeText(o).then(()=>{const e=document.createElement("div");e.textContent="Link copied to clipboard!",e.className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg z-50",document.body.appendChild(e),setTimeout(()=>{document.body.removeChild(e)},3e3)})}),c&&l){const i=document.querySelectorAll("article h2, article h3, article h4");i.length>0&&(l.classList.remove("hidden"),i.forEach((t,n)=>{const o=`heading-${n}`;t.id=o;const e=document.createElement("a");e.href=`#${o}`,e.textContent=t.textContent,e.className=`block py-1 text-gray-600 hover:text-blue-600 transition-colors duration-200 ${t.tagName==="H2"?"font-medium":t.tagName==="H3"?"ml-4 text-sm":"ml-8 text-xs"}`,c.appendChild(e)}),c.addEventListener("click",function(t){if(t.target.tagName==="A"){t.preventDefault();const n=t.target.getAttribute("href").substring(1),o=document.getElementById(n);o&&o.scrollIntoView({behavior:"smooth",block:"start"})}}))}if(c){let i=function(){const o=Array.from(document.querySelectorAll("article h2, article h3, article h4")),e=Array.from(c.querySelectorAll("a"));let d=0;const m=window.scrollY+100;o.forEach((a,r)=>{a.offsetTop<=m&&(d=r)}),e.forEach((a,r)=>{r===d?(a.classList.add("text-blue-600","font-semibold"),a.classList.remove("text-gray-600")):(a.classList.remove("text-blue-600","font-semibold"),a.classList.add("text-gray-600"))}),n=!1},t=function(){n||(requestAnimationFrame(i),n=!0)},n=!1;window.addEventListener("scroll",t),i()}});</script>
