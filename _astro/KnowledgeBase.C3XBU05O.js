@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime.D_zvdyIk.js";import{r as h}from"./index.DtoOFyvK.js";import{u as f}from"./helpers.Ba4igftu.js";import{u as N}from"./translationUtils.BRY7mx92.js";import{F as d}from"./file-text.Bk9ceRhc.js";import{c as o}from"./createLucideIcon.BY18stqz.js";import{G as v}from"./globe.B12dhFM8.js";/**
+import{j as e}from"./jsx-runtime.D_zvdyIk.js";import{r as h}from"./index.DtoOFyvK.js";import{u as f}from"./helpers.B4gvlzGT.js";import{u as N}from"./translationUtils.BRY7mx92.js";import{F as d}from"./file-text.Bk9ceRhc.js";import{c as o}from"./createLucideIcon.BY18stqz.js";import{G as v}from"./globe.B12dhFM8.js";/**
  * @license lucide-react v0.542.0 - ISC
  *
  * This source code is licensed under the ISC license.
