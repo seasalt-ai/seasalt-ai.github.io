@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<link rel="canonical" href="https://seasalt.ai/en/integrations/base64-encoderdecoder/sms/">
+<script>
+(function(){
+var S=["en","es","zh-TW","zh-CN","ja","ko","fr","de","ar","fa","fil","hi","id","ms","pl","pt","ru","ta","th","vi","ro"];
+var L={};S.forEach(function(x){L[x.toLowerCase()]=x;});
+var M={"zh-hans":"zh-CN","zh-hant":"zh-TW","zh-hk":"zh-TW","zh-mo":"zh-TW","zh-sg":"zh-CN","zh":"zh-TW","tl":"fil","fil-ph":"fil","fa-ir":"fa","ms-my":"ms","ta-in":"ta","hi-in":"hi","id-id":"id","th-th":"th","vi-vn":"vi"};
+var T={"asia/tokyo":"ja","asia/seoul":"ko","asia/shanghai":"zh-CN","asia/hong_kong":"zh-TW","asia/taipei":"zh-TW","asia/singapore":"zh-CN","asia/bangkok":"th","asia/ho_chi_minh":"vi","asia/jakarta":"id","asia/kuala_lumpur":"ms","asia/manila":"fil","asia/kolkata":"hi","asia/tehran":"fa","asia/dubai":"ar","asia/riyadh":"ar","europe/berlin":"de","europe/paris":"fr","europe/madrid":"es","europe/rome":"es","europe/warsaw":"pl","europe/moscow":"ru","america/mexico_city":"es","america/sao_paulo":"pt"};
+function d(){try{var s=localStorage.getItem("seasalt-preferred-language");if(s&&L[s.toLowerCase()])return L[s.toLowerCase()]}catch(e){}
+var a=navigator.languages||[navigator.language||""];for(var i=0;i<a.length;i++){var x=String(a[i]||"").trim(),lo=x.toLowerCase();
+if(L[lo])return L[lo];if(M[lo]&&L[M[lo]])return M[lo];
+var p=lo.split("-")[0];if(L[p])return L[p];
+if(p==="zh")return(lo.indexOf("cn")>-1||lo.indexOf("hans")>-1)?"zh-CN":"zh-TW";}
+try{var t=Intl.DateTimeFormat().resolvedOptions().timeZone.toLowerCase();if(T[t])return T[t]}catch(e){}
+return "en";}
+var A=["en"];
+var P="/integrations/base64-encoderdecoder/sms/";
+var d0=d();
+var t=A.indexOf(d0)>-1?"/"+d0+P:(A.indexOf("en")>-1?"/en"+P:"/"+A[0]+P);
+location.replace(t);
+})();
+</script>
+<meta http-equiv="refresh" content="0; url=/en/integrations/base64-encoderdecoder/sms/">
+</head>
+<body><p>Redirecting&hellip; <a href="/en/integrations/base64-encoderdecoder/sms/">Continue</a></p></body>
+</html>
